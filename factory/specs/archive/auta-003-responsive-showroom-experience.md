@@ -1,7 +1,7 @@
 ---
 id: auta-003-responsive-showroom-experience
 title: Responsive showroom experience
-status: inbox
+status: accepted
 agent: codex
 verification:
   - bun test

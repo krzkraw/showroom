@@ -1,10 +1,319 @@
 @import "tailwindcss";
 @import "@fontsource-variable/inter";
 
-@theme {
-  --font-sans: "Inter Variable", system-ui, sans-serif;
+:root {
+  font-family: "Inter Variable", Inter, system-ui, sans-serif;
+  color: #10131a;
+  background: #fff;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html {
   font-size: 20px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #fff;
+}
+
+button {
+  font: inherit;
+}
+
+.showroom-shell {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 100svh;
+  margin: 0 auto;
+  padding: 1.4rem 1.5rem 1.25rem;
+}
+
+.showroom-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.showroom-title,
+.model-counter {
+  margin: 0;
+}
+
+.showroom-title {
+  font-size: clamp(1.35rem, 2.3vw, 1.75rem);
+  font-weight: 750;
+  letter-spacing: -0.025em;
+}
+
+.model-counter {
+  flex: 0 0 auto;
+  font-size: 1rem;
+}
+
+.showroom-content {
+  display: grid;
+  grid-template-areas:
+    "identity stage"
+    "facts stage";
+  grid-template-columns: minmax(23rem, 0.95fr) minmax(24rem, 1.05fr);
+  grid-template-rows: auto 1fr;
+  column-gap: clamp(1.5rem, 3vw, 2.5rem);
+  margin-top: clamp(2.5rem, 7vh, 4rem);
+}
+
+.model-identity {
+  grid-area: identity;
+  min-width: 0;
+}
+
+.model-identity h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3.7vw, 2.6rem);
+  font-weight: 760;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+.model-identity p {
+  margin: 0.55rem 0 0;
+  color: #49505d;
+  font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+  line-height: 1.35;
+}
+
+.vehicle-stage {
+  display: flex;
+  grid-area: stage;
+  min-width: 0;
+  flex-direction: column;
+  align-self: start;
+}
+
+.vehicle-row {
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr) 2.5rem;
+  align-items: center;
+  min-width: 0;
+  gap: 0.5rem;
+}
+
+.model-arrow {
+  border: 0;
+  border-radius: 0.2rem;
+  color: #10131a;
+  background: transparent;
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.model-arrow:hover,
+.model-arrow:focus-visible {
+  background: transparent;
+}
+
+.model-arrow:active,
+.version-button:active {
+  opacity: 0.58;
+  transform: scale(0.96);
+}
+
+.vehicle-placeholder {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  height: clamp(15rem, 35vw, 20rem);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 0.35rem;
+  color: #424854;
+  background: #e5e7eb;
+  text-align: center;
+  touch-action: pan-y;
+  user-select: none;
+  cursor: grab;
+}
+
+.vehicle-placeholder:active {
+  cursor: grabbing;
+}
+
+.vehicle-placeholder strong {
+  max-width: 80%;
+  font-size: clamp(1.1rem, 2.3vw, 1.5rem);
+}
+
+.vehicle-placeholder span {
+  margin-top: 0.35rem;
+  font-size: 0.8rem;
+}
+
+.version-selector {
+  display: flex;
+  min-width: 0;
+  margin: 0.55rem 0 0;
+  padding: 0;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.1rem 0.8rem;
+  list-style: none;
+  touch-action: pan-y;
+}
+
+.version-selector li {
+  min-width: 0;
+}
+
+.version-button {
+  position: relative;
+  max-width: 100%;
+  border: 0;
+  color: #68707d;
+  background: transparent;
+  line-height: 1.2;
+  text-align: center;
+  cursor: pointer;
+}
+
+.version-button:hover,
+.version-button:focus-visible {
+  color: #10131a;
+  background: transparent;
+}
+
+.version-button[aria-pressed="true"] {
+  color: #10131a;
+  font-weight: 760;
+}
+
+.version-button[aria-pressed="true"]::after {
+  position: absolute;
+  right: 20%;
+  bottom: 0;
+  left: 20%;
+  height: 0.18rem;
+  border-radius: 1rem;
+  background: #e00014;
+  content: "";
+}
+
+.fact-list {
+  grid-area: facts;
+  min-width: 0;
+  margin: 2rem 0 0;
+}
+
+.fact-list > div {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 0.35rem;
+  margin-top: 0.65rem;
+}
+
+.fact-list dt,
+.fact-list dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.fact-list dt {
+  font-weight: 650;
+}
+
+.fact-list dt::after {
+  content: " —";
+}
+
+@media (max-width: 900px) {
+  .showroom-shell {
+    padding: 1.3rem 1.7rem 1.8rem;
+  }
+
+  .showroom-content {
+    grid-template-areas:
+      "identity"
+      "stage"
+      "facts";
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+    margin-top: 2.1rem;
+  }
+
+  .model-identity h1 {
+    font-size: clamp(1.85rem, 5.8vw, 2.45rem);
+  }
+
+  .vehicle-stage {
+    margin-top: 1.35rem;
+  }
+
+  .vehicle-row {
+    grid-template-columns: 2.5rem minmax(0, 1fr) 2.5rem;
+    gap: 0.35rem;
+  }
+
+  .vehicle-placeholder {
+    height: clamp(14rem, 42vw, 17.5rem);
+  }
+
+  .version-selector {
+    margin-top: 0.8rem;
+  }
+
+  .fact-list {
+    margin-top: 1.35rem;
+  }
+
+  .fact-list > div {
+    padding: 0.55rem 0;
+    border-bottom: 1px solid #d8dbe0;
+  }
+}
+
+@media (max-width: 520px) {
+  html {
+    font-size: 18px;
+  }
+
+  .showroom-shell {
+    padding-inline: 1rem;
+  }
+
+  .showroom-header {
+    align-items: flex-start;
+  }
+
+  .vehicle-row {
+    grid-template-columns: 2.5rem minmax(0, 1fr) 2.5rem;
+    gap: 0;
+  }
+
+  .fact-list > div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.15rem;
+  }
+
+  .fact-list dt::after {
+    content: "";
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
