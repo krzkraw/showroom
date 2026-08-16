@@ -3,61 +3,61 @@
   "sources": {
     "project-brief": {
       "kind": "input",
-      "label": "Ustalenia projektu — zakres modeli",
+      "label": "Project decisions — model scope",
       "url": null,
       "accessedAt": "2026-08-16"
     },
     "known-gaps": {
       "kind": "input",
-      "label": "Ustalenia projektu — znane braki danych",
+      "label": "Project decisions — known data gaps",
       "url": null,
       "accessedAt": "2026-08-16"
     },
     "dealer-email-dacia": {
       "kind": "dealer-email",
-      "label": "Zanonimizowana korespondencja dealerska Dacia",
+      "label": "Anonymized Dacia dealer correspondence",
       "url": null,
       "accessedAt": "2026-08-16"
     },
     "dealer-email-renault": {
       "kind": "dealer-email",
-      "label": "Zanonimizowana korespondencja dealerska Renault",
+      "label": "Anonymized Renault dealer correspondence",
       "url": null,
       "accessedAt": "2026-08-16"
     },
     "dealer-email-citroen": {
       "kind": "dealer-email",
-      "label": "Zanonimizowana korespondencja dealerska Citroën",
+      "label": "Anonymized Citroën dealer correspondence",
       "url": null,
       "accessedAt": "2026-08-16"
     },
     "dealer-email-toyota": {
       "kind": "dealer-email",
-      "label": "Zanonimizowana korespondencja dealerska Toyota",
+      "label": "Anonymized Toyota dealer correspondence",
       "url": null,
       "accessedAt": "2026-08-16"
     },
     "dealer-email-volkswagen": {
       "kind": "dealer-email",
-      "label": "Zanonimizowana korespondencja dealerska Volkswagen",
+      "label": "Anonymized Volkswagen dealer correspondence",
       "url": null,
       "accessedAt": "2026-08-16"
     },
     "dealer-email-fiat": {
       "kind": "dealer-email",
-      "label": "Zanonimizowana korespondencja dealerska Fiat",
+      "label": "Anonymized Fiat dealer correspondence",
       "url": null,
       "accessedAt": "2026-08-16"
     },
     "dealer-email-hyundai": {
       "kind": "dealer-email",
-      "label": "Zanonimizowana korespondencja dealerska Hyundai",
+      "label": "Anonymized Hyundai dealer correspondence",
       "url": null,
       "accessedAt": "2026-08-16"
     },
     "dealer-email-peugeot": {
       "kind": "dealer-email",
-      "label": "Zanonimizowana korespondencja dealerska Peugeot",
+      "label": "Anonymized Peugeot dealer correspondence",
       "url": null,
       "accessedAt": "2026-08-16"
     },
@@ -69,7 +69,7 @@
     },
     "official-dacia-warranty": {
       "kind": "official",
-      "label": "Gwarancja Dacia",
+      "label": "Dacia warranty",
       "url": "https://www.dacia.pl/uslugi-pomocnicze/gwarancja.html",
       "accessedAt": "2026-08-16"
     },
@@ -81,37 +81,37 @@
     },
     "official-renault-warranty": {
       "kind": "official",
-      "label": "Gwarancje Renault",
+      "label": "Renault warranties",
       "url": "https://www.renault.pl/gwarancje.html",
       "accessedAt": "2026-08-16"
     },
     "official-renault-renewable": {
       "kind": "official",
-      "label": "Gwarancja Odnawialna Renault",
+      "label": "Renault Renewable Warranty",
       "url": "https://www.renault.pl/serwis/gwarancja-odnawialna.html",
       "accessedAt": "2026-08-16"
     },
     "official-toyota-warranty": {
       "kind": "official",
-      "label": "Gwarancja Toyota",
+      "label": "Toyota warranty",
       "url": "https://www.toyota.pl/serwis-i-akcesoria/gwarancja",
       "accessedAt": "2026-08-16"
     },
     "official-hyundai-warranty": {
       "kind": "official",
-      "label": "Gwarancja Hyundai",
+      "label": "Hyundai warranty",
       "url": "https://www.hyundai.com/pl/pl/serwis/serwis-wsparcie/gwarancja.html",
       "accessedAt": "2026-08-16"
     },
     "official-peugeot-warranty": {
       "kind": "official",
-      "label": "Gwarancja Peugeot",
+      "label": "Peugeot warranty",
       "url": "https://www.peugeot.pl/serwis-czesci-i-akcesoria/gwarancja-assistance/gwarancje.html",
       "accessedAt": "2026-08-16"
     },
     "official-peugeot-care": {
       "kind": "official",
-      "label": "Program Peugeot Care",
+      "label": "Peugeot Care program",
       "url": "https://www.peugeot.pl/serwis-czesci-i-akcesoria/program-peugeot-care.html",
       "accessedAt": "2026-08-16"
     },
@@ -123,13 +123,13 @@
     },
     "official-citroen-warranty": {
       "kind": "official",
-      "label": "Gwarancja Citroën",
+      "label": "Citroën warranty",
       "url": "https://www.citroen.pl/serwis/gwarancja-citroena.html",
       "accessedAt": "2026-08-16"
     },
     "official-citroen-care": {
       "kind": "official",
-      "label": "Program Citroën We Care",
+      "label": "Citroën We Care program",
       "url": "https://www.citroen.pl/serwis/citroen-we-care.html",
       "accessedAt": "2026-08-16"
     }

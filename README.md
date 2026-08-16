@@ -1,78 +1,78 @@
-# Dane wirtualnego salonu
+# Virtual Showroom Data
 
-Plik `src/data/showroom.json` jest jedynym katalogiem danych. Katalog używa wersji schematu `1.0`.
+The `src/data/showroom.json` file is the only data catalog. The catalog uses schema version `1.0`.
 
-Parser `src/domain/showroom.ts` sprawdza katalog przed użyciem. Nie wymaga biblioteki walidacyjnej.
+The parser in `src/domain/showroom.ts` validates the catalog before use. The parser requires no validation library.
 
-## Schemat
+## Schema
 
-Katalog zawiera rejestr `sources` oraz tablicę `models`. Każdy model zawiera:
+The catalog contains a `sources` registry and a `models` array. Each model record has the following content:
 
-- markę i nazwę modelu;
-- wersje, napęd, paliwa, skrzynię biegów i dane techniczne;
-- oferty i ich krótkie podsumowania;
-- finansowanie i jego krótkie podsumowania;
-- gwarancję podstawową oraz przedłużenia;
-- odsyłacze do materiałów „Więcej”.
+- The record identifies the brand and model.
+- The record describes versions, the powertrain, fuels, the gearbox, and technical data.
+- The record contains offers and their short summaries.
+- The record contains financing details and their short summaries.
+- The record contains the base warranty and its extensions.
+- The record links to materials shown under `Więcej`.
 
-Każdy fakt ma pola `value`, `status` i `sourceRef`. Rejestr źródeł przechowuje datę `accessedAt`.
+Each fact has `value`, `status`, and `sourceRef` fields. The source registry stores the `accessedAt` date.
 
-## Statusy faktów
+## Fact statuses
 
-- `verified` oznacza potwierdzenie w podanym źródle.
-- `unverified` oznacza wartość pochodzącą ze źródła, która wymaga dalszego potwierdzenia.
-- `unknown` oznacza brak potwierdzonej wartości. Taki fakt musi mieć `value: null`.
+- A `verified` status means that the cited source confirms the value.
+- An `unverified` status means that a source provides the value, but the value requires further confirmation.
+- An `unknown` status means that no value is confirmed. A fact with this status must have `value: null`.
 
-Status `unverified` może zawierać wartość lub `null`. `null` przy statusie `verified` może oznaczać potwierdzony brak limitu liczbowego.
+The `unverified` status may contain a value or `null`. A `verified` value of `null` may mean a confirmed absence of a numeric limit.
 
-## Źródła i daty
+## Sources and dates
 
-`sourceRef` wskazuje jeden wpis w `sources`. Parser odrzuca nieznane referencje.
+`sourceRef` identifies one entry in `sources`. The parser rejects unknown references.
 
-Obsługiwane rodzaje źródeł to `official`, `dealer-email`, `independent`, `youtube` i `input`.
+Supported source kinds are `official`, `dealer-email`, `independent`, `youtube`, and `input`.
 
-Źródła oficjalne, niezależne i YouTube wymagają adresu HTTPS. Zanonimizowane emaile oraz dane wejściowe nie mają adresu URL.
+Official, independent, and YouTube sources require an HTTPS address. Anonymized emails and input data have no URL.
 
-Data `accessedAt` opisuje dzień sprawdzenia źródła w formacie `YYYY-MM-DD`. Obecny katalog odzwierciedla stan ustaleń projektu z 2026-08-16.
+The `accessedAt` date records the source check date in `YYYY-MM-DD` format. The current catalog reflects project decisions as of 2026-08-16.
 
-## Prywatność
+## Privacy
 
-Katalog zawiera wyłącznie zanonimizowane fakty potrzebne do porównania ofert. Nie zawiera nazwisk, adresów email ani numerów telefonów.
+The catalog contains only anonymized facts needed to compare offers. It contains no names, email addresses, or phone numbers.
 
-Katalog nie zawiera identyfikatorów Gmail, nazw prywatnych załączników, surowych PDF-ów ani danych konkretnego sprzedawcy.
+The catalog contains no Gmail identifiers, private attachment names, raw PDFs, or data identifying a specific dealer.
 
-Przed publicznym push trzeba potwierdzić zakres publikacji dokładnych warunków finansowania.
+Confirm the publication scope for exact financing terms before a public push.
 
-## Stany ofert
+## Offer states
 
-- `missing` oznacza „Brak oferty”. Ten stan jest jawny dla Dacia, Renault i Citroën.
-- `pending` oznacza zapowiedzianą ofertę, której jeszcze nie otrzymano.
-- `available` oznacza otrzymaną ofertę lub dokument.
+- A `missing` state means `Brak oferty`. This state is explicit for Dacia, Renault, and Citroën.
+- A `pending` state means that an announced offer has not arrived.
+- An `available` state means that an offer or document has been received.
 
-Brak ceny nie ukrywa oferty. Cena pozostaje `null`, jeśli dokument nie potwierdza kwoty.
+A missing price does not hide an offer. The price remains `null` when the document does not confirm an amount.
 
-## Finansowanie
+## Financing
 
-`nominalInterestRate` przechowuje oprocentowanie nominalne. `annualPercentageRate` przechowuje RRSO.
+The `nominalInterestRate` field stores the nominal interest rate. The `annualPercentageRate` field stores RRSO.
 
-RRSO obejmuje roczny całkowity koszt kredytu według zasad ustawowych. Nie jest tym samym co oprocentowanie nominalne.
+RRSO represents the annual total credit cost under statutory rules. It is not the nominal interest rate.
 
-W kalkulacjach Hyundai zapisano 7,79% jako oprocentowanie nominalne i 11,06% jako RRSO. Cena bazowa kalkulacji pozostaje oddzielna od ceny konfiguracji.
+The Hyundai calculations record 7.79% as the nominal interest rate and 11.06% as RRSO. The calculation base price remains separate from the configuration price.
 
-## Znane braki
+## Known gaps
 
-- Automat Renault Eco-G 120 pozostaje `unknown`.
-- Citroën Plus i Max pozostają w wymaganym zakresie. Oficjalna strona nie potwierdza obecnej wersji Max.
-- Nie potwierdzono zasięgu elektrycznego Hyundai Inster.
-- Nie znaleziono wiarygodnych pomiarów hałasu kabiny ani prędkości pomiaru.
-- Nie potwierdzono rozrządów ani typów sprzęgieł wskazanych wersji.
-- Nie zebrano pełnych wymiarów, mas, spalań i zasięgów.
-- Nie potwierdzono dokładnej gwarancji Volkswagen ani oficjalnych warunków gwarancji Fiat.
-- Cena Toyota Yaris oraz część warunków finansowania pozostają niepotwierdzone.
+- The Renault Eco-G 120 automatic gearbox remains `unknown`.
+- The Citroën Plus and Max versions remain in scope. The official page does not confirm a current Max version.
+- The electric range of the Hyundai Inster remains unconfirmed.
+- No reliable cabin-noise measurements or measurement speeds were found.
+- The timing drives and clutch types remain unconfirmed for the specified versions.
+- Complete dimensions, weights, fuel-consumption figures, and ranges have not been collected.
+- The exact Volkswagen warranty and the official Fiat warranty terms remain unconfirmed.
+- The Toyota Yaris price and some financing terms remain unconfirmed.
 
 ## Test
 
-Uruchom parser i testy kontraktu:
+Run the parser and contract tests:
 
 ```sh
 bun test
