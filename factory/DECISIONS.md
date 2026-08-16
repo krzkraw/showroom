@@ -26,7 +26,7 @@ The user settled the decisions in `Confirmed by the user`. The assistant settled
 - The repository starts private. The repository becomes public during `auta-006`.
 - A reviewer checks the catalog, the parser, and personal data before `auta-001` moves to archive.
 - The application uses self-hosted Inter, a light theme, and no dark mode.
-- `bin/loop-factory` stages and dispatches each spec. The `review-and-archive` skill closes each spec.
+- Specs move directly among `factory/specs/inbox`, `factory/specs/active`, and `factory/specs/archive`, with frontmatter `status` updates.
 - The `Więcej` destination ships with honest empty states. The catalog receives YouTube materials later.
 
 ## Delegated to the assistant
