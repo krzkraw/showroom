@@ -62,7 +62,9 @@ The Hyundai calculations record 7.79% as the nominal interest rate and 11.06% as
 ## Known gaps
 
 - The Renault Eco-G 120 automatic gearbox remains `unknown`.
-- The Citroën Plus and Max versions remain in scope. The official page does not confirm a current Max version.
+- The Dacia Sandero Stepway Eco-G 120 automatic gearbox remains `unverified`. The official page does not confirm the automatic gearbox with the LPG engine.
+- The Citroën Plus, Max, and Collection versions remain in scope. The official page does not confirm a current Max version.
+- The official Citroën C3 range also lists a YOU version. The user decides during final validation whether YOU belongs in scope.
 - The electric range of the Hyundai Inster remains unconfirmed.
 - No reliable cabin-noise measurements or measurement speeds were found.
 - The timing drives and clutch types remain unconfirmed for the specified versions.

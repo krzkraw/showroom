@@ -144,7 +144,7 @@
           "id": "extreme-eco-g-120",
           "name": { "value": "Extreme Eco-G 120", "status": "unverified", "sourceRef": "project-brief" },
           "modelYear": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
-          "needsConfirmation": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "needsConfirmation": { "value": true, "status": "unverified", "sourceRef": "known-gaps" },
           "powertrain": { "value": "Eco-G 120", "status": "verified", "sourceRef": "official-dacia-model" },
           "fuels": { "value": ["petrol", "lpg"], "status": "verified", "sourceRef": "official-dacia-model" },
           "powerKw": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
@@ -153,7 +153,7 @@
           "electricRangeKmWltp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
           "timingDrive": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
           "gearbox": {
-            "name": { "value": "automat", "status": "verified", "sourceRef": "official-dacia-model" },
+            "name": { "value": "automat", "status": "unverified", "sourceRef": "official-dacia-model" },
             "kind": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
             "forwardGears": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
             "clutchType": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
@@ -347,6 +347,35 @@
           "consumptionLPer100KmWltp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
           "noiseMeasurementDb": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
           "noiseMeasurementSpeedKph": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+        },
+        {
+          "id": "collection",
+          "name": { "value": "Collection", "status": "verified", "sourceRef": "official-citroen-model" },
+          "modelYear": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "needsConfirmation": { "value": true, "status": "unverified", "sourceRef": "known-gaps" },
+          "powertrain": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "fuels": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "powerKw": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "powerHp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "batteryKWh": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "electricRangeKmWltp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "timingDrive": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "gearbox": {
+            "name": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "kind": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "forwardGears": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "clutchType": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+          },
+          "dimensionsMm": {
+            "length": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "width": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "height": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+          },
+          "curbWeightKg": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "grossVehicleWeightKg": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "consumptionLPer100KmWltp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "noiseMeasurementDb": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "noiseMeasurementSpeedKph": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
         }
       ],
       "offers": [
@@ -386,7 +415,7 @@
       ],
       "more": {
         "youtubeReviews": [],
-        "technicalData": [{ "title": "Oficjalna gama C3: YOU, PLUS i COLLECTION; Max niepotwierdzony", "sourceRef": "official-citroen-model" }]
+        "technicalData": [{ "title": "Oficjalna gama C3", "sourceRef": "official-citroen-model" }]
       }
     },
     {

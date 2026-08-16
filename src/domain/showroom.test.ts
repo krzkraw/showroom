@@ -27,7 +27,11 @@ test("parses the showroom catalog", () => {
   ]);
   expect(catalog.models[0].versions[0].fuels.value).toEqual(["petrol", "lpg"]);
   expect(catalog.models[1].versions[0].gearbox.kind).toMatchObject({ value: null, status: "unknown" });
-  expect(catalog.models[2].versions).toHaveLength(2);
+  expect(catalog.models[2].versions.map((version) => version.id)).toEqual([
+    "plus",
+    "max",
+    "collection",
+  ]);
   expect(catalog.models.slice(0, 3).map((model) => model.offers[0].state)).toEqual([
     "missing",
     "missing",
@@ -59,4 +63,27 @@ test("rejects broken catalog contracts", () => {
   expect(() =>
     Catalog.fromJSON(changed((catalog) => (catalog.models[0].versions[0].timingDrive.value = "chain"))),
   ).toThrow("must be null when status is unknown");
+});
+
+test("rejects a key that the contract does not define", () => {
+  expect(() =>
+    Catalog.fromJSON(changed((catalog) => (catalog.models[0].dealerName = "Auto Salon Kowalski"))),
+  ).toThrow('catalog.models[0].dealerName: unknown key "dealerName"');
+  expect(() =>
+    Catalog.fromJSON(
+      changed((catalog) => (catalog.models[0].versions[0].contact = "sales@example.com")),
+    ),
+  ).toThrow('catalog.models[0].versions[0].contact: unknown key "contact"');
+});
+
+test("rejects an offer that points at no version", () => {
+  expect(() =>
+    Catalog.fromJSON(changed((catalog) => (catalog.models[0].offers[0].versionId = "ghost"))),
+  ).toThrow('unknown versionId "ghost"');
+});
+
+test("rejects a duplicate version ID within one model", () => {
+  expect(() =>
+    Catalog.fromJSON(changed((catalog) => (catalog.models[2].versions[1].id = "plus"))),
+  ).toThrow('duplicate ID "plus"');
 });

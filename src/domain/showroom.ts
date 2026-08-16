@@ -102,15 +102,93 @@ const gearboxKinds = [
 const clutchTypes = ["wet", "dry", "none", "unknown"] as const;
 const warrantyKinds = ["base", "extension"] as const;
 
+const catalogKeys = ["schemaVersion", "sources", "models"] as const;
+const sourceKeys = ["kind", "label", "url", "accessedAt"] as const;
+const factKeys = ["value", "status", "sourceRef"] as const;
+const rangeKeys = ["min", "max"] as const;
+const vehicleKeys = [
+  "id",
+  "brand",
+  "model",
+  "versions",
+  "offers",
+  "financing",
+  "warranty",
+  "more",
+] as const;
+const moreKeys = ["youtubeReviews", "technicalData"] as const;
+const moreLinkKeys = ["title", "sourceRef"] as const;
+const versionKeys = [
+  "id",
+  "name",
+  "modelYear",
+  "needsConfirmation",
+  "powertrain",
+  "fuels",
+  "powerKw",
+  "powerHp",
+  "batteryKWh",
+  "electricRangeKmWltp",
+  "timingDrive",
+  "gearbox",
+  "dimensionsMm",
+  "curbWeightKg",
+  "grossVehicleWeightKg",
+  "consumptionLPer100KmWltp",
+  "noiseMeasurementDb",
+  "noiseMeasurementSpeedKph",
+] as const;
+const gearboxKeys = ["name", "kind", "forwardGears", "clutchType"] as const;
+const dimensionsKeys = ["length", "width", "height"] as const;
+const offerKeys = [
+  "id",
+  "versionId",
+  "state",
+  "sourceRef",
+  "pricePln",
+  "specialPricePln",
+  "catalogPricePln",
+  "configurationPricePln",
+  "priceBeforeDiscountPln",
+  "discountPln",
+  "priceAfterDiscountPln",
+  "summary",
+] as const;
+const financingKeys = [
+  "id",
+  "versionId",
+  "state",
+  "sourceRef",
+  "basePricePln",
+  "variants",
+  "summary",
+] as const;
+const financingVariantKeys = [
+  "durationMonths",
+  "initialPaymentPln",
+  "installmentPln",
+  "nominalInterestRate",
+  "annualPercentageRate",
+] as const;
+const warrantyKeys = ["id", "kind", "label", "durationYears", "distanceLimitKm", "terms"] as const;
+
 function fail(path: string, message: string): never {
   throw new TypeError(`${path}: ${message}`);
 }
 
-function object(value: unknown, path: string): JsonObject {
+function dictionary(value: unknown, path: string): JsonObject {
   if (typeof value !== "object" || value === null || Array.isArray(value)) {
     fail(path, "expected an object");
   }
   return value as JsonObject;
+}
+
+function object(value: unknown, path: string, allowed: readonly string[]): JsonObject {
+  const record = dictionary(value, path);
+  for (const key of Object.keys(record)) {
+    if (!allowed.includes(key)) fail(`${path}.${key}`, `unknown key ${JSON.stringify(key)}`);
+  }
+  return record;
 }
 
 function array(value: unknown, path: string): unknown[] {
@@ -168,7 +246,7 @@ function fact<T>(
   path: string,
   parseValue: (value: unknown, path: string) => T,
 ): Fact<T> {
-  const record = object(value, path);
+  const record = object(value, path, factKeys);
   const status = enumeration(record.status, statuses, `${path}.status`);
   const rawValue = record.value;
   if (status === "unknown" && rawValue !== null) fail(`${path}.value`, "must be null when status is unknown");
@@ -180,7 +258,7 @@ function fact<T>(
 }
 
 function range(value: unknown, path: string): NumberRange {
-  const record = object(value, path);
+  const record = object(value, path, rangeKeys);
   const min = number(record.min, `${path}.min`);
   const max = number(record.max, `${path}.max`);
   if (min > max) fail(path, "min must not exceed max");
@@ -196,7 +274,7 @@ function uniqueIds<T extends { readonly id: string }>(values: readonly T[], path
 }
 
 function parseSource(value: unknown, path: string): Source {
-  const record = object(value, path);
+  const record = object(value, path, sourceKeys);
   const kind = enumeration(record.kind, sourceKinds, `${path}.kind`);
   const rawUrl = record.url;
   if (rawUrl !== null && (typeof rawUrl !== "string" || !rawUrl.startsWith("https://"))) {
@@ -214,9 +292,9 @@ function parseSource(value: unknown, path: string): Source {
 }
 
 function parseVersion(value: unknown, sources: Sources, path: string): VehicleVersion {
-  const record = object(value, path);
-  const gearbox = object(record.gearbox, `${path}.gearbox`);
-  const dimensions = object(record.dimensionsMm, `${path}.dimensionsMm`);
+  const record = object(value, path, versionKeys);
+  const gearbox = object(record.gearbox, `${path}.gearbox`, gearboxKeys);
+  const dimensions = object(record.dimensionsMm, `${path}.dimensionsMm`, dimensionsKeys);
   return {
     id: id(record.id, `${path}.id`),
     name: fact(record.name, sources, `${path}.name`, string),
@@ -297,7 +375,7 @@ export class Offer {
   ) {}
 
   static fromJSON(value: unknown, sources: Sources, path = "offer"): Offer {
-    const record = object(value, path);
+    const record = object(value, path, offerKeys);
     return new Offer(
       id(record.id, `${path}.id`),
       id(record.versionId, `${path}.versionId`),
@@ -327,7 +405,7 @@ export class Financing {
   ) {}
 
   static fromJSON(value: unknown, sources: Sources, path = "financing"): Financing {
-    const record = object(value, path);
+    const record = object(value, path, financingKeys);
     const rawVersionId = record.versionId;
     return new Financing(
       id(record.id, `${path}.id`),
@@ -337,7 +415,7 @@ export class Financing {
       fact(record.basePricePln, sources, `${path}.basePricePln`, number),
       array(record.variants, `${path}.variants`).map((item, index) => {
         const variantPath = `${path}.variants[${index}]`;
-        const variant = object(item, variantPath);
+        const variant = object(item, variantPath, financingVariantKeys);
         return {
           durationMonths: fact(variant.durationMonths, sources, `${variantPath}.durationMonths`, positiveInteger),
           initialPaymentPln: fact(variant.initialPaymentPln, sources, `${variantPath}.initialPaymentPln`, number),
@@ -362,7 +440,7 @@ export class Financing {
 }
 
 function parseWarranty(value: unknown, sources: Sources, path: string): Warranty {
-  const record = object(value, path);
+  const record = object(value, path, warrantyKeys);
   return {
     id: id(record.id, `${path}.id`),
     kind: fact(record.kind, sources, `${path}.kind`, (item, itemPath) =>
@@ -378,7 +456,7 @@ function parseWarranty(value: unknown, sources: Sources, path: string): Warranty
 function parseMoreLinks(value: unknown, sources: Sources, path: string): MoreLink[] {
   return array(value, path).map((item, index) => {
     const itemPath = `${path}[${index}]`;
-    const record = object(item, itemPath);
+    const record = object(item, itemPath, moreLinkKeys);
     return {
       title: string(record.title, `${itemPath}.title`),
       sourceRef: sourceRef(record.sourceRef, sources, `${itemPath}.sourceRef`),
@@ -402,7 +480,7 @@ export class Vehicle {
   ) {}
 
   static fromJSON(value: unknown, sources: Sources, path = "vehicle"): Vehicle {
-    const record = object(value, path);
+    const record = object(value, path, vehicleKeys);
     const versions = array(record.versions, `${path}.versions`).map((item, index) =>
       parseVersion(item, sources, `${path}.versions[${index}]`),
     );
@@ -429,7 +507,7 @@ export class Vehicle {
       parseWarranty(item, sources, `${path}.warranty[${index}]`),
     );
     uniqueIds(warranty, `${path}.warranty`);
-    const more = object(record.more, `${path}.more`);
+    const more = object(record.more, `${path}.more`, moreKeys);
     return new Vehicle(
       id(record.id, `${path}.id`),
       fact(record.brand, sources, `${path}.brand`, string),
@@ -454,10 +532,10 @@ export class Catalog {
   ) {}
 
   static fromJSON(value: unknown): Catalog {
-    const record = object(value, "catalog");
+    const record = object(value, "catalog", catalogKeys);
     const schemaVersion = string(record.schemaVersion, "catalog.schemaVersion");
     if (schemaVersion !== "1.0") fail("catalog.schemaVersion", 'expected "1.0"');
-    const sourceRecords = object(record.sources, "catalog.sources");
+    const sourceRecords = dictionary(record.sources, "catalog.sources");
     const sourceEntries = Object.entries(sourceRecords).map(([sourceId, source]) => {
       id(sourceId, `catalog.sources.${sourceId}`);
       return [sourceId, parseSource(source, `catalog.sources.${sourceId}`)] as const;

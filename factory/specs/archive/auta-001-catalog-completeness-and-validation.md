@@ -1,7 +1,7 @@
 ---
 id: auta-001-catalog-completeness-and-validation
 title: Catalog completeness and data validation
-status: inbox
+status: archive
 agent: codex
 verification:
   - python3 -m json.tool src/data/showroom.json >/dev/null
