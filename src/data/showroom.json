@@ -1,0 +1,1103 @@
+{
+  "schemaVersion": "1.0",
+  "sources": {
+    "project-brief": {
+      "kind": "input",
+      "label": "Ustalenia projektu — zakres modeli",
+      "url": null,
+      "accessedAt": "2026-08-16"
+    },
+    "known-gaps": {
+      "kind": "input",
+      "label": "Ustalenia projektu — znane braki danych",
+      "url": null,
+      "accessedAt": "2026-08-16"
+    },
+    "dealer-email-dacia": {
+      "kind": "dealer-email",
+      "label": "Zanonimizowana korespondencja dealerska Dacia",
+      "url": null,
+      "accessedAt": "2026-08-16"
+    },
+    "dealer-email-renault": {
+      "kind": "dealer-email",
+      "label": "Zanonimizowana korespondencja dealerska Renault",
+      "url": null,
+      "accessedAt": "2026-08-16"
+    },
+    "dealer-email-citroen": {
+      "kind": "dealer-email",
+      "label": "Zanonimizowana korespondencja dealerska Citroën",
+      "url": null,
+      "accessedAt": "2026-08-16"
+    },
+    "dealer-email-toyota": {
+      "kind": "dealer-email",
+      "label": "Zanonimizowana korespondencja dealerska Toyota",
+      "url": null,
+      "accessedAt": "2026-08-16"
+    },
+    "dealer-email-volkswagen": {
+      "kind": "dealer-email",
+      "label": "Zanonimizowana korespondencja dealerska Volkswagen",
+      "url": null,
+      "accessedAt": "2026-08-16"
+    },
+    "dealer-email-fiat": {
+      "kind": "dealer-email",
+      "label": "Zanonimizowana korespondencja dealerska Fiat",
+      "url": null,
+      "accessedAt": "2026-08-16"
+    },
+    "dealer-email-hyundai": {
+      "kind": "dealer-email",
+      "label": "Zanonimizowana korespondencja dealerska Hyundai",
+      "url": null,
+      "accessedAt": "2026-08-16"
+    },
+    "dealer-email-peugeot": {
+      "kind": "dealer-email",
+      "label": "Zanonimizowana korespondencja dealerska Peugeot",
+      "url": null,
+      "accessedAt": "2026-08-16"
+    },
+    "official-dacia-model": {
+      "kind": "official",
+      "label": "Dacia Sandero Stepway",
+      "url": "https://www.dacia.pl/samochody/sandero-stepway-crossover.html",
+      "accessedAt": "2026-08-16"
+    },
+    "official-dacia-warranty": {
+      "kind": "official",
+      "label": "Gwarancja Dacia",
+      "url": "https://www.dacia.pl/uslugi-pomocnicze/gwarancja.html",
+      "accessedAt": "2026-08-16"
+    },
+    "official-renault-model": {
+      "kind": "official",
+      "label": "Renault Clio",
+      "url": "https://www.renault.pl/hybrydy/clio.html",
+      "accessedAt": "2026-08-16"
+    },
+    "official-renault-warranty": {
+      "kind": "official",
+      "label": "Gwarancje Renault",
+      "url": "https://www.renault.pl/gwarancje.html",
+      "accessedAt": "2026-08-16"
+    },
+    "official-renault-renewable": {
+      "kind": "official",
+      "label": "Gwarancja Odnawialna Renault",
+      "url": "https://www.renault.pl/serwis/gwarancja-odnawialna.html",
+      "accessedAt": "2026-08-16"
+    },
+    "official-toyota-warranty": {
+      "kind": "official",
+      "label": "Gwarancja Toyota",
+      "url": "https://www.toyota.pl/serwis-i-akcesoria/gwarancja",
+      "accessedAt": "2026-08-16"
+    },
+    "official-hyundai-warranty": {
+      "kind": "official",
+      "label": "Gwarancja Hyundai",
+      "url": "https://www.hyundai.com/pl/pl/serwis/serwis-wsparcie/gwarancja.html",
+      "accessedAt": "2026-08-16"
+    },
+    "official-peugeot-warranty": {
+      "kind": "official",
+      "label": "Gwarancja Peugeot",
+      "url": "https://www.peugeot.pl/serwis-czesci-i-akcesoria/gwarancja-assistance/gwarancje.html",
+      "accessedAt": "2026-08-16"
+    },
+    "official-peugeot-care": {
+      "kind": "official",
+      "label": "Program Peugeot Care",
+      "url": "https://www.peugeot.pl/serwis-czesci-i-akcesoria/program-peugeot-care.html",
+      "accessedAt": "2026-08-16"
+    },
+    "official-citroen-model": {
+      "kind": "official",
+      "label": "Citroën C3",
+      "url": "https://www.citroen.pl/modele/c3.html",
+      "accessedAt": "2026-08-16"
+    },
+    "official-citroen-warranty": {
+      "kind": "official",
+      "label": "Gwarancja Citroën",
+      "url": "https://www.citroen.pl/serwis/gwarancja-citroena.html",
+      "accessedAt": "2026-08-16"
+    },
+    "official-citroen-care": {
+      "kind": "official",
+      "label": "Program Citroën We Care",
+      "url": "https://www.citroen.pl/serwis/citroen-we-care.html",
+      "accessedAt": "2026-08-16"
+    }
+  },
+  "models": [
+    {
+      "id": "dacia-sandero-stepway",
+      "brand": { "value": "Dacia", "status": "verified", "sourceRef": "project-brief" },
+      "model": { "value": "Sandero Stepway", "status": "verified", "sourceRef": "project-brief" },
+      "versions": [
+        {
+          "id": "extreme-eco-g-120",
+          "name": { "value": "Extreme Eco-G 120", "status": "unverified", "sourceRef": "project-brief" },
+          "modelYear": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "needsConfirmation": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "powertrain": { "value": "Eco-G 120", "status": "verified", "sourceRef": "official-dacia-model" },
+          "fuels": { "value": ["petrol", "lpg"], "status": "verified", "sourceRef": "official-dacia-model" },
+          "powerKw": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "powerHp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "batteryKWh": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "electricRangeKmWltp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "timingDrive": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "gearbox": {
+            "name": { "value": "automat", "status": "verified", "sourceRef": "official-dacia-model" },
+            "kind": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "forwardGears": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "clutchType": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+          },
+          "dimensionsMm": {
+            "length": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "width": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "height": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+          },
+          "curbWeightKg": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "grossVehicleWeightKg": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "consumptionLPer100KmWltp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "noiseMeasurementDb": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "noiseMeasurementSpeedKph": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+        }
+      ],
+      "offers": [
+        {
+          "id": "offer-missing",
+          "versionId": "extreme-eco-g-120",
+          "state": "missing",
+          "sourceRef": "dealer-email-dacia",
+          "pricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-dacia" },
+          "specialPricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-dacia" },
+          "catalogPricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-dacia" },
+          "configurationPricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-dacia" },
+          "priceBeforeDiscountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-dacia" },
+          "discountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-dacia" },
+          "priceAfterDiscountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-dacia" },
+          "summary": { "value": "Nie nadesłano oferty.", "status": "unverified", "sourceRef": "dealer-email-dacia" }
+        }
+      ],
+      "financing": [],
+      "warranty": [
+        {
+          "id": "base",
+          "kind": { "value": "base", "status": "verified", "sourceRef": "official-dacia-warranty" },
+          "label": { "value": "Gwarancja producenta", "status": "verified", "sourceRef": "official-dacia-warranty" },
+          "durationYears": { "value": 3, "status": "verified", "sourceRef": "official-dacia-warranty" },
+          "distanceLimitKm": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "terms": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+        },
+        {
+          "id": "non-stop",
+          "kind": { "value": "extension", "status": "verified", "sourceRef": "official-dacia-warranty" },
+          "label": { "value": "Formuła Non Stop", "status": "verified", "sourceRef": "official-dacia-warranty" },
+          "durationYears": { "value": 5, "status": "verified", "sourceRef": "official-dacia-warranty" },
+          "distanceLimitKm": { "value": 200000, "status": "verified", "sourceRef": "official-dacia-warranty" },
+          "terms": { "value": "Ochrona może trwać do 5 lat lub 200 000 km.", "status": "verified", "sourceRef": "official-dacia-warranty" }
+        }
+      ],
+      "more": {
+        "youtubeReviews": [],
+        "technicalData": [{ "title": "Oficjalna strona Dacia Sandero Stepway", "sourceRef": "official-dacia-model" }]
+      }
+    },
+    {
+      "id": "renault-clio",
+      "brand": { "value": "Renault", "status": "verified", "sourceRef": "project-brief" },
+      "model": { "value": "Clio", "status": "verified", "sourceRef": "project-brief" },
+      "versions": [
+        {
+          "id": "eco-g-120",
+          "name": { "value": "Eco-G 120", "status": "verified", "sourceRef": "official-renault-model" },
+          "modelYear": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "needsConfirmation": { "value": true, "status": "unverified", "sourceRef": "known-gaps" },
+          "powertrain": { "value": "Eco-G 120", "status": "verified", "sourceRef": "official-renault-model" },
+          "fuels": { "value": ["petrol", "lpg"], "status": "unverified", "sourceRef": "project-brief" },
+          "powerKw": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "powerHp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "batteryKWh": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "electricRangeKmWltp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "timingDrive": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "gearbox": {
+            "name": { "value": null, "status": "unknown", "sourceRef": "official-renault-model" },
+            "kind": { "value": null, "status": "unknown", "sourceRef": "official-renault-model" },
+            "forwardGears": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "clutchType": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+          },
+          "dimensionsMm": {
+            "length": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "width": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "height": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+          },
+          "curbWeightKg": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "grossVehicleWeightKg": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "consumptionLPer100KmWltp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "noiseMeasurementDb": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "noiseMeasurementSpeedKph": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+        }
+      ],
+      "offers": [
+        {
+          "id": "offer-missing",
+          "versionId": "eco-g-120",
+          "state": "missing",
+          "sourceRef": "dealer-email-renault",
+          "pricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-renault" },
+          "specialPricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-renault" },
+          "catalogPricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-renault" },
+          "configurationPricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-renault" },
+          "priceBeforeDiscountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-renault" },
+          "discountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-renault" },
+          "priceAfterDiscountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-renault" },
+          "summary": { "value": "Nie nadesłano oferty.", "status": "unverified", "sourceRef": "dealer-email-renault" }
+        }
+      ],
+      "financing": [],
+      "warranty": [
+        {
+          "id": "base",
+          "kind": { "value": "base", "status": "verified", "sourceRef": "official-renault-warranty" },
+          "label": { "value": "Gwarancja podstawowa", "status": "verified", "sourceRef": "official-renault-warranty" },
+          "durationYears": { "value": null, "status": "unverified", "sourceRef": "official-renault-warranty" },
+          "distanceLimitKm": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "terms": { "value": "Okres wynosi 2 lub 3 lata, zależnie od modelu.", "status": "verified", "sourceRef": "official-renault-warranty" }
+        },
+        {
+          "id": "renewable",
+          "kind": { "value": "extension", "status": "verified", "sourceRef": "official-renault-renewable" },
+          "label": { "value": "Gwarancja Odnawialna", "status": "verified", "sourceRef": "official-renault-renewable" },
+          "durationYears": { "value": 7, "status": "verified", "sourceRef": "official-renault-renewable" },
+          "distanceLimitKm": { "value": 150000, "status": "verified", "sourceRef": "official-renault-renewable" },
+          "terms": { "value": "Dodatkowy rok następuje po kwalifikującym przeglądzie. Aktywacja następuje zasadniczo przed 6 latami i 120 000 km. Odnowienia mogą trwać do 7 lat lub 150 000 km.", "status": "verified", "sourceRef": "official-renault-renewable" }
+        }
+      ],
+      "more": {
+        "youtubeReviews": [],
+        "technicalData": [{ "title": "Oficjalna strona Renault Clio", "sourceRef": "official-renault-model" }]
+      }
+    },
+    {
+      "id": "citroen-c3",
+      "brand": { "value": "Citroën", "status": "verified", "sourceRef": "project-brief" },
+      "model": { "value": "C3", "status": "verified", "sourceRef": "project-brief" },
+      "versions": [
+        {
+          "id": "plus",
+          "name": { "value": "Plus", "status": "verified", "sourceRef": "official-citroen-model" },
+          "modelYear": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "needsConfirmation": { "value": true, "status": "unverified", "sourceRef": "known-gaps" },
+          "powertrain": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "fuels": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "powerKw": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "powerHp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "batteryKWh": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "electricRangeKmWltp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "timingDrive": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "gearbox": {
+            "name": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "kind": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "forwardGears": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "clutchType": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+          },
+          "dimensionsMm": {
+            "length": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "width": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "height": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+          },
+          "curbWeightKg": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "grossVehicleWeightKg": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "consumptionLPer100KmWltp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "noiseMeasurementDb": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "noiseMeasurementSpeedKph": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+        },
+        {
+          "id": "max",
+          "name": { "value": "Max", "status": "unverified", "sourceRef": "project-brief" },
+          "modelYear": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "needsConfirmation": { "value": true, "status": "unverified", "sourceRef": "known-gaps" },
+          "powertrain": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "fuels": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "powerKw": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "powerHp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "batteryKWh": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "electricRangeKmWltp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "timingDrive": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "gearbox": {
+            "name": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "kind": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "forwardGears": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "clutchType": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+          },
+          "dimensionsMm": {
+            "length": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "width": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "height": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+          },
+          "curbWeightKg": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "grossVehicleWeightKg": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "consumptionLPer100KmWltp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "noiseMeasurementDb": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "noiseMeasurementSpeedKph": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+        }
+      ],
+      "offers": [
+        {
+          "id": "offer-missing",
+          "versionId": "plus",
+          "state": "missing",
+          "sourceRef": "dealer-email-citroen",
+          "pricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-citroen" },
+          "specialPricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-citroen" },
+          "catalogPricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-citroen" },
+          "configurationPricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-citroen" },
+          "priceBeforeDiscountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-citroen" },
+          "discountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-citroen" },
+          "priceAfterDiscountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-citroen" },
+          "summary": { "value": "Nie nadesłano oferty dla C3 Plus ani Max.", "status": "unverified", "sourceRef": "dealer-email-citroen" }
+        }
+      ],
+      "financing": [],
+      "warranty": [
+        {
+          "id": "base",
+          "kind": { "value": "base", "status": "verified", "sourceRef": "official-citroen-warranty" },
+          "label": { "value": "Gwarancja podstawowa", "status": "verified", "sourceRef": "official-citroen-warranty" },
+          "durationYears": { "value": 2, "status": "verified", "sourceRef": "official-citroen-warranty" },
+          "distanceLimitKm": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "terms": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+        },
+        {
+          "id": "we-care",
+          "kind": { "value": "extension", "status": "verified", "sourceRef": "official-citroen-care" },
+          "label": { "value": "Citroën We Care", "status": "verified", "sourceRef": "official-citroen-care" },
+          "durationYears": { "value": 8, "status": "verified", "sourceRef": "official-citroen-care" },
+          "distanceLimitKm": { "value": 160000, "status": "verified", "sourceRef": "official-citroen-care" },
+          "terms": { "value": "Program wymaga terminowego serwisu w ASO i dotyczy kwalifikujących aut zamówionych od 2026-07-01.", "status": "verified", "sourceRef": "official-citroen-care" }
+        }
+      ],
+      "more": {
+        "youtubeReviews": [],
+        "technicalData": [{ "title": "Oficjalna gama C3: YOU, PLUS i COLLECTION; Max niepotwierdzony", "sourceRef": "official-citroen-model" }]
+      }
+    },
+    {
+      "id": "toyota-aygo-x",
+      "brand": { "value": "Toyota", "status": "verified", "sourceRef": "project-brief" },
+      "model": { "value": "Aygo X", "status": "verified", "sourceRef": "project-brief" },
+      "versions": [
+        {
+          "id": "style",
+          "name": { "value": "Style", "status": "unverified", "sourceRef": "dealer-email-toyota" },
+          "modelYear": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "needsConfirmation": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "powertrain": { "value": "1.5 Hybrid", "status": "unverified", "sourceRef": "dealer-email-toyota" },
+          "fuels": { "value": ["hybrid"], "status": "unverified", "sourceRef": "dealer-email-toyota" },
+          "powerKw": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "powerHp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "batteryKWh": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "electricRangeKmWltp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "timingDrive": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "gearbox": {
+            "name": { "value": "bezstopniowa automatyczna", "status": "unverified", "sourceRef": "dealer-email-toyota" },
+            "kind": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "forwardGears": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "clutchType": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+          },
+          "dimensionsMm": {
+            "length": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "width": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "height": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+          },
+          "curbWeightKg": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "grossVehicleWeightKg": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "consumptionLPer100KmWltp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "noiseMeasurementDb": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "noiseMeasurementSpeedKph": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+        }
+      ],
+      "offers": [
+        {
+          "id": "dealer-offer",
+          "versionId": "style",
+          "state": "available",
+          "sourceRef": "dealer-email-toyota",
+          "pricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-toyota" },
+          "specialPricePln": { "value": 96000, "status": "unverified", "sourceRef": "dealer-email-toyota" },
+          "catalogPricePln": { "value": 105390, "status": "unverified", "sourceRef": "dealer-email-toyota" },
+          "configurationPricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-toyota" },
+          "priceBeforeDiscountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-toyota" },
+          "discountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-toyota" },
+          "priceAfterDiscountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-toyota" },
+          "summary": { "value": "Aygo X Style 1.5 Hybrid z bezstopniową skrzynią automatyczną. Cena specjalna 96 000 zł; cena katalogowa 105 390 zł.", "status": "unverified", "sourceRef": "dealer-email-toyota" }
+        }
+      ],
+      "financing": [
+        {
+          "id": "dealer-financing",
+          "versionId": "style",
+          "state": "available",
+          "sourceRef": "dealer-email-toyota",
+          "basePricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-toyota" },
+          "variants": [],
+          "summary": { "value": "Istnieje osobny dokument finansowania; nie odczytano z niego warunków.", "status": "unverified", "sourceRef": "dealer-email-toyota" }
+        }
+      ],
+      "warranty": [
+        {
+          "id": "base",
+          "kind": { "value": "base", "status": "verified", "sourceRef": "official-toyota-warranty" },
+          "label": { "value": "Gwarancja podstawowa", "status": "verified", "sourceRef": "official-toyota-warranty" },
+          "durationYears": { "value": 3, "status": "verified", "sourceRef": "official-toyota-warranty" },
+          "distanceLimitKm": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "terms": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+        },
+        {
+          "id": "relax",
+          "kind": { "value": "extension", "status": "verified", "sourceRef": "official-toyota-warranty" },
+          "label": { "value": "Toyota Relax", "status": "verified", "sourceRef": "official-toyota-warranty" },
+          "durationYears": { "value": 10, "status": "verified", "sourceRef": "official-toyota-warranty" },
+          "distanceLimitKm": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "terms": { "value": "Ochrona może zostać przedłużona maksymalnie do 10 lat.", "status": "verified", "sourceRef": "official-toyota-warranty" }
+        }
+      ],
+      "more": { "youtubeReviews": [], "technicalData": [] }
+    },
+    {
+      "id": "toyota-yaris",
+      "brand": { "value": "Toyota", "status": "verified", "sourceRef": "project-brief" },
+      "model": { "value": "Yaris", "status": "verified", "sourceRef": "project-brief" },
+      "versions": [
+        {
+          "id": "style",
+          "name": { "value": "Style", "status": "unverified", "sourceRef": "dealer-email-toyota" },
+          "modelYear": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "needsConfirmation": { "value": true, "status": "unverified", "sourceRef": "known-gaps" },
+          "powertrain": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "fuels": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "powerKw": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "powerHp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "batteryKWh": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "electricRangeKmWltp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "timingDrive": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "gearbox": {
+            "name": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "kind": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "forwardGears": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "clutchType": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+          },
+          "dimensionsMm": {
+            "length": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "width": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "height": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+          },
+          "curbWeightKg": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "grossVehicleWeightKg": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "consumptionLPer100KmWltp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "noiseMeasurementDb": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "noiseMeasurementSpeedKph": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+        }
+      ],
+      "offers": [
+        {
+          "id": "dealer-offer",
+          "versionId": "style",
+          "state": "available",
+          "sourceRef": "dealer-email-toyota",
+          "pricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-toyota" },
+          "specialPricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-toyota" },
+          "catalogPricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-toyota" },
+          "configurationPricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-toyota" },
+          "priceBeforeDiscountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-toyota" },
+          "discountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-toyota" },
+          "priceAfterDiscountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-toyota" },
+          "summary": { "value": "Istnieje dokument oferty; dokładna cena nie została potwierdzona.", "status": "unverified", "sourceRef": "dealer-email-toyota" }
+        }
+      ],
+      "financing": [
+        {
+          "id": "dealer-financing",
+          "versionId": "style",
+          "state": "available",
+          "sourceRef": "dealer-email-toyota",
+          "basePricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-toyota" },
+          "variants": [],
+          "summary": { "value": "Istnieje dokument finansowania; nie odczytano z niego warunków.", "status": "unverified", "sourceRef": "dealer-email-toyota" }
+        }
+      ],
+      "warranty": [
+        {
+          "id": "base",
+          "kind": { "value": "base", "status": "verified", "sourceRef": "official-toyota-warranty" },
+          "label": { "value": "Gwarancja podstawowa", "status": "verified", "sourceRef": "official-toyota-warranty" },
+          "durationYears": { "value": 3, "status": "verified", "sourceRef": "official-toyota-warranty" },
+          "distanceLimitKm": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "terms": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+        },
+        {
+          "id": "relax",
+          "kind": { "value": "extension", "status": "verified", "sourceRef": "official-toyota-warranty" },
+          "label": { "value": "Toyota Relax", "status": "verified", "sourceRef": "official-toyota-warranty" },
+          "durationYears": { "value": 10, "status": "verified", "sourceRef": "official-toyota-warranty" },
+          "distanceLimitKm": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "terms": { "value": "Ochrona może zostać przedłużona maksymalnie do 10 lat.", "status": "verified", "sourceRef": "official-toyota-warranty" }
+        }
+      ],
+      "more": { "youtubeReviews": [], "technicalData": [] }
+    },
+    {
+      "id": "volkswagen-t-cross",
+      "brand": { "value": "Volkswagen", "status": "verified", "sourceRef": "project-brief" },
+      "model": { "value": "T-Cross", "status": "verified", "sourceRef": "project-brief" },
+      "versions": [
+        {
+          "id": "life-plus",
+          "name": { "value": "Life Plus", "status": "unverified", "sourceRef": "dealer-email-volkswagen" },
+          "modelYear": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "needsConfirmation": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "powertrain": { "value": "1.0 TSI", "status": "unverified", "sourceRef": "dealer-email-volkswagen" },
+          "fuels": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "powerKw": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "powerHp": { "value": 116, "status": "unverified", "sourceRef": "dealer-email-volkswagen" },
+          "batteryKWh": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "electricRangeKmWltp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "timingDrive": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "gearbox": {
+            "name": { "value": "DSG", "status": "unverified", "sourceRef": "dealer-email-volkswagen" },
+            "kind": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "forwardGears": { "value": 7, "status": "unverified", "sourceRef": "dealer-email-volkswagen" },
+            "clutchType": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+          },
+          "dimensionsMm": {
+            "length": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "width": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "height": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+          },
+          "curbWeightKg": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "grossVehicleWeightKg": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "consumptionLPer100KmWltp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "noiseMeasurementDb": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "noiseMeasurementSpeedKph": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+        }
+      ],
+      "offers": [
+        {
+          "id": "dealer-offer",
+          "versionId": "life-plus",
+          "state": "available",
+          "sourceRef": "dealer-email-volkswagen",
+          "pricePln": { "value": 106000, "status": "unverified", "sourceRef": "dealer-email-volkswagen" },
+          "specialPricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-volkswagen" },
+          "catalogPricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-volkswagen" },
+          "configurationPricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-volkswagen" },
+          "priceBeforeDiscountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-volkswagen" },
+          "discountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-volkswagen" },
+          "priceAfterDiscountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-volkswagen" },
+          "summary": { "value": "T-Cross Life Plus 1.0 TSI 116 KM, DSG 7-biegowe. Cena 106 000 zł.", "status": "unverified", "sourceRef": "dealer-email-volkswagen" }
+        }
+      ],
+      "financing": [
+        {
+          "id": "dealer-financing",
+          "versionId": "life-plus",
+          "state": "available",
+          "sourceRef": "dealer-email-volkswagen",
+          "basePricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-volkswagen" },
+          "variants": [],
+          "summary": { "value": "Istnieje osobny dokument finansowania; nie odczytano z niego warunków.", "status": "unverified", "sourceRef": "dealer-email-volkswagen" }
+        }
+      ],
+      "warranty": [
+        {
+          "id": "base",
+          "kind": { "value": "base", "status": "unverified", "sourceRef": "known-gaps" },
+          "label": { "value": "Gwarancja podstawowa", "status": "unverified", "sourceRef": "known-gaps" },
+          "durationYears": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "distanceLimitKm": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "terms": { "value": "Nie potwierdzono dokładnych warunków gwarancji Volkswagen.", "status": "verified", "sourceRef": "known-gaps" }
+        }
+      ],
+      "more": { "youtubeReviews": [], "technicalData": [] }
+    },
+    {
+      "id": "fiat-grande-panda",
+      "brand": { "value": "Fiat", "status": "verified", "sourceRef": "project-brief" },
+      "model": { "value": "Grande Panda", "status": "verified", "sourceRef": "project-brief" },
+      "versions": [
+        {
+          "id": "hybrid-la-prima",
+          "name": { "value": "Hybrid La Prima", "status": "unverified", "sourceRef": "dealer-email-fiat" },
+          "modelYear": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "needsConfirmation": { "value": true, "status": "unverified", "sourceRef": "known-gaps" },
+          "powertrain": { "value": "1.2 Hybrid", "status": "unverified", "sourceRef": "dealer-email-fiat" },
+          "fuels": { "value": ["hybrid"], "status": "unverified", "sourceRef": "dealer-email-fiat" },
+          "powerKw": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "powerHp": { "value": 110, "status": "unverified", "sourceRef": "dealer-email-fiat" },
+          "batteryKWh": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "electricRangeKmWltp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "timingDrive": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "gearbox": {
+            "name": { "value": "automat", "status": "unverified", "sourceRef": "project-brief" },
+            "kind": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "forwardGears": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "clutchType": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+          },
+          "dimensionsMm": {
+            "length": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "width": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "height": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+          },
+          "curbWeightKg": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "grossVehicleWeightKg": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "consumptionLPer100KmWltp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "noiseMeasurementDb": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "noiseMeasurementSpeedKph": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+        }
+      ],
+      "offers": [
+        {
+          "id": "dealer-offer",
+          "versionId": "hybrid-la-prima",
+          "state": "available",
+          "sourceRef": "dealer-email-fiat",
+          "pricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-fiat" },
+          "specialPricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-fiat" },
+          "catalogPricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-fiat" },
+          "configurationPricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-fiat" },
+          "priceBeforeDiscountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-fiat" },
+          "discountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-fiat" },
+          "priceAfterDiscountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-fiat" },
+          "summary": { "value": "Grande Panda Hybrid La Prima 1.2 Hybrid 110 KM była dostępna od ręki. Dokładnych kwot nie odczytano z dokumentu.", "status": "unverified", "sourceRef": "dealer-email-fiat" }
+        }
+      ],
+      "financing": [],
+      "warranty": [
+        {
+          "id": "base",
+          "kind": { "value": "base", "status": "unverified", "sourceRef": "known-gaps" },
+          "label": { "value": "Gwarancja podstawowa", "status": "unverified", "sourceRef": "known-gaps" },
+          "durationYears": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "distanceLimitKm": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "terms": { "value": "Nie potwierdzono oficjalnych warunków gwarancji Fiat.", "status": "verified", "sourceRef": "known-gaps" }
+        },
+        {
+          "id": "dealer-protection",
+          "kind": { "value": "extension", "status": "unverified", "sourceRef": "dealer-email-fiat" },
+          "label": { "value": "Ochrona opisana w ofercie", "status": "unverified", "sourceRef": "dealer-email-fiat" },
+          "durationYears": { "value": 8, "status": "unverified", "sourceRef": "dealer-email-fiat" },
+          "distanceLimitKm": { "value": 160000, "status": "unverified", "sourceRef": "dealer-email-fiat" },
+          "terms": { "value": "Email podaje ochronę przez 8 lat lub 160 000 km; dokładne warunki wymagają potwierdzenia.", "status": "unverified", "sourceRef": "dealer-email-fiat" }
+        }
+      ],
+      "more": { "youtubeReviews": [], "technicalData": [] }
+    },
+    {
+      "id": "hyundai-i20",
+      "brand": { "value": "Hyundai", "status": "verified", "sourceRef": "project-brief" },
+      "model": { "value": "i20", "status": "verified", "sourceRef": "project-brief" },
+      "versions": [
+        {
+          "id": "modern",
+          "name": { "value": "Modern", "status": "unverified", "sourceRef": "dealer-email-hyundai" },
+          "modelYear": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "needsConfirmation": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "powertrain": { "value": "1.0 T-GDI", "status": "unverified", "sourceRef": "dealer-email-hyundai" },
+          "fuels": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "powerKw": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "powerHp": { "value": 90, "status": "unverified", "sourceRef": "dealer-email-hyundai" },
+          "batteryKWh": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "electricRangeKmWltp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "timingDrive": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "gearbox": {
+            "name": { "value": "7DCT", "status": "unverified", "sourceRef": "dealer-email-hyundai" },
+            "kind": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "forwardGears": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "clutchType": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+          },
+          "dimensionsMm": {
+            "length": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "width": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "height": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+          },
+          "curbWeightKg": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "grossVehicleWeightKg": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "consumptionLPer100KmWltp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "noiseMeasurementDb": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "noiseMeasurementSpeedKph": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+        }
+      ],
+      "offers": [
+        {
+          "id": "dealer-offer",
+          "versionId": "modern",
+          "state": "available",
+          "sourceRef": "dealer-email-hyundai",
+          "pricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-hyundai" },
+          "specialPricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-hyundai" },
+          "catalogPricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-hyundai" },
+          "configurationPricePln": { "value": 99900, "status": "unverified", "sourceRef": "dealer-email-hyundai" },
+          "priceBeforeDiscountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-hyundai" },
+          "discountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-hyundai" },
+          "priceAfterDiscountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-hyundai" },
+          "summary": { "value": "i20 Modern 1.0 T-GDI 90 KM, 7DCT. Cena konfiguracji 99 900 zł.", "status": "unverified", "sourceRef": "dealer-email-hyundai" }
+        }
+      ],
+      "financing": [
+        {
+          "id": "dealer-financing",
+          "versionId": "modern",
+          "state": "available",
+          "sourceRef": "dealer-email-hyundai",
+          "basePricePln": { "value": 82000, "status": "unverified", "sourceRef": "dealer-email-hyundai" },
+          "variants": [
+            {
+              "durationMonths": { "value": null, "status": "unknown", "sourceRef": "dealer-email-hyundai" },
+              "initialPaymentPln": { "value": 40000, "status": "unverified", "sourceRef": "dealer-email-hyundai" },
+              "installmentPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-hyundai" },
+              "nominalInterestRate": { "value": 7.79, "status": "unverified", "sourceRef": "dealer-email-hyundai" },
+              "annualPercentageRate": { "value": 11.06, "status": "unverified", "sourceRef": "dealer-email-hyundai" }
+            }
+          ],
+          "summary": { "value": "Bazowa cena kalkulacji 82 000 zł; wpłata własna 40 000 zł; oprocentowanie nominalne 7,79%; RRSO 11,06%. Dokładna rata niepotwierdzona. Cena bazowa kalkulacji różni się od ceny konfiguracji.", "status": "unverified", "sourceRef": "dealer-email-hyundai" }
+        }
+      ],
+      "warranty": [
+        {
+          "id": "base",
+          "kind": { "value": "base", "status": "verified", "sourceRef": "official-hyundai-warranty" },
+          "label": { "value": "Gwarancja podstawowa", "status": "verified", "sourceRef": "official-hyundai-warranty" },
+          "durationYears": { "value": 5, "status": "verified", "sourceRef": "official-hyundai-warranty" },
+          "distanceLimitKm": { "value": null, "status": "verified", "sourceRef": "official-hyundai-warranty" },
+          "terms": { "value": "Standardowe auta osobowe mają 5 lat gwarancji bez limitu kilometrów.", "status": "verified", "sourceRef": "official-hyundai-warranty" }
+        }
+      ],
+      "more": { "youtubeReviews": [], "technicalData": [] }
+    },
+    {
+      "id": "hyundai-bayon",
+      "brand": { "value": "Hyundai", "status": "verified", "sourceRef": "project-brief" },
+      "model": { "value": "Bayon", "status": "verified", "sourceRef": "project-brief" },
+      "versions": [
+        {
+          "id": "modern",
+          "name": { "value": "Modern", "status": "unverified", "sourceRef": "dealer-email-hyundai" },
+          "modelYear": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "needsConfirmation": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "powertrain": { "value": "1.0 T-GDI", "status": "unverified", "sourceRef": "dealer-email-hyundai" },
+          "fuels": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "powerKw": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "powerHp": { "value": 90, "status": "unverified", "sourceRef": "dealer-email-hyundai" },
+          "batteryKWh": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "electricRangeKmWltp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "timingDrive": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "gearbox": {
+            "name": { "value": "7DCT", "status": "unverified", "sourceRef": "dealer-email-hyundai" },
+            "kind": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "forwardGears": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "clutchType": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+          },
+          "dimensionsMm": {
+            "length": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "width": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "height": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+          },
+          "curbWeightKg": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "grossVehicleWeightKg": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "consumptionLPer100KmWltp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "noiseMeasurementDb": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "noiseMeasurementSpeedKph": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+        }
+      ],
+      "offers": [
+        {
+          "id": "dealer-offer",
+          "versionId": "modern",
+          "state": "available",
+          "sourceRef": "dealer-email-hyundai",
+          "pricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-hyundai" },
+          "specialPricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-hyundai" },
+          "catalogPricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-hyundai" },
+          "configurationPricePln": { "value": 103600, "status": "unverified", "sourceRef": "dealer-email-hyundai" },
+          "priceBeforeDiscountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-hyundai" },
+          "discountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-hyundai" },
+          "priceAfterDiscountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-hyundai" },
+          "summary": { "value": "Bayon Modern 1.0 T-GDI 90 KM, 7DCT. Cena konfiguracji 103 600 zł.", "status": "unverified", "sourceRef": "dealer-email-hyundai" }
+        }
+      ],
+      "financing": [
+        {
+          "id": "dealer-financing",
+          "versionId": "modern",
+          "state": "available",
+          "sourceRef": "dealer-email-hyundai",
+          "basePricePln": { "value": 90000, "status": "unverified", "sourceRef": "dealer-email-hyundai" },
+          "variants": [
+            {
+              "durationMonths": { "value": null, "status": "unknown", "sourceRef": "dealer-email-hyundai" },
+              "initialPaymentPln": { "value": 40000, "status": "unverified", "sourceRef": "dealer-email-hyundai" },
+              "installmentPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-hyundai" },
+              "nominalInterestRate": { "value": 7.79, "status": "unverified", "sourceRef": "dealer-email-hyundai" },
+              "annualPercentageRate": { "value": 11.06, "status": "unverified", "sourceRef": "dealer-email-hyundai" }
+            }
+          ],
+          "summary": { "value": "Bazowa cena kalkulacji 90 000 zł; wpłata własna 40 000 zł; oprocentowanie nominalne 7,79%; RRSO 11,06%. Dokładna rata niepotwierdzona. Cena bazowa kalkulacji różni się od ceny konfiguracji.", "status": "unverified", "sourceRef": "dealer-email-hyundai" }
+        }
+      ],
+      "warranty": [
+        {
+          "id": "base",
+          "kind": { "value": "base", "status": "verified", "sourceRef": "official-hyundai-warranty" },
+          "label": { "value": "Gwarancja podstawowa", "status": "verified", "sourceRef": "official-hyundai-warranty" },
+          "durationYears": { "value": 5, "status": "verified", "sourceRef": "official-hyundai-warranty" },
+          "distanceLimitKm": { "value": null, "status": "verified", "sourceRef": "official-hyundai-warranty" },
+          "terms": { "value": "Standardowe auta osobowe mają 5 lat gwarancji bez limitu kilometrów.", "status": "verified", "sourceRef": "official-hyundai-warranty" }
+        }
+      ],
+      "more": { "youtubeReviews": [], "technicalData": [] }
+    },
+    {
+      "id": "hyundai-inster",
+      "brand": { "value": "Hyundai", "status": "verified", "sourceRef": "project-brief" },
+      "model": { "value": "Inster", "status": "verified", "sourceRef": "project-brief" },
+      "versions": [
+        {
+          "id": "pure",
+          "name": { "value": "Pure", "status": "unverified", "sourceRef": "dealer-email-hyundai" },
+          "modelYear": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "needsConfirmation": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "powertrain": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "fuels": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "powerKw": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "powerHp": { "value": 115, "status": "unverified", "sourceRef": "dealer-email-hyundai" },
+          "batteryKWh": { "value": 49, "status": "unverified", "sourceRef": "dealer-email-hyundai" },
+          "electricRangeKmWltp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "timingDrive": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "gearbox": {
+            "name": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "kind": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "forwardGears": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "clutchType": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+          },
+          "dimensionsMm": {
+            "length": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "width": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "height": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+          },
+          "curbWeightKg": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "grossVehicleWeightKg": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "consumptionLPer100KmWltp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "noiseMeasurementDb": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "noiseMeasurementSpeedKph": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+        }
+      ],
+      "offers": [
+        {
+          "id": "dealer-offer",
+          "versionId": "pure",
+          "state": "available",
+          "sourceRef": "dealer-email-hyundai",
+          "pricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-hyundai" },
+          "specialPricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-hyundai" },
+          "catalogPricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-hyundai" },
+          "configurationPricePln": { "value": 123300, "status": "unverified", "sourceRef": "dealer-email-hyundai" },
+          "priceBeforeDiscountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-hyundai" },
+          "discountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-hyundai" },
+          "priceAfterDiscountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-hyundai" },
+          "summary": { "value": "Inster Pure, akumulator 49 kWh, moc 115 KM. Cena konfiguracji 123 300 zł.", "status": "unverified", "sourceRef": "dealer-email-hyundai" }
+        }
+      ],
+      "financing": [
+        {
+          "id": "dealer-financing",
+          "versionId": "pure",
+          "state": "available",
+          "sourceRef": "dealer-email-hyundai",
+          "basePricePln": { "value": 89900, "status": "unverified", "sourceRef": "dealer-email-hyundai" },
+          "variants": [
+            {
+              "durationMonths": { "value": null, "status": "unknown", "sourceRef": "dealer-email-hyundai" },
+              "initialPaymentPln": { "value": 40000, "status": "unverified", "sourceRef": "dealer-email-hyundai" },
+              "installmentPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-hyundai" },
+              "nominalInterestRate": { "value": 7.79, "status": "unverified", "sourceRef": "dealer-email-hyundai" },
+              "annualPercentageRate": { "value": 11.06, "status": "unverified", "sourceRef": "dealer-email-hyundai" }
+            }
+          ],
+          "summary": { "value": "Bazowa cena kalkulacji 89 900 zł; wpłata własna 40 000 zł; oprocentowanie nominalne 7,79%; RRSO 11,06%. Dokładna rata niepotwierdzona. Cena bazowa kalkulacji różni się od ceny konfiguracji.", "status": "unverified", "sourceRef": "dealer-email-hyundai" }
+        }
+      ],
+      "warranty": [
+        {
+          "id": "base",
+          "kind": { "value": "base", "status": "verified", "sourceRef": "official-hyundai-warranty" },
+          "label": { "value": "Gwarancja podstawowa", "status": "verified", "sourceRef": "official-hyundai-warranty" },
+          "durationYears": { "value": 5, "status": "verified", "sourceRef": "official-hyundai-warranty" },
+          "distanceLimitKm": { "value": null, "status": "verified", "sourceRef": "official-hyundai-warranty" },
+          "terms": { "value": "Standardowe auta osobowe mają 5 lat gwarancji bez limitu kilometrów.", "status": "verified", "sourceRef": "official-hyundai-warranty" }
+        }
+      ],
+      "more": { "youtubeReviews": [], "technicalData": [] }
+    },
+    {
+      "id": "peugeot-208",
+      "brand": { "value": "Peugeot", "status": "verified", "sourceRef": "project-brief" },
+      "model": { "value": "208", "status": "verified", "sourceRef": "project-brief" },
+      "versions": [
+        {
+          "id": "business-hybrid-110-e-dcs6",
+          "name": { "value": "Business Hybrid 110 e-DCS6", "status": "unverified", "sourceRef": "dealer-email-peugeot" },
+          "modelYear": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "needsConfirmation": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "powertrain": { "value": "Hybrid 110", "status": "unverified", "sourceRef": "dealer-email-peugeot" },
+          "fuels": { "value": ["hybrid"], "status": "unverified", "sourceRef": "dealer-email-peugeot" },
+          "powerKw": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "powerHp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "batteryKWh": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "electricRangeKmWltp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "timingDrive": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "gearbox": {
+            "name": { "value": "e-DCS6", "status": "unverified", "sourceRef": "dealer-email-peugeot" },
+            "kind": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "forwardGears": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "clutchType": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+          },
+          "dimensionsMm": {
+            "length": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "width": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "height": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+          },
+          "curbWeightKg": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "grossVehicleWeightKg": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "consumptionLPer100KmWltp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "noiseMeasurementDb": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "noiseMeasurementSpeedKph": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+        }
+      ],
+      "offers": [
+        {
+          "id": "dealer-offer",
+          "versionId": "business-hybrid-110-e-dcs6",
+          "state": "available",
+          "sourceRef": "dealer-email-peugeot",
+          "pricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-peugeot" },
+          "specialPricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-peugeot" },
+          "catalogPricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-peugeot" },
+          "configurationPricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-peugeot" },
+          "priceBeforeDiscountPln": { "value": 97100, "status": "unverified", "sourceRef": "dealer-email-peugeot" },
+          "discountPln": { "value": 9600, "status": "unverified", "sourceRef": "dealer-email-peugeot" },
+          "priceAfterDiscountPln": { "value": 87500, "status": "unverified", "sourceRef": "dealer-email-peugeot" },
+          "summary": { "value": "208 Business Hybrid 110 e-DCS6. Cena przed rabatem 97 100 zł; rabat 9 600 zł; cena po rabacie 87 500 zł.", "status": "unverified", "sourceRef": "dealer-email-peugeot" }
+        }
+      ],
+      "financing": [],
+      "warranty": [
+        {
+          "id": "base",
+          "kind": { "value": "base", "status": "verified", "sourceRef": "official-peugeot-warranty" },
+          "label": { "value": "Gwarancja podstawowa", "status": "verified", "sourceRef": "official-peugeot-warranty" },
+          "durationYears": { "value": 2, "status": "verified", "sourceRef": "official-peugeot-warranty" },
+          "distanceLimitKm": { "value": null, "status": "verified", "sourceRef": "official-peugeot-warranty" },
+          "terms": { "value": "Gwarancja podstawowa trwa 2 lata bez limitu kilometrów.", "status": "verified", "sourceRef": "official-peugeot-warranty" }
+        },
+        {
+          "id": "care",
+          "kind": { "value": "extension", "status": "verified", "sourceRef": "official-peugeot-care" },
+          "label": { "value": "Peugeot Care", "status": "verified", "sourceRef": "official-peugeot-care" },
+          "durationYears": { "value": 8, "status": "verified", "sourceRef": "official-peugeot-care" },
+          "distanceLimitKm": { "value": 160000, "status": "verified", "sourceRef": "official-peugeot-care" },
+          "terms": { "value": "Ochrona może trwać do 8 lat lub 160 000 km. Program dotyczy kwalifikujących aut zamówionych od 2026-07-01.", "status": "verified", "sourceRef": "official-peugeot-care" }
+        }
+      ],
+      "more": { "youtubeReviews": [], "technicalData": [] }
+    },
+    {
+      "id": "peugeot-2008",
+      "brand": { "value": "Peugeot", "status": "verified", "sourceRef": "project-brief" },
+      "model": { "value": "2008", "status": "verified", "sourceRef": "project-brief" },
+      "versions": [
+        {
+          "id": "hybrid-110-e-dcs6",
+          "name": { "value": "Hybrid 110 e-DCS6", "status": "unverified", "sourceRef": "dealer-email-peugeot" },
+          "modelYear": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "needsConfirmation": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "powertrain": { "value": "Hybrid 110", "status": "unverified", "sourceRef": "dealer-email-peugeot" },
+          "fuels": { "value": ["hybrid"], "status": "unverified", "sourceRef": "dealer-email-peugeot" },
+          "powerKw": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "powerHp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "batteryKWh": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "electricRangeKmWltp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "timingDrive": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "gearbox": {
+            "name": { "value": "e-DCS6", "status": "unverified", "sourceRef": "dealer-email-peugeot" },
+            "kind": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "forwardGears": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "clutchType": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+          },
+          "dimensionsMm": {
+            "length": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "width": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+            "height": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+          },
+          "curbWeightKg": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "grossVehicleWeightKg": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "consumptionLPer100KmWltp": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "noiseMeasurementDb": { "value": null, "status": "unknown", "sourceRef": "known-gaps" },
+          "noiseMeasurementSpeedKph": { "value": null, "status": "unknown", "sourceRef": "known-gaps" }
+        }
+      ],
+      "offers": [
+        {
+          "id": "dealer-offer",
+          "versionId": "hybrid-110-e-dcs6",
+          "state": "available",
+          "sourceRef": "dealer-email-peugeot",
+          "pricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-peugeot" },
+          "specialPricePln": { "value": 108400, "status": "unverified", "sourceRef": "dealer-email-peugeot" },
+          "catalogPricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-peugeot" },
+          "configurationPricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-peugeot" },
+          "priceBeforeDiscountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-peugeot" },
+          "discountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-peugeot" },
+          "priceAfterDiscountPln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-peugeot" },
+          "summary": { "value": "2008 Hybrid 110 e-DCS6. Cena specjalna 108 400 zł.", "status": "unverified", "sourceRef": "dealer-email-peugeot" }
+        }
+      ],
+      "financing": [
+        {
+          "id": "rental-pending",
+          "versionId": "hybrid-110-e-dcs6",
+          "state": "pending",
+          "sourceRef": "dealer-email-peugeot",
+          "basePricePln": { "value": null, "status": "unknown", "sourceRef": "dealer-email-peugeot" },
+          "variants": [],
+          "summary": { "value": "Oferta najmu została zapowiedziana na 2026-08-17.", "status": "unverified", "sourceRef": "dealer-email-peugeot" }
+        }
+      ],
+      "warranty": [
+        {
+          "id": "base",
+          "kind": { "value": "base", "status": "verified", "sourceRef": "official-peugeot-warranty" },
+          "label": { "value": "Gwarancja podstawowa", "status": "verified", "sourceRef": "official-peugeot-warranty" },
+          "durationYears": { "value": 2, "status": "verified", "sourceRef": "official-peugeot-warranty" },
+          "distanceLimitKm": { "value": null, "status": "verified", "sourceRef": "official-peugeot-warranty" },
+          "terms": { "value": "Gwarancja podstawowa trwa 2 lata bez limitu kilometrów.", "status": "verified", "sourceRef": "official-peugeot-warranty" }
+        },
+        {
+          "id": "care",
+          "kind": { "value": "extension", "status": "verified", "sourceRef": "official-peugeot-care" },
+          "label": { "value": "Peugeot Care", "status": "verified", "sourceRef": "official-peugeot-care" },
+          "durationYears": { "value": 8, "status": "verified", "sourceRef": "official-peugeot-care" },
+          "distanceLimitKm": { "value": 160000, "status": "verified", "sourceRef": "official-peugeot-care" },
+          "terms": { "value": "Ochrona może trwać do 8 lat lub 160 000 km. Program dotyczy kwalifikujących aut zamówionych od 2026-07-01.", "status": "verified", "sourceRef": "official-peugeot-care" }
+        }
+      ],
+      "more": { "youtubeReviews": [], "technicalData": [] }
+    }
+  ]
+}
