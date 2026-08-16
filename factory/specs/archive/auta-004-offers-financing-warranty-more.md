@@ -1,7 +1,7 @@
 ---
 id: auta-004-offers-financing-warranty-more
 title: Offers, financing, warranty, and more
-status: inbox
+status: accepted
 agent: codex
 verification:
   - bun test
