@@ -1,7 +1,7 @@
 ---
 id: auta-002-react-showroom-foundation
 title: React showroom foundation
-status: inbox
+status: archive
 agent: codex
 verification:
   - bun test

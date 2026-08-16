@@ -70,3 +70,20 @@ The user settled the decisions in `Confirmed by the user`. The assistant settled
 - Set the Vite `base` option to `/showroom/`.
 - Publish through a GitHub Actions workflow during `auta-006`. The workflow uploads the `dist` output only.
 - Write every commit message in Conventional Commits format. Commit to `main` without a pull request.
+
+## Findings carried to later specs
+
+The `auta-002` review accepted the foundation and raised these items. Each item
+belongs to a later spec.
+
+- `auta-003`: run `shadcn init` and take the `sheet` and `button` components.
+- `auta-003`: install `@vitejs/plugin-react` to restore React Fast Refresh.
+- `auta-003`: set the page title from `src/ui/copy.pl.ts` in `src/main.tsx`.
+- `auta-004`: correct the fact renderer for a confirmed absence. `src/ui/facts.ts`
+  currently returns `Brak potwierdzonych danych` for every `null` value. A fact
+  with `status: "verified"` and `value: null` records a confirmed absence, not
+  missing data. The Hyundai warranty `distanceLimitKm` is the live case: the
+  value is `null` and `verified`, and the sibling `terms` confirms an unlimited
+  mileage warranty. The warranty view SHALL NOT report that fact as missing.
+- `auta-006`: the built bundle contains every financing number. Confirm the
+  public scope before the repository becomes public.
