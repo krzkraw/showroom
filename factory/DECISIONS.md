@@ -68,7 +68,7 @@ The user settled the decisions in `Confirmed by the user`. The assistant settled
 - Keep `test-results/` untracked. Commit the two accepted screenshots to `design/acceptance/`.
 - Ignore `node_modules`, `dist`, `.DS_Store`, `playwright-report`, and `test-results`.
 - Set the Vite `base` option to `/showroom/`.
-- Publish through a GitHub Actions workflow during `auta-006`. The workflow uploads the `dist` output only.
+- Publish the prebuilt `dist` root from an orphan `gh-pages` branch during `auta-006`. Use no GitHub Actions workflow.
 - Write every commit message in Conventional Commits format. Commit to `main` without a pull request.
 
 ## Findings carried to later specs
