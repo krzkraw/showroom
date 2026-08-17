@@ -1,0 +1,2819 @@
+{
+  "research_date": "2026-08-17",
+  "vehicle_model_count": 10,
+  "offer_configuration_count": 11,
+  "vehicles": [
+    {
+      "id": "fiat-grande-panda-hybrid-la-prima",
+      "make": "Fiat",
+      "model": "Grande Panda",
+      "trim": "La Prima",
+      "body_style": "crossover / hatchback",
+      "powertrain": {
+        "fuel": {
+          "value": "benzyna + mild hybrid 48 V",
+          "status": "exact-offer+official-model",
+          "source_ids": [
+            "LOCAL-01",
+            "FIAT_PRESS"
+          ],
+          "note": ""
+        },
+        "type": {
+          "value": "MHEV",
+          "status": "official-model",
+          "source_ids": [
+            "FIAT_PRESS"
+          ],
+          "note": ""
+        },
+        "displacement_cc": {
+          "value": 1199,
+          "status": "model-level",
+          "source_ids": [
+            "FIAT_HYBRID_PRESS"
+          ],
+          "note": ""
+        },
+        "power_hp": {
+          "value": 110,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-01"
+          ],
+          "note": ""
+        },
+        "power_kw": {
+          "value": 81,
+          "status": "derived-from-110-hp",
+          "source_ids": [
+            "LOCAL-01"
+          ],
+          "note": "Zaokrąglenie przeliczenia KM→kW."
+        },
+        "torque_nm": {
+          "value": 205,
+          "status": "model-level-other-market",
+          "source_ids": [
+            "FIAT_HYBRID_PRESS"
+          ],
+          "note": ""
+        },
+        "gearbox": {
+          "value": "6-biegowa eDCT, dwusprzęgłowa",
+          "status": "official-model",
+          "source_ids": [
+            "FIAT_PRESS"
+          ],
+          "note": ""
+        },
+        "drive": {
+          "value": "FWD",
+          "status": "model-level",
+          "source_ids": [
+            "FIAT_HYBRID_PRESS"
+          ],
+          "note": ""
+        }
+      },
+      "performance": {
+        "zero_to_100_s": {
+          "value": 10.0,
+          "status": "model-level-other-market",
+          "source_ids": [
+            "FIAT_HYBRID_PRESS"
+          ],
+          "note": ""
+        },
+        "max_speed_kmh": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": "Brak wiarygodnej wartości w dokumentach i zebranych oficjalnych stronach."
+        }
+      },
+      "efficiency": {
+        "consumption_wltp_l_100km": {
+          "value": 5.1,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-01"
+          ],
+          "note": ""
+        },
+        "co2_wltp_g_km": {
+          "value": 116,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-01"
+          ],
+          "note": ""
+        }
+      },
+      "dimensions": {
+        "length_mm": {
+          "value": 3999,
+          "status": "official-current-model",
+          "source_ids": [
+            "FIAT_TECH"
+          ],
+          "note": ""
+        },
+        "width_mm": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": "Oficjalna strona podaje tylko szerokość z lusterkami."
+        },
+        "width_with_mirrors_mm": {
+          "value": 2017,
+          "status": "official-current-model",
+          "source_ids": [
+            "FIAT_TECH"
+          ],
+          "note": ""
+        },
+        "height_mm": {
+          "value": 1586,
+          "status": "official-current-model",
+          "source_ids": [
+            "FIAT_TECH"
+          ],
+          "note": ""
+        },
+        "wheelbase_mm": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "ground_clearance_mm": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "turning_circle_m": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "boot_l": {
+          "value": 412,
+          "status": "official-current-model",
+          "source_ids": [
+            "FIAT_TECH"
+          ],
+          "note": ""
+        },
+        "boot_max_l": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "tank_l": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "towing_braked_kg": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "towing_unbraked_kg": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "curb_mass_kg": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "gross_mass_kg": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        }
+      },
+      "warranty": [
+        "Gwarancja ogólna: 24 miesiące bez limitu kilometrów — warunki ogólne Fiat.",
+        "Lakier: 24 miesiące; perforacja nadwozia: 8 lat — zweryfikować książkę gwarancyjną konkretnego auta."
+      ],
+      "equipment_highlights": [
+        "felgi 17\"",
+        "automatyczna klimatyzacja",
+        "kamera cofania",
+        "czujniki przód/tył",
+        "elektrycznie składane i podgrzewane lusterka",
+        "ładowarka bezprzewodowa",
+        "Uconnect 10,25\"",
+        "zestaw wskaźników 10\""
+      ],
+      "offer_variants": [
+        {
+          "id": "fiat-152036209",
+          "label": "La Prima — Żółty Limone",
+          "source_file": "01-grande-panda-hybrid-la-prima.md",
+          "price_pln": 90212,
+          "catalog_price_pln": 100800,
+          "exterior": "Żółty Limone metalizowany (507)",
+          "interior": "La Prima materiałowa (192)",
+          "wheels": "aluminiowe 17\"",
+          "production_year": 2026,
+          "model_year": null,
+          "offer_date": "2026-08-14",
+          "vin": null,
+          "configuration_id": "152036209",
+          "notes": ""
+        }
+      ],
+      "conflicts": [],
+      "unknown_fields": [
+        "prędkość maksymalna",
+        "rozstaw osi",
+        "masa",
+        "dopuszczalne masy przyczepy",
+        "pojemność zbiornika"
+      ],
+      "local_source_ids": [
+        "LOCAL-01"
+      ],
+      "web_source_ids": [
+        "FIAT_TECH",
+        "FIAT_PRESS",
+        "FIAT_HYBRID_PRESS",
+        "FIAT_WARRANTY",
+        "FIAT_MEDIA"
+      ],
+      "remote_images": [
+        {
+          "label": "widok zewnętrzny / jazda",
+          "url": "https://stellantis3.dam-broadcast.com/medias/domain12808/media108936/2680846-iqmf7uo58c-whr.jpg",
+          "scope": "official-illustrative"
+        }
+      ],
+      "offline_preview_sources": [
+        "assets/01-grande-panda-hybrid-la-prima/page-001.jpg"
+      ]
+    },
+    {
+      "id": "volkswagen-t-cross-life-plus-116-dsg",
+      "make": "Volkswagen",
+      "model": "T-Cross",
+      "trim": "Life Plus",
+      "body_style": "crossover / SUV",
+      "powertrain": {
+        "fuel": {
+          "value": "benzyna",
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-02"
+          ],
+          "note": ""
+        },
+        "type": {
+          "value": "ICE turbo",
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-02"
+          ],
+          "note": ""
+        },
+        "displacement_cc": {
+          "value": 999,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-02"
+          ],
+          "note": ""
+        },
+        "power_hp": {
+          "value": 116,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-02"
+          ],
+          "note": ""
+        },
+        "power_kw": {
+          "value": 85,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-02"
+          ],
+          "note": ""
+        },
+        "torque_nm": {
+          "value": 200,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-02"
+          ],
+          "note": ""
+        },
+        "gearbox": {
+          "value": "7-biegowa DSG",
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-02"
+          ],
+          "note": ""
+        },
+        "drive": {
+          "value": "FWD",
+          "status": "model-level",
+          "source_ids": [
+            "VW_TCROSS_PRICE"
+          ],
+          "note": ""
+        }
+      },
+      "performance": {
+        "zero_to_100_s": {
+          "value": 10.3,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-02"
+          ],
+          "note": ""
+        },
+        "max_speed_kmh": {
+          "value": 192,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-02"
+          ],
+          "note": ""
+        }
+      },
+      "efficiency": {
+        "consumption_wltp_l_100km": {
+          "value": 5.8,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-02"
+          ],
+          "note": ""
+        },
+        "co2_wltp_g_km": {
+          "value": 132,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-02"
+          ],
+          "note": ""
+        }
+      },
+      "dimensions": {
+        "length_mm": {
+          "value": "4127–4135",
+          "status": "exact-offer-range",
+          "source_ids": [
+            "LOCAL-02"
+          ],
+          "note": ""
+        },
+        "width_mm": {
+          "value": "1760–1784",
+          "status": "exact-offer-range",
+          "source_ids": [
+            "LOCAL-02"
+          ],
+          "note": ""
+        },
+        "width_with_mirrors_mm": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "height_mm": {
+          "value": 1573,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-02"
+          ],
+          "note": ""
+        },
+        "wheelbase_mm": {
+          "value": 2551,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-02"
+          ],
+          "note": ""
+        },
+        "ground_clearance_mm": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "turning_circle_m": {
+          "value": 10.7,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-02"
+          ],
+          "note": ""
+        },
+        "boot_l": {
+          "value": 455,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-02"
+          ],
+          "note": ""
+        },
+        "boot_max_l": {
+          "value": 1281,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-02"
+          ],
+          "note": ""
+        },
+        "tank_l": {
+          "value": 40,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-02"
+          ],
+          "note": ""
+        },
+        "towing_braked_kg": {
+          "value": 1100,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-02"
+          ],
+          "note": ""
+        },
+        "towing_unbraked_kg": {
+          "value": 640,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-02"
+          ],
+          "note": ""
+        },
+        "curb_mass_kg": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "gross_mass_kg": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        }
+      },
+      "warranty": [
+        "Warunki gwarancji nie zostały dołączone do oferty; przed zakupem należy pobrać aktualną książkę gwarancyjną VW dla rynku polskiego."
+      ],
+      "equipment_highlights": [
+        "Reflex Silver metalik",
+        "Bangalore 17\"",
+        "pakiet Style",
+        "pakiet Comfort",
+        "podgrzewane fotele",
+        "bezprzewodowy App-Connect",
+        "LED",
+        "przesuwna tylna kanapa"
+      ],
+      "offer_variants": [
+        {
+          "id": "vw-gov-26-286981",
+          "label": "Life Plus — Srebrny Reflex",
+          "source_file": "02-gov-26-286981.md",
+          "price_pln": 129290,
+          "catalog_price_pln": null,
+          "exterior": "Srebrny Reflex metalizowany",
+          "interior": "szary melanż / czarny",
+          "wheels": "Bangalore 17\"",
+          "production_year": 2026,
+          "model_year": 2027,
+          "offer_date": "2026-08-14",
+          "vin": null,
+          "configuration_id": "GOV-26-286981",
+          "notes": ""
+        }
+      ],
+      "conflicts": [
+        "Symulacja 6177859 dotyczy T-Cross Life za 106 000 zł, a nie dokładnie Life Plus z informacji handlowej za 129 290 zł. Nie wolno automatycznie łączyć tych dokumentów jako jednej konfiguracji."
+      ],
+      "unknown_fields": [
+        "masa własna/DMC",
+        "szerokość z lusterkami",
+        "warunki gwarancji konkretnej oferty"
+      ],
+      "local_source_ids": [
+        "LOCAL-02",
+        "LOCAL-03"
+      ],
+      "web_source_ids": [
+        "VW_TCROSS_PRICE",
+        "VW_TCROSS_MEDIA"
+      ],
+      "remote_images": [
+        {
+          "label": "przód / jazda",
+          "url": "https://uploads.vw-mms.de/system/production/images/vwn/079/456/images/2db0787da05557834c3fb08af01d4b22d5562d11/DB2023AU00622_web_1600.jpg?1717575978=",
+          "scope": "official-illustrative"
+        },
+        {
+          "label": "widok zewnętrzny",
+          "url": "https://uploads.vw-mms.de/system/production/images/vwn/079/465/images/d93e4e7d7fa9166d4613d4128f4b04352cee6704/DB2023AU00631_web_1600.jpg?1717576001=",
+          "scope": "official-illustrative"
+        },
+        {
+          "label": "wnętrze",
+          "url": "https://uploads.vw-mms.de/system/production/images/vwn/079/471/images/cde6bcdd87abc28ee5dd9074e68351c4a7d48c5f/DB2023AU00637_web_1600.jpg?1717576202=",
+          "scope": "official-illustrative"
+        }
+      ],
+      "offline_preview_sources": [
+        "assets/02-gov-26-286981/page-001.jpg",
+        "assets/02-gov-26-286981/page-002.jpg"
+      ]
+    },
+    {
+      "id": "peugeot-2008-edition-hybrid-110",
+      "make": "Peugeot",
+      "model": "2008",
+      "trim": "Edition",
+      "body_style": "SUV / crossover",
+      "powertrain": {
+        "fuel": {
+          "value": "benzyna + hybryda 48 V",
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-04"
+          ],
+          "note": ""
+        },
+        "type": {
+          "value": "mild/full hybrid 48 V wg nazewnictwa Peugeot",
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-04"
+          ],
+          "note": ""
+        },
+        "displacement_cc": {
+          "value": 1199,
+          "status": "model-level-comparable",
+          "source_ids": [
+            "PEUGEOT_PRICES"
+          ],
+          "note": ""
+        },
+        "power_hp": {
+          "value": 110,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-04"
+          ],
+          "note": ""
+        },
+        "power_kw": {
+          "value": 81,
+          "status": "derived-from-110-hp",
+          "source_ids": [
+            "LOCAL-04"
+          ],
+          "note": ""
+        },
+        "torque_nm": {
+          "value": null,
+          "status": "not-found-exact",
+          "source_ids": [],
+          "note": ""
+        },
+        "gearbox": {
+          "value": "6-biegowa e-DCS6",
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-04"
+          ],
+          "note": ""
+        },
+        "drive": {
+          "value": "FWD",
+          "status": "model-level",
+          "source_ids": [
+            "PEUGEOT_2008_MODEL"
+          ],
+          "note": ""
+        }
+      },
+      "performance": {
+        "zero_to_100_s": {
+          "value": null,
+          "status": "not-found-exact",
+          "source_ids": [],
+          "note": ""
+        },
+        "max_speed_kmh": {
+          "value": null,
+          "status": "not-found-exact",
+          "source_ids": [],
+          "note": ""
+        }
+      },
+      "efficiency": {
+        "consumption_wltp_l_100km": {
+          "value": 4.9,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-04"
+          ],
+          "note": ""
+        },
+        "co2_wltp_g_km": {
+          "value": 111,
+          "status": "exact-offer-cover",
+          "source_ids": [
+            "LOCAL-04"
+          ],
+          "note": "Nagłówek oferty podaje 111 g/km; tabela niżej zawiera błędnie 4,9 w polu CO₂."
+        }
+      },
+      "dimensions": {
+        "length_mm": {
+          "value": 4300,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-04"
+          ],
+          "note": ""
+        },
+        "width_mm": {
+          "value": 1770,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-04"
+          ],
+          "note": ""
+        },
+        "width_with_mirrors_mm": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "height_mm": {
+          "value": 1550,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-04"
+          ],
+          "note": ""
+        },
+        "wheelbase_mm": {
+          "value": 2605,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-04"
+          ],
+          "note": ""
+        },
+        "ground_clearance_mm": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "turning_circle_m": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "boot_l": {
+          "value": 434,
+          "status": "official-current-model-generic",
+          "source_ids": [
+            "PEUGEOT_2008_MODEL"
+          ],
+          "note": ""
+        },
+        "boot_max_l": {
+          "value": 1467,
+          "status": "official-current-model-generic",
+          "source_ids": [
+            "PEUGEOT_2008_MODEL"
+          ],
+          "note": ""
+        },
+        "tank_l": {
+          "value": 44,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-04"
+          ],
+          "note": ""
+        },
+        "towing_braked_kg": {
+          "value": null,
+          "status": "not-found-exact",
+          "source_ids": [],
+          "note": ""
+        },
+        "towing_unbraked_kg": {
+          "value": null,
+          "status": "not-found-exact",
+          "source_ids": [],
+          "note": ""
+        },
+        "curb_mass_kg": {
+          "value": null,
+          "status": "not-found-exact",
+          "source_ids": [],
+          "note": ""
+        },
+        "gross_mass_kg": {
+          "value": 1790,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-04"
+          ],
+          "note": ""
+        }
+      },
+      "warranty": [
+        "Oferta opisuje warunkową specjalną ochronę do 8 lat / 160 000 km po wykonywaniu przeglądów w autoryzowanej sieci; zakres i ograniczenia trzeba sprawdzić w OWG Peugeot."
+      ],
+      "equipment_highlights": [
+        "Obsession Blue",
+        "Renzo",
+        "kamera HD 180 Visiopark 1",
+        "Peugeot i-Connect Advanced",
+        "nawigacja 3D",
+        "automatyczna klimatyzacja",
+        "podgrzewane fotele",
+        "elektrycznie składane lusterka"
+      ],
+      "offer_variants": [
+        {
+          "id": "peugeot-189220",
+          "label": "2008 Edition Hybrid 110",
+          "source_file": "04-oferta-2008-pan-krzysztof-krawczynski.md",
+          "price_pln": 108400,
+          "catalog_price_pln": 108400,
+          "exterior": "Niebieski Obsession",
+          "interior": "Tapicerka Renzo",
+          "wheels": "brak precyzyjnego opisu w tekście oferty",
+          "production_year": 2026,
+          "model_year": null,
+          "offer_date": "2026-08-14",
+          "vin": "VR3USHPX6TJ753669",
+          "configuration_id": "189220",
+          "notes": ""
+        }
+      ],
+      "conflicts": [
+        "W tabeli technicznej oferty pole „Emisja CO₂” zawiera 4,9 — to wartość zużycia paliwa, nie g/km. Za właściwą wartość exact przyjęto 111 g/km z nagłówka.",
+        "Aktualna strona modelu podaje około 4304 × 1815 × 1523/1550 mm, podczas gdy konkretna oferta podaje 4300 × 1770 × 1550 mm. W kodzie należy zachować obie wartości z zakresem pochodzenia, nie nadpisywać danych konfiguracji wartością ogólnomodelową."
+      ],
+      "unknown_fields": [
+        "0–100 km/h exact",
+        "prędkość maksymalna exact",
+        "moment obrotowy exact",
+        "masa własna",
+        "uciąg"
+      ],
+      "local_source_ids": [
+        "LOCAL-04"
+      ],
+      "web_source_ids": [
+        "PEUGEOT_2008_MODEL",
+        "PEUGEOT_PRICES",
+        "PEUGEOT_2008_MEDIA"
+      ],
+      "remote_images": [],
+      "offline_preview_sources": [
+        "assets/04-oferta-2008-pan-krzysztof-krawczynski/page-001.jpg",
+        "assets/04-oferta-2008-pan-krzysztof-krawczynski/page-005.jpg"
+      ]
+    },
+    {
+      "id": "peugeot-208-business-hybrid-110",
+      "make": "Peugeot",
+      "model": "208",
+      "trim": "Business",
+      "body_style": "hatchback",
+      "powertrain": {
+        "fuel": {
+          "value": "benzyna + hybryda 48 V",
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-05"
+          ],
+          "note": ""
+        },
+        "type": {
+          "value": "hybrid 48 V",
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-05"
+          ],
+          "note": ""
+        },
+        "displacement_cc": {
+          "value": 1199,
+          "status": "official-comparable-stock",
+          "source_ids": [
+            "PEUGEOT_208_STOCK"
+          ],
+          "note": ""
+        },
+        "power_hp": {
+          "value": 110,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-05"
+          ],
+          "note": ""
+        },
+        "power_kw": {
+          "value": 81,
+          "status": "exact-offer-total/official-comparable",
+          "source_ids": [
+            "LOCAL-05",
+            "PEUGEOT_208_STOCK"
+          ],
+          "note": ""
+        },
+        "torque_nm": {
+          "value": null,
+          "status": "not-found-exact",
+          "source_ids": [],
+          "note": ""
+        },
+        "gearbox": {
+          "value": "6-biegowa e-DCS6",
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-05"
+          ],
+          "note": ""
+        },
+        "drive": {
+          "value": "FWD",
+          "status": "model-level",
+          "source_ids": [
+            "PEUGEOT_208_STOCK"
+          ],
+          "note": ""
+        }
+      },
+      "performance": {
+        "zero_to_100_s": {
+          "value": null,
+          "status": "not-found-exact",
+          "source_ids": [],
+          "note": ""
+        },
+        "max_speed_kmh": {
+          "value": 193,
+          "status": "official-comparable-stock",
+          "source_ids": [
+            "PEUGEOT_208_STOCK"
+          ],
+          "note": "Porównywalny wariant, nie VIN z oferty."
+        }
+      },
+      "efficiency": {
+        "consumption_wltp_l_100km": {
+          "value": 4.5,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-05"
+          ],
+          "note": ""
+        },
+        "co2_wltp_g_km": {
+          "value": 102,
+          "status": "exact-offer-cover",
+          "source_ids": [
+            "LOCAL-05"
+          ],
+          "note": "Nagłówek oferty; tabela niżej błędnie zawiera 4,5 w polu CO₂."
+        }
+      },
+      "dimensions": {
+        "length_mm": {
+          "value": 4055,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-05"
+          ],
+          "note": ""
+        },
+        "width_mm": {
+          "value": 1745,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-05"
+          ],
+          "note": ""
+        },
+        "width_with_mirrors_mm": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "height_mm": {
+          "value": 1465,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-05"
+          ],
+          "note": ""
+        },
+        "wheelbase_mm": {
+          "value": 2540,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-05"
+          ],
+          "note": ""
+        },
+        "ground_clearance_mm": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "turning_circle_m": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "boot_l": {
+          "value": 352,
+          "status": "official-current-model-generic",
+          "source_ids": [
+            "PEUGEOT_208_FAQ"
+          ],
+          "note": ""
+        },
+        "boot_max_l": {
+          "value": 1163,
+          "status": "official-current-model-generic",
+          "source_ids": [
+            "PEUGEOT_208_FAQ"
+          ],
+          "note": ""
+        },
+        "tank_l": {
+          "value": 44,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-05"
+          ],
+          "note": ""
+        },
+        "towing_braked_kg": {
+          "value": 1200,
+          "status": "official-comparable-stock",
+          "source_ids": [
+            "PEUGEOT_208_STOCK"
+          ],
+          "note": ""
+        },
+        "towing_unbraked_kg": {
+          "value": 645,
+          "status": "official-comparable-stock",
+          "source_ids": [
+            "PEUGEOT_208_STOCK"
+          ],
+          "note": ""
+        },
+        "curb_mass_kg": {
+          "value": 1295,
+          "status": "official-comparable-stock",
+          "source_ids": [
+            "PEUGEOT_208_STOCK"
+          ],
+          "note": ""
+        },
+        "gross_mass_kg": {
+          "value": 1690,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-05"
+          ],
+          "note": ""
+        }
+      },
+      "warranty": [
+        "Oferta opisuje warunkową specjalną ochronę do 8 lat / 160 000 km przy wykonywaniu przeglądów w autoryzowanej sieci; zweryfikować OWG i dokładny zakres."
+      ],
+      "equipment_highlights": [
+        "Agueda Yellow",
+        "Renzo",
+        "czujniki przód/tył",
+        "kamera 180°",
+        "akustyczna szyba przednia",
+        "podgrzewane fotele",
+        "nawigacja i-Connect Advanced",
+        "ekran 10\"",
+        "4 USB"
+      ],
+      "offer_variants": [
+        {
+          "id": "peugeot-189219",
+          "label": "208 Business Hybrid 110",
+          "source_file": "05-oferta-208-pan-krzysztof-krawczynski.md",
+          "price_pln": 87500,
+          "catalog_price_pln": 97100,
+          "exterior": "Żółty Agueda",
+          "interior": "Tapicerka Renzo",
+          "wheels": "brak precyzyjnego opisu w tekście oferty",
+          "production_year": 2026,
+          "model_year": null,
+          "offer_date": "2026-08-14",
+          "vin": null,
+          "configuration_id": "189219",
+          "notes": ""
+        }
+      ],
+      "conflicts": [
+        "W tabeli technicznej oferty fazy WLTP mają wartości 0, a pole „Emisja CO₂” ma 4,5. Za exact przyjęto 4,5 l/100 km i 102 g/km z nagłówka, a błędne pola zachowano jako konflikt.",
+        "Parametry masy, prędkości i uciągu pochodzą z porównywalnego egzemplarza w oficjalnym sklepie Peugeot, nie z VIN oferty. Muszą pozostać oznaczone jako comparable-stock."
+      ],
+      "unknown_fields": [
+        "0–100 km/h exact",
+        "moment obrotowy exact",
+        "prześwit",
+        "promień zawracania"
+      ],
+      "local_source_ids": [
+        "LOCAL-05"
+      ],
+      "web_source_ids": [
+        "PEUGEOT_208_FAQ",
+        "PEUGEOT_208_STOCK",
+        "PEUGEOT_PRICES"
+      ],
+      "remote_images": [],
+      "offline_preview_sources": [
+        "assets/05-oferta-208-pan-krzysztof-krawczynski/page-001.jpg",
+        "assets/05-oferta-208-pan-krzysztof-krawczynski/page-005.jpg"
+      ]
+    },
+    {
+      "id": "hyundai-inster-49kwh-pure",
+      "make": "Hyundai",
+      "model": "Inster",
+      "trim": "Pure",
+      "body_style": "miejski crossover EV",
+      "powertrain": {
+        "fuel": {
+          "value": "energia elektryczna",
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-09"
+          ],
+          "note": ""
+        },
+        "type": {
+          "value": "BEV",
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-09"
+          ],
+          "note": ""
+        },
+        "battery_kwh": {
+          "value": 49,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-09"
+          ],
+          "note": ""
+        },
+        "power_hp": {
+          "value": 115,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-09"
+          ],
+          "note": ""
+        },
+        "power_kw": {
+          "value": 84.5,
+          "status": "official-model",
+          "source_ids": [
+            "HYUNDAI_INSTER_PRESS"
+          ],
+          "note": ""
+        },
+        "torque_nm": {
+          "value": null,
+          "status": "not-found-in-collected-sources",
+          "source_ids": [],
+          "note": ""
+        },
+        "gearbox": {
+          "value": "jednobiegowa / automatyczna",
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-09"
+          ],
+          "note": ""
+        },
+        "drive": {
+          "value": "FWD",
+          "status": "model-level",
+          "source_ids": [
+            "HYUNDAI_INSTER_PRESS"
+          ],
+          "note": ""
+        },
+        "onboard_charger_kw": {
+          "value": 11,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-09"
+          ],
+          "note": ""
+        }
+      },
+      "performance": {
+        "zero_to_100_s": {
+          "value": 10.6,
+          "status": "official-model-49kwh",
+          "source_ids": [
+            "HYUNDAI_INSTER_PRESS"
+          ],
+          "note": ""
+        },
+        "max_speed_kmh": {
+          "value": 150,
+          "status": "official-model-49kwh",
+          "source_ids": [
+            "HYUNDAI_INSTER_PRESS"
+          ],
+          "note": ""
+        }
+      },
+      "efficiency": {
+        "electric_consumption_wltp_kwh_100km": {
+          "value": 15.3,
+          "status": "official-model-49kwh",
+          "source_ids": [
+            "HYUNDAI_INSTER_PRESS"
+          ],
+          "note": ""
+        },
+        "range_wltp_km": {
+          "value": 370,
+          "status": "official-current-model-up-to",
+          "source_ids": [
+            "HYUNDAI_INSTER_PRESS"
+          ],
+          "note": ""
+        },
+        "dc_10_80_minutes": {
+          "value": 30,
+          "status": "official-model-conditions-apply",
+          "source_ids": [
+            "HYUNDAI_INSTER_PRESS"
+          ],
+          "note": ""
+        },
+        "ac_11kw_charge_time": {
+          "value": "około 4 h 35 min",
+          "status": "official-model",
+          "source_ids": [
+            "HYUNDAI_INSTER_PRESS"
+          ],
+          "note": ""
+        }
+      },
+      "dimensions": {
+        "length_mm": {
+          "value": 3825,
+          "status": "official-model",
+          "source_ids": [
+            "HYUNDAI_INSTER_PRESS"
+          ],
+          "note": ""
+        },
+        "width_mm": {
+          "value": 1610,
+          "status": "official-model",
+          "source_ids": [
+            "HYUNDAI_INSTER_PRESS"
+          ],
+          "note": ""
+        },
+        "width_with_mirrors_mm": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "height_mm": {
+          "value": 1575,
+          "status": "official-model",
+          "source_ids": [
+            "HYUNDAI_INSTER_PRESS"
+          ],
+          "note": ""
+        },
+        "wheelbase_mm": {
+          "value": 2580,
+          "status": "official-model",
+          "source_ids": [
+            "HYUNDAI_INSTER_PRESS"
+          ],
+          "note": ""
+        },
+        "ground_clearance_mm": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "turning_circle_m": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "boot_l": {
+          "value": "238–351 / 280–351 zależnie od źródła i położenia siedzeń",
+          "status": "official-conflict",
+          "source_ids": [
+            "HYUNDAI_INSTER_DESIGN",
+            "HYUNDAI_INSTER_PRESS"
+          ],
+          "note": ""
+        },
+        "boot_max_l": {
+          "value": 1059,
+          "status": "official-current-model",
+          "source_ids": [
+            "HYUNDAI_INSTER_DESIGN"
+          ],
+          "note": ""
+        },
+        "tank_l": {
+          "value": null,
+          "status": "not-applicable",
+          "source_ids": [],
+          "note": ""
+        },
+        "towing_braked_kg": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "towing_unbraked_kg": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "curb_mass_kg": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "gross_mass_kg": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        }
+      },
+      "warranty": [
+        "5 lat gwarancji bez limitu kilometrów i 5 lat Assistance — zgodnie z ofertą.",
+        "Akumulator wysokonapięciowy: 8 lat / 160 000 km — zgodnie z ofertą; obowiązują wyłączenia książki gwarancyjnej."
+      ],
+      "equipment_highlights": [
+        "pompa ciepła",
+        "podgrzewanie baterii",
+        "ładowarka AC 11 kW",
+        "adaptacyjny tempomat Stop&Go",
+        "HDA",
+        "kamera cofania",
+        "bezkluczykowy dostęp",
+        "10,25\" multimedia i zegary"
+      ],
+      "offer_variants": [
+        {
+          "id": "hyundai-26095544",
+          "label": "Inster 49 kWh Pure",
+          "source_file": "09-ha0520260814121921-00000026095544-1.md",
+          "price_pln": 123300,
+          "catalog_price_pln": 123300,
+          "exterior": "Sienna Orange Metallic",
+          "interior": "tapicerka ciemna",
+          "wheels": "stalowe 15\" z kołpakami",
+          "production_year": 2025,
+          "model_year": null,
+          "offer_date": "2026-08-14",
+          "vin": null,
+          "configuration_id": "26095544",
+          "notes": ""
+        }
+      ],
+      "conflicts": [
+        "Oficjalne materiały podają różne minimalne pojemności bagażnika (238 l lub 280 l), ponieważ zależy ona od metodologii i położenia przesuwanych siedzeń. Wartość 351 l jest podawana przy maksymalnym przesunięciu siedzeń."
+      ],
+      "unknown_fields": [
+        "moment obrotowy",
+        "masa i DMC konkretnej konfiguracji",
+        "prześwit",
+        "uciąg"
+      ],
+      "local_source_ids": [
+        "LOCAL-09"
+      ],
+      "web_source_ids": [
+        "HYUNDAI_INSTER_PRESS",
+        "HYUNDAI_INSTER_DESIGN"
+      ],
+      "remote_images": [
+        {
+          "label": "zewnętrzny 1",
+          "url": "https://dmassets.hyundai.com/is/image/hyundaiautoever/hyundai-inster-premiere-exterior-04-1%3AImage%20Video%20Collection%20Item%20Mobile?hei=441&wid=663",
+          "scope": "official-illustrative"
+        },
+        {
+          "label": "zewnętrzny 2",
+          "url": "https://dmassets.hyundai.com/is/image/hyundaiautoever/hyundai-inster-premiere-exterior-04%3AImage%20Video%20Collection%20Item%20Mobile?hei=441&wid=663",
+          "scope": "official-illustrative"
+        },
+        {
+          "label": "zewnętrzny 3",
+          "url": "https://dmassets.hyundai.com/is/image/hyundaiautoever/hyundai-inster-premiere-exterior-03%3AImage%20Video%20Collection%20Item%20Mobile?hei=441&wid=663",
+          "scope": "official-illustrative"
+        }
+      ],
+      "offline_preview_sources": [
+        "assets/09-ha0520260814121921-00000026095544-1/page-001.jpg"
+      ]
+    },
+    {
+      "id": "hyundai-bayon-modern-90-7dct",
+      "make": "Hyundai",
+      "model": "Bayon",
+      "trim": "Modern + Comfort",
+      "body_style": "crossover / SUV",
+      "powertrain": {
+        "fuel": {
+          "value": "benzyna",
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-10"
+          ],
+          "note": ""
+        },
+        "type": {
+          "value": "ICE turbo",
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-10"
+          ],
+          "note": ""
+        },
+        "displacement_cc": {
+          "value": 998,
+          "status": "official-current-uk-variant",
+          "source_ids": [
+            "HYUNDAI_BAYON_UK_TECH"
+          ],
+          "note": ""
+        },
+        "power_hp": {
+          "value": 90,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-10"
+          ],
+          "note": ""
+        },
+        "power_kw": {
+          "value": 66,
+          "status": "official-current-uk-variant",
+          "source_ids": [
+            "HYUNDAI_BAYON_UK_TECH"
+          ],
+          "note": ""
+        },
+        "torque_nm": {
+          "value": 172,
+          "status": "official-current-uk-variant",
+          "source_ids": [
+            "HYUNDAI_BAYON_UK_TECH"
+          ],
+          "note": ""
+        },
+        "gearbox": {
+          "value": "7DCT",
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-10"
+          ],
+          "note": ""
+        },
+        "drive": {
+          "value": "FWD",
+          "status": "model-level",
+          "source_ids": [
+            "HYUNDAI_BAYON_UK_TECH"
+          ],
+          "note": ""
+        }
+      },
+      "performance": {
+        "zero_to_100_s": {
+          "value": 13.3,
+          "status": "official-current-uk-variant",
+          "source_ids": [
+            "HYUNDAI_BAYON_UK_TECH"
+          ],
+          "note": ""
+        },
+        "max_speed_kmh": {
+          "value": 172,
+          "status": "official-current-uk-variant-converted",
+          "source_ids": [
+            "HYUNDAI_BAYON_UK_TECH"
+          ],
+          "note": "107 mph ≈ 172 km/h."
+        }
+      },
+      "efficiency": {
+        "consumption_wltp_l_100km": {
+          "value": 5.8,
+          "status": "official-current-uk-variant",
+          "source_ids": [
+            "HYUNDAI_BAYON_UK_TECH"
+          ],
+          "note": ""
+        },
+        "co2_wltp_g_km": {
+          "value": "131–132",
+          "status": "official-current-uk-variant-by-wheel-trim",
+          "source_ids": [
+            "HYUNDAI_BAYON_UK_TECH"
+          ],
+          "note": ""
+        }
+      },
+      "dimensions": {
+        "length_mm": {
+          "value": 4180,
+          "status": "official-current-model",
+          "source_ids": [
+            "HYUNDAI_BAYON_DESIGN",
+            "HYUNDAI_BAYON_UK_TECH"
+          ],
+          "note": ""
+        },
+        "width_mm": {
+          "value": 1775,
+          "status": "official-current-model",
+          "source_ids": [
+            "HYUNDAI_BAYON_DESIGN",
+            "HYUNDAI_BAYON_UK_TECH"
+          ],
+          "note": ""
+        },
+        "width_with_mirrors_mm": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "height_mm": {
+          "value": "1490–1500",
+          "status": "official-current-model",
+          "source_ids": [
+            "HYUNDAI_BAYON_DESIGN",
+            "HYUNDAI_BAYON_UK_TECH"
+          ],
+          "note": "Zależnie od relingów/rynku/specyfikacji."
+        },
+        "wheelbase_mm": {
+          "value": 2580,
+          "status": "official-current-model",
+          "source_ids": [
+            "HYUNDAI_BAYON_DESIGN",
+            "HYUNDAI_BAYON_UK_TECH"
+          ],
+          "note": ""
+        },
+        "ground_clearance_mm": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "turning_circle_m": {
+          "value": "10.4–10.6",
+          "status": "official-market-variation",
+          "source_ids": [
+            "HYUNDAI_BAYON_UK_TECH",
+            "HYUNDAI_BAYON_DESIGN"
+          ],
+          "note": ""
+        },
+        "boot_l": {
+          "value": 411,
+          "status": "official-current-model",
+          "source_ids": [
+            "HYUNDAI_BAYON_DESIGN",
+            "HYUNDAI_BAYON_UK_TECH"
+          ],
+          "note": ""
+        },
+        "boot_max_l": {
+          "value": 1205,
+          "status": "official-current-model",
+          "source_ids": [
+            "HYUNDAI_BAYON_DESIGN",
+            "HYUNDAI_BAYON_UK_TECH"
+          ],
+          "note": ""
+        },
+        "tank_l": {
+          "value": 40,
+          "status": "official-current-uk-variant",
+          "source_ids": [
+            "HYUNDAI_BAYON_UK_TECH"
+          ],
+          "note": ""
+        },
+        "towing_braked_kg": {
+          "value": 910,
+          "status": "official-current-uk-variant",
+          "source_ids": [
+            "HYUNDAI_BAYON_UK_TECH"
+          ],
+          "note": ""
+        },
+        "towing_unbraked_kg": {
+          "value": 450,
+          "status": "official-current-uk-variant",
+          "source_ids": [
+            "HYUNDAI_BAYON_UK_TECH"
+          ],
+          "note": ""
+        },
+        "curb_mass_kg": {
+          "value": "1125–1235",
+          "status": "official-current-uk-variant",
+          "source_ids": [
+            "HYUNDAI_BAYON_UK_TECH"
+          ],
+          "note": ""
+        },
+        "gross_mass_kg": {
+          "value": 1650,
+          "status": "official-current-uk-variant",
+          "source_ids": [
+            "HYUNDAI_BAYON_UK_TECH"
+          ],
+          "note": ""
+        }
+      },
+      "warranty": [
+        "5 lat gwarancji bez limitu kilometrów, 5 lat Assistance i 5 lat bezpłatnej kontroli stanu technicznego — zgodnie z ofertą; wyjątki dla niektórych zastosowań komercyjnych."
+      ],
+      "equipment_highlights": [
+        "Lucid Lime",
+        "pakiet Comfort",
+        "podgrzewane fotele i kierownica",
+        "kamera cofania",
+        "10,25\" nawigacja/Bluelink",
+        "felgi 16\"",
+        "relingi",
+        "LFA/LKA/FCA"
+      ],
+      "offer_variants": [
+        {
+          "id": "hyundai-26095581",
+          "label": "Bayon Modern 90 7DCT",
+          "source_file": "10-ha0520260814124843-00000026095581.md",
+          "price_pln": 103600,
+          "catalog_price_pln": 103600,
+          "exterior": "Lucid Lime Metallic",
+          "interior": "Black",
+          "wheels": "aluminiowe 16\"",
+          "production_year": 2026,
+          "model_year": 2026,
+          "offer_date": "2026-08-14",
+          "vin": null,
+          "configuration_id": "26095581",
+          "notes": ""
+        }
+      ],
+      "conflicts": [
+        "Oferta polska nie podaje osiągów ani WLTP. Uzupełnienia techniczne 90 PS 7DCT pochodzą z bieżącej oficjalnej specyfikacji rynku UK i mogą różnić się homologacją, oponami lub wyposażeniem od auta w Polsce."
+      ],
+      "unknown_fields": [
+        "dokładne polskie WLTP/CO₂ konkretnego VIN",
+        "prześwit",
+        "masa konkretnej konfiguracji"
+      ],
+      "local_source_ids": [
+        "LOCAL-10"
+      ],
+      "web_source_ids": [
+        "HYUNDAI_BAYON_MODEL",
+        "HYUNDAI_BAYON_DESIGN",
+        "HYUNDAI_BAYON_FEATURES",
+        "HYUNDAI_BAYON_UK_TECH"
+      ],
+      "remote_images": [
+        {
+          "label": "zewnętrzny 1",
+          "url": "https://dmassets.hyundai.com/is/image/hyundaiautoever/hyundai-new-bayon-0124-01%3AImage%20Video%20Collection%20Item%20Mobile?hei=441&wid=663",
+          "scope": "official-illustrative"
+        },
+        {
+          "label": "zewnętrzny 2",
+          "url": "https://dmassets.hyundai.com/is/image/hyundaiautoever/hyundai-new-bayon-0124-02%3AImage%20Video%20Collection%20Item%20Mobile?hei=441&wid=663",
+          "scope": "official-illustrative"
+        },
+        {
+          "label": "zewnętrzny 3",
+          "url": "https://dmassets.hyundai.com/is/image/hyundaiautoever/hyundai-new-bayon-0124-05%3AImage%20Video%20Collection%20Item%20Mobile?hei=441&wid=663",
+          "scope": "official-illustrative"
+        }
+      ],
+      "offline_preview_sources": [
+        "assets/10-ha0520260814124843-00000026095581/page-001.jpg"
+      ]
+    },
+    {
+      "id": "hyundai-i20-modern-90-7dct",
+      "make": "Hyundai",
+      "model": "i20",
+      "trim": "Modern + Comfort",
+      "body_style": "hatchback",
+      "powertrain": {
+        "fuel": {
+          "value": "benzyna",
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-11"
+          ],
+          "note": ""
+        },
+        "type": {
+          "value": "ICE turbo",
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-11"
+          ],
+          "note": ""
+        },
+        "displacement_cc": {
+          "value": 998,
+          "status": "model-level",
+          "source_ids": [
+            "HYUNDAI_I20_FEATURES"
+          ],
+          "note": ""
+        },
+        "power_hp": {
+          "value": 90,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-11"
+          ],
+          "note": ""
+        },
+        "power_kw": {
+          "value": 66,
+          "status": "derived/official-model",
+          "source_ids": [
+            "LOCAL-11",
+            "HYUNDAI_I20_FEATURES"
+          ],
+          "note": ""
+        },
+        "torque_nm": {
+          "value": 172,
+          "status": "official-current-model-pl",
+          "source_ids": [
+            "HYUNDAI_I20_FEATURES"
+          ],
+          "note": ""
+        },
+        "gearbox": {
+          "value": "7DCT",
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-11"
+          ],
+          "note": ""
+        },
+        "drive": {
+          "value": "FWD",
+          "status": "official-model",
+          "source_ids": [
+            "HYUNDAI_I20_FEATURES"
+          ],
+          "note": ""
+        }
+      },
+      "performance": {
+        "zero_to_100_s": {
+          "value": 12.8,
+          "status": "official-current-model-pl",
+          "source_ids": [
+            "HYUNDAI_I20_FEATURES"
+          ],
+          "note": ""
+        },
+        "max_speed_kmh": {
+          "value": 179,
+          "status": "official-current-model-pl",
+          "source_ids": [
+            "HYUNDAI_I20_FEATURES"
+          ],
+          "note": ""
+        }
+      },
+      "efficiency": {
+        "consumption_wltp_l_100km": {
+          "value": "5.3–5.8",
+          "status": "official-current-model-pl-range",
+          "source_ids": [
+            "HYUNDAI_I20_FEATURES"
+          ],
+          "note": ""
+        },
+        "co2_wltp_g_km": {
+          "value": "126–139",
+          "status": "official-current-model-pl-range",
+          "source_ids": [
+            "HYUNDAI_I20_FEATURES"
+          ],
+          "note": ""
+        }
+      },
+      "dimensions": {
+        "length_mm": {
+          "value": 4065,
+          "status": "official-current-model",
+          "source_ids": [
+            "HYUNDAI_I20_DESIGN"
+          ],
+          "note": ""
+        },
+        "width_mm": {
+          "value": 1775,
+          "status": "official-current-model",
+          "source_ids": [
+            "HYUNDAI_I20_DESIGN"
+          ],
+          "note": ""
+        },
+        "width_with_mirrors_mm": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "height_mm": {
+          "value": 1450,
+          "status": "official-current-model",
+          "source_ids": [
+            "HYUNDAI_I20_DESIGN"
+          ],
+          "note": ""
+        },
+        "wheelbase_mm": {
+          "value": 2570,
+          "status": "official-current-model",
+          "source_ids": [
+            "HYUNDAI_I20_DESIGN"
+          ],
+          "note": ""
+        },
+        "ground_clearance_mm": {
+          "value": 140,
+          "status": "official-current-model",
+          "source_ids": [
+            "HYUNDAI_I20_DESIGN"
+          ],
+          "note": ""
+        },
+        "turning_circle_m": {
+          "value": 10.4,
+          "status": "official-current-model",
+          "source_ids": [
+            "HYUNDAI_I20_DESIGN"
+          ],
+          "note": ""
+        },
+        "boot_l": {
+          "value": 352,
+          "status": "official-current-model",
+          "source_ids": [
+            "HYUNDAI_I20_DESIGN"
+          ],
+          "note": ""
+        },
+        "boot_max_l": {
+          "value": 1165,
+          "status": "official-current-model",
+          "source_ids": [
+            "HYUNDAI_I20_DESIGN"
+          ],
+          "note": ""
+        },
+        "tank_l": {
+          "value": null,
+          "status": "not-found-in-collected-sources",
+          "source_ids": [],
+          "note": ""
+        },
+        "towing_braked_kg": {
+          "value": 1110,
+          "status": "official-model-level",
+          "source_ids": [
+            "HYUNDAI_I20_DESIGN"
+          ],
+          "note": ""
+        },
+        "towing_unbraked_kg": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "curb_mass_kg": {
+          "value": null,
+          "status": "not-found-exact",
+          "source_ids": [],
+          "note": ""
+        },
+        "gross_mass_kg": {
+          "value": null,
+          "status": "not-found-exact",
+          "source_ids": [],
+          "note": ""
+        }
+      },
+      "warranty": [
+        "5 lat gwarancji bez limitu kilometrów, 5 lat Assistance i 5 lat bezpłatnej kontroli stanu technicznego — zgodnie z ofertą; ograniczenia dla określonych zastosowań komercyjnych."
+      ],
+      "equipment_highlights": [
+        "Lucid Lime",
+        "automatyczna klimatyzacja",
+        "podgrzewane fotele i kierownica",
+        "10,25\" nawigacja/Bluelink",
+        "kamera cofania",
+        "felgi 16\"",
+        "Michelin",
+        "LFA/LKA/FCA"
+      ],
+      "offer_variants": [
+        {
+          "id": "hyundai-26095574",
+          "label": "i20 Modern 90 7DCT",
+          "source_file": "11-ha0520260814124132-00000026095574.md",
+          "price_pln": 99900,
+          "catalog_price_pln": 99900,
+          "exterior": "Lucid Lime Metallic",
+          "interior": "Black",
+          "wheels": "aluminiowe 16\"",
+          "production_year": 2026,
+          "model_year": 2026,
+          "offer_date": "2026-08-14",
+          "vin": null,
+          "configuration_id": "26095574",
+          "notes": ""
+        }
+      ],
+      "conflicts": [
+        "Niektóre ogólne podstrony Hyundai nadal zawierają wcześniejsze informacje o mocy 100 KM; dla oferty MY/PY2026 przyjęto tabelę 90 KM 7DCT z aktualnej podstrony wyposażenia oraz exact nazwę z PDF."
+      ],
+      "unknown_fields": [
+        "masa konkretnej konfiguracji",
+        "pojemność zbiornika w zebranych źródłach",
+        "uciąg bez hamulca"
+      ],
+      "local_source_ids": [
+        "LOCAL-11"
+      ],
+      "web_source_ids": [
+        "HYUNDAI_I20_FEATURES",
+        "HYUNDAI_I20_DESIGN",
+        "HYUNDAI_I20_MEDIA"
+      ],
+      "remote_images": [
+        {
+          "label": "zewnętrzny 1",
+          "url": "https://s7g10.scene7.com/is/image/hyundaiautoever/hyundai-all-new-i20-0220-01%3AImage%20Video%20Collection%20Item%20Mobile?hei=441&wid=663",
+          "scope": "official-illustrative-older-media"
+        },
+        {
+          "label": "zewnętrzny 2",
+          "url": "https://s7g10.scene7.com/is/image/hyundaiautoever/hyundai-all-new-i20-0220-02%3AImage%20Video%20Collection%20Item%20Mobile?hei=441&wid=663",
+          "scope": "official-illustrative-older-media"
+        },
+        {
+          "label": "wnętrze / detal",
+          "url": "https://s7g10.scene7.com/is/image/hyundaiautoever/hyundai-all-new-i20-0220-03%3AImage%20Video%20Collection%20Item%20Mobile?hei=441&wid=663",
+          "scope": "official-illustrative-older-media"
+        }
+      ],
+      "offline_preview_sources": [
+        "assets/11-ha0520260814124132-00000026095574/page-001.jpg"
+      ]
+    },
+    {
+      "id": "skoda-fabia-drive-115-dsg",
+      "make": "Škoda",
+      "model": "Fabia",
+      "trim": "Drive",
+      "body_style": "hatchback",
+      "powertrain": {
+        "fuel": {
+          "value": "benzyna",
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-12",
+            "LOCAL-14"
+          ],
+          "note": ""
+        },
+        "type": {
+          "value": "ICE turbo",
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-12",
+            "LOCAL-14"
+          ],
+          "note": ""
+        },
+        "displacement_cc": {
+          "value": 999,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-12",
+            "LOCAL-14"
+          ],
+          "note": ""
+        },
+        "power_hp": {
+          "value": 115,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-12",
+            "LOCAL-14"
+          ],
+          "note": ""
+        },
+        "power_kw": {
+          "value": 85,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-12",
+            "LOCAL-14"
+          ],
+          "note": ""
+        },
+        "torque_nm": {
+          "value": 200,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-12",
+            "LOCAL-14"
+          ],
+          "note": ""
+        },
+        "gearbox": {
+          "value": "7-biegowa DSG",
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-12",
+            "LOCAL-14"
+          ],
+          "note": ""
+        },
+        "drive": {
+          "value": "FWD",
+          "status": "model-level",
+          "source_ids": [
+            "SKODA_FABIA_MODEL"
+          ],
+          "note": ""
+        }
+      },
+      "performance": {
+        "zero_to_100_s": {
+          "value": 9.7,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-12",
+            "LOCAL-14"
+          ],
+          "note": ""
+        },
+        "max_speed_kmh": {
+          "value": 202,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-12",
+            "LOCAL-14"
+          ],
+          "note": ""
+        }
+      },
+      "efficiency": {
+        "consumption_wltp_l_100km": {
+          "value": 5.2,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-12",
+            "LOCAL-14"
+          ],
+          "note": ""
+        },
+        "co2_wltp_g_km": {
+          "value": 119,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-12",
+            "LOCAL-14"
+          ],
+          "note": ""
+        }
+      },
+      "dimensions": {
+        "length_mm": {
+          "value": 4108,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-12",
+            "LOCAL-14"
+          ],
+          "note": ""
+        },
+        "width_mm": {
+          "value": 1780,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-12",
+            "LOCAL-14"
+          ],
+          "note": ""
+        },
+        "width_with_mirrors_mm": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "height_mm": {
+          "value": 1482,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-12",
+            "LOCAL-14"
+          ],
+          "note": ""
+        },
+        "wheelbase_mm": {
+          "value": 2552,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-12",
+            "LOCAL-14"
+          ],
+          "note": ""
+        },
+        "ground_clearance_mm": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "turning_circle_m": {
+          "value": 9.9,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-12",
+            "LOCAL-14"
+          ],
+          "note": ""
+        },
+        "boot_l": {
+          "value": 380,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-12",
+            "LOCAL-14"
+          ],
+          "note": ""
+        },
+        "boot_max_l": {
+          "value": 1190,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-12",
+            "LOCAL-14"
+          ],
+          "note": ""
+        },
+        "tank_l": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "towing_braked_kg": {
+          "value": 1100,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-14"
+          ],
+          "note": ""
+        },
+        "towing_unbraked_kg": {
+          "value": 590,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-14"
+          ],
+          "note": ""
+        },
+        "curb_mass_kg": {
+          "value": 1150,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-14"
+          ],
+          "note": ""
+        },
+        "gross_mass_kg": {
+          "value": 1650,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-14"
+          ],
+          "note": ""
+        }
+      },
+      "warranty": [
+        "Dokumenty nie zawierają pełnych warunków gwarancji; przed decyzją pobrać aktualne warunki Škoda dla konkretnego roku produkcji."
+      ],
+      "equipment_highlights": [
+        "kamera cofania",
+        "czujniki przód/tył",
+        "Kessy Full",
+        "LED Basic",
+        "SmartLink",
+        "Digital Display",
+        "Drive Mode Select"
+      ],
+      "offer_variants": [
+        {
+          "id": "skoda-fabia-green",
+          "label": "Drive — Zieleń Timiano",
+          "source_file": "12-skoda-fabia-poz-3.md",
+          "price_pln": 91350,
+          "catalog_price_pln": 100150,
+          "exterior": "Zieleń Timiano niemetalizowany",
+          "interior": "Loft",
+          "wheels": "Rotare 15\"",
+          "production_year": 2026,
+          "model_year": 2026,
+          "offer_date": "2026-08-13",
+          "vin": null,
+          "configuration_id": "TMBER6PJ5T4088196",
+          "notes": "Dodatki: pełnowymiarowe koło, podgrzewana kierownica, Winter Basic."
+        },
+        {
+          "id": "skoda-fabia-blue",
+          "label": "Drive — Błękit Race",
+          "source_file": "14-skoda-fabia-92-700-poz-2.md",
+          "price_pln": 101550,
+          "catalog_price_pln": 101550,
+          "exterior": "Błękit Race metalizowany",
+          "interior": "Loft",
+          "wheels": "Rotare 15\"",
+          "production_year": 2027,
+          "model_year": 2027,
+          "offer_date": "2026-08-13",
+          "vin": null,
+          "configuration_id": "CKL9JCZW",
+          "notes": "Dodatki: Side Assist i Climatronic."
+        }
+      ],
+      "conflicts": [
+        "Symulacja 6174608 używa ceny 92 700 zł, podczas gdy konfiguracja CKL9JCZW pokazuje 101 550 zł. To może być cena po rabacie, ale dokumenty nie zawierają jednoznacznego identyfikatora łączącego kalkulację z niebieską konfiguracją; relacja ma status likely, nie exact."
+      ],
+      "unknown_fields": [
+        "prześwit",
+        "szerokość z lusterkami",
+        "pojemność zbiornika w zebranych materiałach",
+        "pełne warunki gwarancji"
+      ],
+      "local_source_ids": [
+        "LOCAL-12",
+        "LOCAL-14",
+        "LOCAL-15",
+        "LOCAL-17"
+      ],
+      "web_source_ids": [
+        "SKODA_FABIA_MODEL",
+        "SKODA_FABIA_ENGINE",
+        "SKODA_FABIA_MEDIA"
+      ],
+      "remote_images": [
+        {
+          "label": "zewnętrzny",
+          "url": "https://www.skoda-storyboard.com/direct-download/2024/08/4.-generace-07_SKODA_FABIA_ML_Graphite_Grey_918733f4.jpg",
+          "scope": "official-illustrative"
+        }
+      ],
+      "offline_preview_sources": [
+        "assets/12-skoda-fabia-poz-3/page-001.jpg",
+        "assets/12-skoda-fabia-poz-3/page-002.jpg",
+        "assets/14-skoda-fabia-92-700-poz-2/page-001.jpg",
+        "assets/14-skoda-fabia-92-700-poz-2/page-002.jpg"
+      ]
+    },
+    {
+      "id": "skoda-kamiq-drive-115-dsg",
+      "make": "Škoda",
+      "model": "Kamiq",
+      "trim": "Drive",
+      "body_style": "crossover / SUV",
+      "powertrain": {
+        "fuel": {
+          "value": "benzyna",
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-13"
+          ],
+          "note": ""
+        },
+        "type": {
+          "value": "ICE turbo",
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-13"
+          ],
+          "note": ""
+        },
+        "displacement_cc": {
+          "value": 999,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-13"
+          ],
+          "note": ""
+        },
+        "power_hp": {
+          "value": 115,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-13"
+          ],
+          "note": ""
+        },
+        "power_kw": {
+          "value": 85,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-13"
+          ],
+          "note": ""
+        },
+        "torque_nm": {
+          "value": 200,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-13"
+          ],
+          "note": ""
+        },
+        "gearbox": {
+          "value": "7-biegowa DSG",
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-13"
+          ],
+          "note": ""
+        },
+        "drive": {
+          "value": "FWD",
+          "status": "model-level",
+          "source_ids": [
+            "SKODA_KAMIQ_MODEL"
+          ],
+          "note": ""
+        }
+      },
+      "performance": {
+        "zero_to_100_s": {
+          "value": 10.2,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-13"
+          ],
+          "note": ""
+        },
+        "max_speed_kmh": {
+          "value": 195,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-13"
+          ],
+          "note": ""
+        }
+      },
+      "efficiency": {
+        "consumption_wltp_l_100km": {
+          "value": 5.6,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-13"
+          ],
+          "note": ""
+        },
+        "co2_wltp_g_km": {
+          "value": 126,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-13"
+          ],
+          "note": ""
+        }
+      },
+      "dimensions": {
+        "length_mm": {
+          "value": 4241,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-13"
+          ],
+          "note": ""
+        },
+        "width_mm": {
+          "value": 1793,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-13"
+          ],
+          "note": ""
+        },
+        "width_with_mirrors_mm": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "height_mm": {
+          "value": 1559,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-13"
+          ],
+          "note": ""
+        },
+        "wheelbase_mm": {
+          "value": 2639,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-13"
+          ],
+          "note": ""
+        },
+        "ground_clearance_mm": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "turning_circle_m": {
+          "value": 10.1,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-13"
+          ],
+          "note": ""
+        },
+        "boot_l": {
+          "value": 400,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-13"
+          ],
+          "note": ""
+        },
+        "boot_max_l": {
+          "value": 1395,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-13"
+          ],
+          "note": ""
+        },
+        "tank_l": {
+          "value": 50,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-13"
+          ],
+          "note": ""
+        },
+        "towing_braked_kg": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "towing_unbraked_kg": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "curb_mass_kg": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "gross_mass_kg": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        }
+      },
+      "warranty": [
+        "Dokument nie zawiera pełnych warunków gwarancji; pobrać aktualne warunki Škoda przed podpisaniem umowy."
+      ],
+      "equipment_highlights": [
+        "Smokey Silver",
+        "Sargas Aero 16\"",
+        "Climatronic 2-strefowy",
+        "podgrzewane fotele",
+        "podgrzewana szyba przednia",
+        "Full LED",
+        "kamera cofania",
+        "Kessy",
+        "4× USB-C 45 W"
+      ],
+      "offer_variants": [
+        {
+          "id": "skoda-kamiq-silver",
+          "label": "Drive — Srebrny Smokey",
+          "source_file": "13-skoda-kamiq-poz-3.md",
+          "price_pln": 108800,
+          "catalog_price_pln": 121150,
+          "exterior": "Srebrny Smokey Diamond metalizowany",
+          "interior": "Loft z szarą podsufitką",
+          "wheels": "Sargas Aero 16\"",
+          "production_year": 2026,
+          "model_year": 2027,
+          "offer_date": "2026-08-13",
+          "vin": "TMBGR6NW7V3052025",
+          "configuration_id": "GOC-26-376491",
+          "notes": ""
+        }
+      ],
+      "conflicts": [],
+      "unknown_fields": [
+        "masa/DMC",
+        "uciąg",
+        "prześwit",
+        "pełne warunki gwarancji"
+      ],
+      "local_source_ids": [
+        "LOCAL-13",
+        "LOCAL-16"
+      ],
+      "web_source_ids": [
+        "SKODA_KAMIQ_MODEL",
+        "SKODA_KAMIQ_ENGINE",
+        "SKODA_KAMIQ_MEDIA"
+      ],
+      "remote_images": [
+        {
+          "label": "zewnętrzny",
+          "url": "https://www.skoda-storyboard.com/direct-download/2024/02/29_Skoda_Kamiq_d786b450.jpg",
+          "scope": "official-illustrative"
+        }
+      ],
+      "offline_preview_sources": [
+        "assets/13-skoda-kamiq-poz-3/page-001.jpg",
+        "assets/13-skoda-kamiq-poz-3/page-002.jpg"
+      ]
+    },
+    {
+      "id": "toyota-yaris-style-hybrid-116",
+      "make": "Toyota",
+      "model": "Yaris",
+      "trim": "Style",
+      "body_style": "hatchback",
+      "powertrain": {
+        "fuel": {
+          "value": "benzyna + pełna hybryda",
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-18"
+          ],
+          "note": ""
+        },
+        "type": {
+          "value": "HEV",
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-18"
+          ],
+          "note": ""
+        },
+        "displacement_cc": {
+          "value": 1490,
+          "status": "official-current-configurator",
+          "source_ids": [
+            "TOYOTA_YARIS_CONFIG"
+          ],
+          "note": ""
+        },
+        "power_hp": {
+          "value": 116,
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-18"
+          ],
+          "note": ""
+        },
+        "power_kw": {
+          "value": 85,
+          "status": "official-current-configurator",
+          "source_ids": [
+            "TOYOTA_YARIS_CONFIG"
+          ],
+          "note": ""
+        },
+        "torque_nm": {
+          "value": 120,
+          "status": "official-current-configurator-engine",
+          "source_ids": [
+            "TOYOTA_YARIS_CONFIG"
+          ],
+          "note": "Wartość dla silnika spalinowego; moment systemowy nie jest sumowany liniowo."
+        },
+        "gearbox": {
+          "value": "e-CVT / bezstopniowa automatyczna",
+          "status": "exact-offer",
+          "source_ids": [
+            "LOCAL-18"
+          ],
+          "note": ""
+        },
+        "drive": {
+          "value": "FWD",
+          "status": "model-level",
+          "source_ids": [
+            "TOYOTA_YARIS_CONFIG"
+          ],
+          "note": ""
+        }
+      },
+      "performance": {
+        "zero_to_100_s": {
+          "value": 9.7,
+          "status": "official-current-model-116",
+          "source_ids": [
+            "TOYOTA_YARIS_MODEL"
+          ],
+          "note": ""
+        },
+        "max_speed_kmh": {
+          "value": 175,
+          "status": "official-current-configurator",
+          "source_ids": [
+            "TOYOTA_YARIS_CONFIG"
+          ],
+          "note": ""
+        }
+      },
+      "efficiency": {
+        "consumption_wltp_l_100km": {
+          "value": "3.8–4.4",
+          "status": "official-current-model-range",
+          "source_ids": [
+            "TOYOTA_YARIS_MODEL"
+          ],
+          "note": ""
+        },
+        "co2_wltp_g_km": {
+          "value": "87–99",
+          "status": "official-current-model-range",
+          "source_ids": [
+            "TOYOTA_YARIS_MODEL"
+          ],
+          "note": ""
+        }
+      },
+      "dimensions": {
+        "length_mm": {
+          "value": 3940,
+          "status": "official-current-configurator",
+          "source_ids": [
+            "TOYOTA_YARIS_CONFIG"
+          ],
+          "note": ""
+        },
+        "width_mm": {
+          "value": 1745,
+          "status": "official-current-configurator",
+          "source_ids": [
+            "TOYOTA_YARIS_CONFIG"
+          ],
+          "note": ""
+        },
+        "width_with_mirrors_mm": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "height_mm": {
+          "value": 1500,
+          "status": "official-current-configurator",
+          "source_ids": [
+            "TOYOTA_YARIS_CONFIG"
+          ],
+          "note": ""
+        },
+        "wheelbase_mm": {
+          "value": 2560,
+          "status": "official-current-configurator",
+          "source_ids": [
+            "TOYOTA_YARIS_CONFIG"
+          ],
+          "note": ""
+        },
+        "ground_clearance_mm": {
+          "value": 135,
+          "status": "official-current-configurator",
+          "source_ids": [
+            "TOYOTA_YARIS_CONFIG"
+          ],
+          "note": ""
+        },
+        "turning_circle_m": {
+          "value": 9.8,
+          "status": "derived-diameter-from-radius",
+          "source_ids": [
+            "TOYOTA_YARIS_CONFIG"
+          ],
+          "note": "Konfigurator podaje promień 4,9 m; średnica ≈ 9,8 m."
+        },
+        "boot_l": {
+          "value": "286 lub 296",
+          "status": "official-conflict",
+          "source_ids": [
+            "TOYOTA_YARIS_BOOT_286",
+            "TOYOTA_YARIS_BOOT_296"
+          ],
+          "note": "Dwie oficjalne publikacje Toyoty podają różne wartości."
+        },
+        "boot_max_l": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "tank_l": {
+          "value": 36,
+          "status": "official-current-configurator",
+          "source_ids": [
+            "TOYOTA_YARIS_CONFIG"
+          ],
+          "note": ""
+        },
+        "towing_braked_kg": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "towing_unbraked_kg": {
+          "value": null,
+          "status": "not-found",
+          "source_ids": [],
+          "note": ""
+        },
+        "curb_mass_kg": {
+          "value": null,
+          "status": "not-found-exact",
+          "source_ids": [],
+          "note": ""
+        },
+        "gross_mass_kg": {
+          "value": 1615,
+          "status": "official-current-configurator",
+          "source_ids": [
+            "TOYOTA_YARIS_CONFIG"
+          ],
+          "note": ""
+        }
+      },
+      "warranty": [
+        "Gwarancja podstawowa: 3 lata / 100 000 km — zgodnie z bieżącymi warunkami Toyota.",
+        "Elementy układu hybrydowego: 5 lat / 100 000 km.",
+        "Toyota Relax: możliwa warunkowa ochrona do 10 lat / 185 000 km po spełnieniu warunków programu.",
+        "Battery Care: warunkowo do 10 lat / 1 000 000 km dla akumulatora trakcyjnego po corocznych kontrolach — nie jest to bezwarunkowa gwarancja fabryczna na cały okres."
+      ],
+      "equipment_highlights": [
+        "czujniki parkowania przód/tył",
+        "6 głośników",
+        "cyfrowe zegary 7\"",
+        "przyciemniane tylne szyby",
+        "podgrzewana kierownica i fotele",
+        "oświetlenie ambient LED",
+        "Forest Green 6X7 dostępny w konfiguratorze"
+      ],
+      "offer_variants": [
+        {
+          "id": "toyota-022777",
+          "label": "Yaris Style Hybrid 116 — Forest Green",
+          "source_file": "18-toyota-yaris-forest-green-wersja-style.md",
+          "price_pln": 107920,
+          "catalog_price_pln": 112900,
+          "exterior": "Forest Green (6X7) — nazwa z pliku, dostępność koloru potwierdzona w konfiguratorze",
+          "interior": "Style — brak pełnego kodu tapicerki w ofercie finansowej",
+          "wheels": "brak danych w ofercie finansowej",
+          "production_year": 2026,
+          "model_year": 2026,
+          "offer_date": "2026-08-12",
+          "vin": null,
+          "configuration_id": "022777",
+          "notes": ""
+        }
+      ],
+      "conflicts": [
+        "Dealerowa cena 107 920 zł jest niższa od komunikowanej ceny katalogowej Style od 112 900 zł dla MY2026; exact cena z dokumentu ma pierwszeństwo w analizie konkretnej oferty.",
+        "Dwie oficjalne publikacje Toyota podają bagażnik 286 l i 296 l. Bez świadectwa homologacji konkretnego VIN nie należy arbitralnie usuwać jednej wartości.",
+        "Forest Green wynika z nazwy załączonego pliku, nie z tekstu samej kalkulacji; kolor jest jednak dostępny w aktualnym konfiguratorze."
+      ],
+      "unknown_fields": [
+        "masa własna konkretnej konfiguracji",
+        "uciąg",
+        "dokładna pojemność bagażnika dla konkretnego VIN",
+        "pełny kod tapicerki i kół"
+      ],
+      "local_source_ids": [
+        "LOCAL-18"
+      ],
+      "web_source_ids": [
+        "TOYOTA_YARIS_2026",
+        "TOYOTA_YARIS_CONFIG",
+        "TOYOTA_YARIS_MODEL",
+        "TOYOTA_YARIS_BOOT_286",
+        "TOYOTA_YARIS_BOOT_296",
+        "TOYOTA_WARRANTY",
+        "TOYOTA_RELAX",
+        "TOYOTA_MEDIA"
+      ],
+      "remote_images": [
+        {
+          "label": "Yaris — oficjalne zdjęcie poglądowe",
+          "url": "https://client.presspage.com/download/20032c9c-e184-4a4c-9a43-a234dbd3a4d3/2024-yaris-dpl-ext-combo-high0010.jpg",
+          "scope": "official-illustrative"
+        }
+      ],
+      "offline_preview_sources": [
+        "assets/18-toyota-yaris-forest-green-wersja-style/page-001.jpg"
+      ]
+    }
+  ]
+}

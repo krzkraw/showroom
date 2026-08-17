@@ -1,0 +1,14 @@
+Validation date: 2026-08-17
+Output: oferty_markdown_komplet_uzupelnione_web_2026-08-17.zip
+The ZIP is rebuilt after this report is embedded; exact final byte size and entry count are therefore intentionally omitted here.
+JSON OK: research/data/finance_scenarios.json
+JSON OK: research/data/image_sources.json
+JSON OK: research/data/research_manifest.json
+JSON OK: research/data/sources.json
+JSON OK: research/data/vehicles.json
+JSON OK: research/data/vehicles_redacted.json
+Markdown local links OK: 21 files checked
+SHA256 generated: 223 files
+ZIP test OK: 224 entries
+Final-build rule: checksums are refreshed, the report is embedded, and zipfile.testzip() must pass or the build aborts.
+Result: PASS

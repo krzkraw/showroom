@@ -1,0 +1,414 @@
+{
+  "generated": "2026-08-17",
+  "base_package": "oferty_markdown_komplet.zip",
+  "base_documents": 18,
+  "base_pages": 98,
+  "vehicle_models": 10,
+  "offer_configurations": 11,
+  "web_sources": 35,
+  "remote_image_links": 16,
+  "offline_offer_previews": 17,
+  "finance_scenarios": 18,
+  "files": [
+    {
+      "path": "research/CONFLICTS_AND_ASSUMPTIONS.md",
+      "size_bytes": 3592
+    },
+    {
+      "path": "research/DATA_DICTIONARY.md",
+      "size_bytes": 2175
+    },
+    {
+      "path": "research/FINANCING_OVERVIEW.md",
+      "size_bytes": 4431
+    },
+    {
+      "path": "research/GAP_MATRIX.md",
+      "size_bytes": 1474
+    },
+    {
+      "path": "research/INDEX.md",
+      "size_bytes": 1869
+    },
+    {
+      "path": "research/PRIVACY_AND_REPOSITORY_USE.md",
+      "size_bytes": 1478
+    },
+    {
+      "path": "research/README.md",
+      "size_bytes": 2226
+    },
+    {
+      "path": "research/RESEARCH_CHANGELOG.md",
+      "size_bytes": 535
+    },
+    {
+      "path": "research/data/comparison_matrix.csv",
+      "size_bytes": 4518
+    },
+    {
+      "path": "research/data/comparison_matrix_redacted.csv",
+      "size_bytes": 5462
+    },
+    {
+      "path": "research/data/finance_scenarios.csv",
+      "size_bytes": 3869
+    },
+    {
+      "path": "research/data/finance_scenarios.json",
+      "size_bytes": 10214
+    },
+    {
+      "path": "research/data/image_sources.csv",
+      "size_bytes": 4867
+    },
+    {
+      "path": "research/data/image_sources.json",
+      "size_bytes": 11395
+    },
+    {
+      "path": "research/data/sources.csv",
+      "size_bytes": 8674
+    },
+    {
+      "path": "research/data/sources.json",
+      "size_bytes": 16063
+    },
+    {
+      "path": "research/data/vehicles.csv",
+      "size_bytes": 2240
+    },
+    {
+      "path": "research/data/vehicles.json",
+      "size_bytes": 76593
+    },
+    {
+      "path": "research/data/vehicles_redacted.json",
+      "size_bytes": 76376
+    },
+    {
+      "path": "research/galleries/index.html",
+      "size_bytes": 8237
+    },
+    {
+      "path": "research/galleries/index.md",
+      "size_bytes": 3805
+    },
+    {
+      "path": "research/images/offer_preview_contact_sheet.jpg",
+      "size_bytes": 185045
+    },
+    {
+      "path": "research/images/offer_previews/fiat-grande-panda-hybrid-la-prima-01.jpg",
+      "size_bytes": 155298
+    },
+    {
+      "path": "research/images/offer_previews/hyundai-bayon-modern-90-7dct-01.jpg",
+      "size_bytes": 186261
+    },
+    {
+      "path": "research/images/offer_previews/hyundai-i20-modern-90-7dct-01.jpg",
+      "size_bytes": 185603
+    },
+    {
+      "path": "research/images/offer_previews/hyundai-inster-49kwh-pure-01.jpg",
+      "size_bytes": 183245
+    },
+    {
+      "path": "research/images/offer_previews/peugeot-2008-edition-hybrid-110-01.jpg",
+      "size_bytes": 137737
+    },
+    {
+      "path": "research/images/offer_previews/peugeot-2008-edition-hybrid-110-02.jpg",
+      "size_bytes": 120420
+    },
+    {
+      "path": "research/images/offer_previews/peugeot-208-business-hybrid-110-01.jpg",
+      "size_bytes": 153603
+    },
+    {
+      "path": "research/images/offer_previews/peugeot-208-business-hybrid-110-02.jpg",
+      "size_bytes": 153938
+    },
+    {
+      "path": "research/images/offer_previews/skoda-fabia-drive-115-dsg-01.jpg",
+      "size_bytes": 99104
+    },
+    {
+      "path": "research/images/offer_previews/skoda-fabia-drive-115-dsg-02.jpg",
+      "size_bytes": 128074
+    },
+    {
+      "path": "research/images/offer_previews/skoda-fabia-drive-115-dsg-03.jpg",
+      "size_bytes": 84755
+    },
+    {
+      "path": "research/images/offer_previews/skoda-fabia-drive-115-dsg-04.jpg",
+      "size_bytes": 142445
+    },
+    {
+      "path": "research/images/offer_previews/skoda-kamiq-drive-115-dsg-01.jpg",
+      "size_bytes": 103059
+    },
+    {
+      "path": "research/images/offer_previews/skoda-kamiq-drive-115-dsg-02.jpg",
+      "size_bytes": 127240
+    },
+    {
+      "path": "research/images/offer_previews/toyota-yaris-style-hybrid-116-01.jpg",
+      "size_bytes": 94523
+    },
+    {
+      "path": "research/images/offer_previews/volkswagen-t-cross-life-plus-116-dsg-01.jpg",
+      "size_bytes": 114573
+    },
+    {
+      "path": "research/images/offer_previews/volkswagen-t-cross-life-plus-116-dsg-02.jpg",
+      "size_bytes": 141393
+    },
+    {
+      "path": "research/url_shortcuts/images/fiat-grande-panda-hybrid-la-prima-01.url",
+      "size_bytes": 119
+    },
+    {
+      "path": "research/url_shortcuts/images/hyundai-bayon-modern-90-7dct-01.url",
+      "size_bytes": 164
+    },
+    {
+      "path": "research/url_shortcuts/images/hyundai-bayon-modern-90-7dct-02.url",
+      "size_bytes": 164
+    },
+    {
+      "path": "research/url_shortcuts/images/hyundai-bayon-modern-90-7dct-03.url",
+      "size_bytes": 164
+    },
+    {
+      "path": "research/url_shortcuts/images/hyundai-i20-modern-90-7dct-01.url",
+      "size_bytes": 162
+    },
+    {
+      "path": "research/url_shortcuts/images/hyundai-i20-modern-90-7dct-02.url",
+      "size_bytes": 162
+    },
+    {
+      "path": "research/url_shortcuts/images/hyundai-i20-modern-90-7dct-03.url",
+      "size_bytes": 162
+    },
+    {
+      "path": "research/url_shortcuts/images/hyundai-inster-49kwh-pure-01.url",
+      "size_bytes": 176
+    },
+    {
+      "path": "research/url_shortcuts/images/hyundai-inster-49kwh-pure-02.url",
+      "size_bytes": 174
+    },
+    {
+      "path": "research/url_shortcuts/images/hyundai-inster-49kwh-pure-03.url",
+      "size_bytes": 174
+    },
+    {
+      "path": "research/url_shortcuts/images/skoda-fabia-drive-115-dsg-01.url",
+      "size_bytes": 137
+    },
+    {
+      "path": "research/url_shortcuts/images/skoda-kamiq-drive-115-dsg-01.url",
+      "size_bytes": 108
+    },
+    {
+      "path": "research/url_shortcuts/images/toyota-yaris-style-hybrid-116-01.url",
+      "size_bytes": 136
+    },
+    {
+      "path": "research/url_shortcuts/images/volkswagen-t-cross-life-plus-116-dsg-01.url",
+      "size_bytes": 173
+    },
+    {
+      "path": "research/url_shortcuts/images/volkswagen-t-cross-life-plus-116-dsg-02.url",
+      "size_bytes": 173
+    },
+    {
+      "path": "research/url_shortcuts/images/volkswagen-t-cross-life-plus-116-dsg-03.url",
+      "size_bytes": 173
+    },
+    {
+      "path": "research/url_shortcuts/sources/fiat_hybrid_press.url",
+      "size_bytes": 152
+    },
+    {
+      "path": "research/url_shortcuts/sources/fiat_media.url",
+      "size_bytes": 92
+    },
+    {
+      "path": "research/url_shortcuts/sources/fiat_press.url",
+      "size_bytes": 223
+    },
+    {
+      "path": "research/url_shortcuts/sources/fiat_tech.url",
+      "size_bytes": 87
+    },
+    {
+      "path": "research/url_shortcuts/sources/fiat_warranty.url",
+      "size_bytes": 59
+    },
+    {
+      "path": "research/url_shortcuts/sources/hyundai_bayon_design.url",
+      "size_bytes": 83
+    },
+    {
+      "path": "research/url_shortcuts/sources/hyundai_bayon_features.url",
+      "size_bytes": 85
+    },
+    {
+      "path": "research/url_shortcuts/sources/hyundai_bayon_model.url",
+      "size_bytes": 76
+    },
+    {
+      "path": "research/url_shortcuts/sources/hyundai_bayon_uk_tech.url",
+      "size_bytes": 111
+    },
+    {
+      "path": "research/url_shortcuts/sources/hyundai_i20_design.url",
+      "size_bytes": 81
+    },
+    {
+      "path": "research/url_shortcuts/sources/hyundai_i20_features.url",
+      "size_bytes": 86
+    },
+    {
+      "path": "research/url_shortcuts/sources/hyundai_i20_media.url",
+      "size_bytes": 83
+    },
+    {
+      "path": "research/url_shortcuts/sources/hyundai_inster_design.url",
+      "size_bytes": 79
+    },
+    {
+      "path": "research/url_shortcuts/sources/hyundai_inster_press.url",
+      "size_bytes": 110
+    },
+    {
+      "path": "research/url_shortcuts/sources/peugeot_2008_media.url",
+      "size_bytes": 105
+    },
+    {
+      "path": "research/url_shortcuts/sources/peugeot_2008_model.url",
+      "size_bytes": 90
+    },
+    {
+      "path": "research/url_shortcuts/sources/peugeot_208_faq.url",
+      "size_bytes": 79
+    },
+    {
+      "path": "research/url_shortcuts/sources/peugeot_208_stock.url",
+      "size_bytes": 79
+    },
+    {
+      "path": "research/url_shortcuts/sources/peugeot_prices.url",
+      "size_bytes": 73
+    },
+    {
+      "path": "research/url_shortcuts/sources/skoda_fabia_engine.url",
+      "size_bytes": 75
+    },
+    {
+      "path": "research/url_shortcuts/sources/skoda_fabia_media.url",
+      "size_bytes": 167
+    },
+    {
+      "path": "research/url_shortcuts/sources/skoda_fabia_model.url",
+      "size_bytes": 62
+    },
+    {
+      "path": "research/url_shortcuts/sources/skoda_kamiq_engine.url",
+      "size_bytes": 102
+    },
+    {
+      "path": "research/url_shortcuts/sources/skoda_kamiq_media.url",
+      "size_bytes": 78
+    },
+    {
+      "path": "research/url_shortcuts/sources/skoda_kamiq_model.url",
+      "size_bytes": 63
+    },
+    {
+      "path": "research/url_shortcuts/sources/toyota_media.url",
+      "size_bytes": 127
+    },
+    {
+      "path": "research/url_shortcuts/sources/toyota_relax.url",
+      "size_bytes": 87
+    },
+    {
+      "path": "research/url_shortcuts/sources/toyota_warranty.url",
+      "size_bytes": 197
+    },
+    {
+      "path": "research/url_shortcuts/sources/toyota_yaris_2026.url",
+      "size_bytes": 165
+    },
+    {
+      "path": "research/url_shortcuts/sources/toyota_yaris_boot_286.url",
+      "size_bytes": 122
+    },
+    {
+      "path": "research/url_shortcuts/sources/toyota_yaris_boot_296.url",
+      "size_bytes": 115
+    },
+    {
+      "path": "research/url_shortcuts/sources/toyota_yaris_config.url",
+      "size_bytes": 84
+    },
+    {
+      "path": "research/url_shortcuts/sources/toyota_yaris_model.url",
+      "size_bytes": 66
+    },
+    {
+      "path": "research/url_shortcuts/sources/vw_tcross_media.url",
+      "size_bytes": 88
+    },
+    {
+      "path": "research/url_shortcuts/sources/vw_tcross_price.url",
+      "size_bytes": 66
+    },
+    {
+      "path": "research/vehicles/01-fiat-grande-panda-hybrid-la-prima.md",
+      "size_bytes": 5734
+    },
+    {
+      "path": "research/vehicles/02-volkswagen-t-cross-life-plus-116-dsg.md",
+      "size_bytes": 5512
+    },
+    {
+      "path": "research/vehicles/03-peugeot-2008-edition-hybrid-110.md",
+      "size_bytes": 5445
+    },
+    {
+      "path": "research/vehicles/04-peugeot-208-business-hybrid-110.md",
+      "size_bytes": 5280
+    },
+    {
+      "path": "research/vehicles/05-hyundai-inster-49kwh-pure.md",
+      "size_bytes": 5862
+    },
+    {
+      "path": "research/vehicles/06-hyundai-bayon-modern-90-7dct.md",
+      "size_bytes": 6499
+    },
+    {
+      "path": "research/vehicles/07-hyundai-i20-modern-90-7dct.md",
+      "size_bytes": 5889
+    },
+    {
+      "path": "research/vehicles/08-skoda-fabia-drive-115-dsg.md",
+      "size_bytes": 6064
+    },
+    {
+      "path": "research/vehicles/09-skoda-kamiq-drive-115-dsg.md",
+      "size_bytes": 4620
+    },
+    {
+      "path": "research/vehicles/10-toyota-yaris-style-hybrid-116.md",
+      "size_bytes": 7772
+    }
+  ]
+}

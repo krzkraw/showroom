@@ -20,5 +20,6 @@ export default defineConfig({
   projects: [
     { name: "landscape", use: { browserName: "chromium", viewport: { width: 1280, height: 800 } } },
     { name: "portrait", use: { browserName: "chromium", viewport: { width: 800, height: 1280 } } },
+    { name: "mobile", use: { browserName: "chromium", viewport: { width: 390, height: 844 } } },
   ],
 });

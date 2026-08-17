@@ -1,0 +1,252 @@
+{
+  "research_date": "2026-08-17",
+  "images": [
+    {
+      "vehicle_id": "fiat-grande-panda-hybrid-la-prima",
+      "make": "Fiat",
+      "model": "Grande Panda",
+      "label": "widok zewnętrzny / jazda",
+      "url": "https://stellantis3.dam-broadcast.com/medias/domain12808/media108936/2680846-iqmf7uo58c-whr.jpg",
+      "scope": "official-illustrative",
+      "downloaded": false,
+      "notes": "Zewnętrzny oficjalny obraz poglądowy; wymaga połączenia z internetem."
+    },
+    {
+      "vehicle_id": "volkswagen-t-cross-life-plus-116-dsg",
+      "make": "Volkswagen",
+      "model": "T-Cross",
+      "label": "przód / jazda",
+      "url": "https://uploads.vw-mms.de/system/production/images/vwn/079/456/images/2db0787da05557834c3fb08af01d4b22d5562d11/DB2023AU00622_web_1600.jpg?1717575978=",
+      "scope": "official-illustrative",
+      "downloaded": false,
+      "notes": "Zewnętrzny oficjalny obraz poglądowy; wymaga połączenia z internetem."
+    },
+    {
+      "vehicle_id": "volkswagen-t-cross-life-plus-116-dsg",
+      "make": "Volkswagen",
+      "model": "T-Cross",
+      "label": "widok zewnętrzny",
+      "url": "https://uploads.vw-mms.de/system/production/images/vwn/079/465/images/d93e4e7d7fa9166d4613d4128f4b04352cee6704/DB2023AU00631_web_1600.jpg?1717576001=",
+      "scope": "official-illustrative",
+      "downloaded": false,
+      "notes": "Zewnętrzny oficjalny obraz poglądowy; wymaga połączenia z internetem."
+    },
+    {
+      "vehicle_id": "volkswagen-t-cross-life-plus-116-dsg",
+      "make": "Volkswagen",
+      "model": "T-Cross",
+      "label": "wnętrze",
+      "url": "https://uploads.vw-mms.de/system/production/images/vwn/079/471/images/cde6bcdd87abc28ee5dd9074e68351c4a7d48c5f/DB2023AU00637_web_1600.jpg?1717576202=",
+      "scope": "official-illustrative",
+      "downloaded": false,
+      "notes": "Zewnętrzny oficjalny obraz poglądowy; wymaga połączenia z internetem."
+    },
+    {
+      "vehicle_id": "hyundai-inster-49kwh-pure",
+      "make": "Hyundai",
+      "model": "Inster",
+      "label": "zewnętrzny 1",
+      "url": "https://dmassets.hyundai.com/is/image/hyundaiautoever/hyundai-inster-premiere-exterior-04-1%3AImage%20Video%20Collection%20Item%20Mobile?hei=441&wid=663",
+      "scope": "official-illustrative",
+      "downloaded": false,
+      "notes": "Zewnętrzny oficjalny obraz poglądowy; wymaga połączenia z internetem."
+    },
+    {
+      "vehicle_id": "hyundai-inster-49kwh-pure",
+      "make": "Hyundai",
+      "model": "Inster",
+      "label": "zewnętrzny 2",
+      "url": "https://dmassets.hyundai.com/is/image/hyundaiautoever/hyundai-inster-premiere-exterior-04%3AImage%20Video%20Collection%20Item%20Mobile?hei=441&wid=663",
+      "scope": "official-illustrative",
+      "downloaded": false,
+      "notes": "Zewnętrzny oficjalny obraz poglądowy; wymaga połączenia z internetem."
+    },
+    {
+      "vehicle_id": "hyundai-inster-49kwh-pure",
+      "make": "Hyundai",
+      "model": "Inster",
+      "label": "zewnętrzny 3",
+      "url": "https://dmassets.hyundai.com/is/image/hyundaiautoever/hyundai-inster-premiere-exterior-03%3AImage%20Video%20Collection%20Item%20Mobile?hei=441&wid=663",
+      "scope": "official-illustrative",
+      "downloaded": false,
+      "notes": "Zewnętrzny oficjalny obraz poglądowy; wymaga połączenia z internetem."
+    },
+    {
+      "vehicle_id": "hyundai-bayon-modern-90-7dct",
+      "make": "Hyundai",
+      "model": "Bayon",
+      "label": "zewnętrzny 1",
+      "url": "https://dmassets.hyundai.com/is/image/hyundaiautoever/hyundai-new-bayon-0124-01%3AImage%20Video%20Collection%20Item%20Mobile?hei=441&wid=663",
+      "scope": "official-illustrative",
+      "downloaded": false,
+      "notes": "Zewnętrzny oficjalny obraz poglądowy; wymaga połączenia z internetem."
+    },
+    {
+      "vehicle_id": "hyundai-bayon-modern-90-7dct",
+      "make": "Hyundai",
+      "model": "Bayon",
+      "label": "zewnętrzny 2",
+      "url": "https://dmassets.hyundai.com/is/image/hyundaiautoever/hyundai-new-bayon-0124-02%3AImage%20Video%20Collection%20Item%20Mobile?hei=441&wid=663",
+      "scope": "official-illustrative",
+      "downloaded": false,
+      "notes": "Zewnętrzny oficjalny obraz poglądowy; wymaga połączenia z internetem."
+    },
+    {
+      "vehicle_id": "hyundai-bayon-modern-90-7dct",
+      "make": "Hyundai",
+      "model": "Bayon",
+      "label": "zewnętrzny 3",
+      "url": "https://dmassets.hyundai.com/is/image/hyundaiautoever/hyundai-new-bayon-0124-05%3AImage%20Video%20Collection%20Item%20Mobile?hei=441&wid=663",
+      "scope": "official-illustrative",
+      "downloaded": false,
+      "notes": "Zewnętrzny oficjalny obraz poglądowy; wymaga połączenia z internetem."
+    },
+    {
+      "vehicle_id": "hyundai-i20-modern-90-7dct",
+      "make": "Hyundai",
+      "model": "i20",
+      "label": "zewnętrzny 1",
+      "url": "https://s7g10.scene7.com/is/image/hyundaiautoever/hyundai-all-new-i20-0220-01%3AImage%20Video%20Collection%20Item%20Mobile?hei=441&wid=663",
+      "scope": "official-illustrative-older-media",
+      "downloaded": false,
+      "notes": "Zewnętrzny oficjalny obraz poglądowy; wymaga połączenia z internetem."
+    },
+    {
+      "vehicle_id": "hyundai-i20-modern-90-7dct",
+      "make": "Hyundai",
+      "model": "i20",
+      "label": "zewnętrzny 2",
+      "url": "https://s7g10.scene7.com/is/image/hyundaiautoever/hyundai-all-new-i20-0220-02%3AImage%20Video%20Collection%20Item%20Mobile?hei=441&wid=663",
+      "scope": "official-illustrative-older-media",
+      "downloaded": false,
+      "notes": "Zewnętrzny oficjalny obraz poglądowy; wymaga połączenia z internetem."
+    },
+    {
+      "vehicle_id": "hyundai-i20-modern-90-7dct",
+      "make": "Hyundai",
+      "model": "i20",
+      "label": "wnętrze / detal",
+      "url": "https://s7g10.scene7.com/is/image/hyundaiautoever/hyundai-all-new-i20-0220-03%3AImage%20Video%20Collection%20Item%20Mobile?hei=441&wid=663",
+      "scope": "official-illustrative-older-media",
+      "downloaded": false,
+      "notes": "Zewnętrzny oficjalny obraz poglądowy; wymaga połączenia z internetem."
+    },
+    {
+      "vehicle_id": "skoda-fabia-drive-115-dsg",
+      "make": "Škoda",
+      "model": "Fabia",
+      "label": "zewnętrzny",
+      "url": "https://www.skoda-storyboard.com/direct-download/2024/08/4.-generace-07_SKODA_FABIA_ML_Graphite_Grey_918733f4.jpg",
+      "scope": "official-illustrative",
+      "downloaded": false,
+      "notes": "Zewnętrzny oficjalny obraz poglądowy; wymaga połączenia z internetem."
+    },
+    {
+      "vehicle_id": "skoda-kamiq-drive-115-dsg",
+      "make": "Škoda",
+      "model": "Kamiq",
+      "label": "zewnętrzny",
+      "url": "https://www.skoda-storyboard.com/direct-download/2024/02/29_Skoda_Kamiq_d786b450.jpg",
+      "scope": "official-illustrative",
+      "downloaded": false,
+      "notes": "Zewnętrzny oficjalny obraz poglądowy; wymaga połączenia z internetem."
+    },
+    {
+      "vehicle_id": "toyota-yaris-style-hybrid-116",
+      "make": "Toyota",
+      "model": "Yaris",
+      "label": "Yaris — oficjalne zdjęcie poglądowe",
+      "url": "https://client.presspage.com/download/20032c9c-e184-4a4c-9a43-a234dbd3a4d3/2024-yaris-dpl-ext-combo-high0010.jpg",
+      "scope": "official-illustrative",
+      "downloaded": false,
+      "notes": "Zewnętrzny oficjalny obraz poglądowy; wymaga połączenia z internetem."
+    }
+  ],
+  "offline_previews": [
+    {
+      "vehicle_id": "fiat-grande-panda-hybrid-la-prima",
+      "source_path": "assets/01-grande-panda-hybrid-la-prima/page-001.jpg",
+      "preview_path": "research/images/offer_previews/fiat-grande-panda-hybrid-la-prima-01.jpg"
+    },
+    {
+      "vehicle_id": "volkswagen-t-cross-life-plus-116-dsg",
+      "source_path": "assets/02-gov-26-286981/page-001.jpg",
+      "preview_path": "research/images/offer_previews/volkswagen-t-cross-life-plus-116-dsg-01.jpg"
+    },
+    {
+      "vehicle_id": "volkswagen-t-cross-life-plus-116-dsg",
+      "source_path": "assets/02-gov-26-286981/page-002.jpg",
+      "preview_path": "research/images/offer_previews/volkswagen-t-cross-life-plus-116-dsg-02.jpg"
+    },
+    {
+      "vehicle_id": "peugeot-2008-edition-hybrid-110",
+      "source_path": "assets/04-oferta-2008-pan-krzysztof-krawczynski/page-001.jpg",
+      "preview_path": "research/images/offer_previews/peugeot-2008-edition-hybrid-110-01.jpg"
+    },
+    {
+      "vehicle_id": "peugeot-2008-edition-hybrid-110",
+      "source_path": "assets/04-oferta-2008-pan-krzysztof-krawczynski/page-005.jpg",
+      "preview_path": "research/images/offer_previews/peugeot-2008-edition-hybrid-110-02.jpg"
+    },
+    {
+      "vehicle_id": "peugeot-208-business-hybrid-110",
+      "source_path": "assets/05-oferta-208-pan-krzysztof-krawczynski/page-001.jpg",
+      "preview_path": "research/images/offer_previews/peugeot-208-business-hybrid-110-01.jpg"
+    },
+    {
+      "vehicle_id": "peugeot-208-business-hybrid-110",
+      "source_path": "assets/05-oferta-208-pan-krzysztof-krawczynski/page-005.jpg",
+      "preview_path": "research/images/offer_previews/peugeot-208-business-hybrid-110-02.jpg"
+    },
+    {
+      "vehicle_id": "hyundai-inster-49kwh-pure",
+      "source_path": "assets/09-ha0520260814121921-00000026095544-1/page-001.jpg",
+      "preview_path": "research/images/offer_previews/hyundai-inster-49kwh-pure-01.jpg"
+    },
+    {
+      "vehicle_id": "hyundai-bayon-modern-90-7dct",
+      "source_path": "assets/10-ha0520260814124843-00000026095581/page-001.jpg",
+      "preview_path": "research/images/offer_previews/hyundai-bayon-modern-90-7dct-01.jpg"
+    },
+    {
+      "vehicle_id": "hyundai-i20-modern-90-7dct",
+      "source_path": "assets/11-ha0520260814124132-00000026095574/page-001.jpg",
+      "preview_path": "research/images/offer_previews/hyundai-i20-modern-90-7dct-01.jpg"
+    },
+    {
+      "vehicle_id": "skoda-fabia-drive-115-dsg",
+      "source_path": "assets/12-skoda-fabia-poz-3/page-001.jpg",
+      "preview_path": "research/images/offer_previews/skoda-fabia-drive-115-dsg-01.jpg"
+    },
+    {
+      "vehicle_id": "skoda-fabia-drive-115-dsg",
+      "source_path": "assets/12-skoda-fabia-poz-3/page-002.jpg",
+      "preview_path": "research/images/offer_previews/skoda-fabia-drive-115-dsg-02.jpg"
+    },
+    {
+      "vehicle_id": "skoda-fabia-drive-115-dsg",
+      "source_path": "assets/14-skoda-fabia-92-700-poz-2/page-001.jpg",
+      "preview_path": "research/images/offer_previews/skoda-fabia-drive-115-dsg-03.jpg"
+    },
+    {
+      "vehicle_id": "skoda-fabia-drive-115-dsg",
+      "source_path": "assets/14-skoda-fabia-92-700-poz-2/page-002.jpg",
+      "preview_path": "research/images/offer_previews/skoda-fabia-drive-115-dsg-04.jpg"
+    },
+    {
+      "vehicle_id": "skoda-kamiq-drive-115-dsg",
+      "source_path": "assets/13-skoda-kamiq-poz-3/page-001.jpg",
+      "preview_path": "research/images/offer_previews/skoda-kamiq-drive-115-dsg-01.jpg"
+    },
+    {
+      "vehicle_id": "skoda-kamiq-drive-115-dsg",
+      "source_path": "assets/13-skoda-kamiq-poz-3/page-002.jpg",
+      "preview_path": "research/images/offer_previews/skoda-kamiq-drive-115-dsg-02.jpg"
+    },
+    {
+      "vehicle_id": "toyota-yaris-style-hybrid-116",
+      "source_path": "assets/18-toyota-yaris-forest-green-wersja-style/page-001.jpg",
+      "preview_path": "research/images/offer_previews/toyota-yaris-style-hybrid-116-01.jpg"
+    }
+  ]
+}

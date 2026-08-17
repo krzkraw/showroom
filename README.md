@@ -1,81 +1,82 @@
-# Virtual Showroom Data
+# Showroom ofert nowych aut
 
-The `src/data/showroom.json` file is the only data catalog. The catalog uses schema version `1.0`.
+Statyczna aplikacja React i Vite porównuje konkretne oferty dealerskie oraz dane modeli z roczników 2025+.
 
-The parser in `src/domain/showroom.ts` validates the catalog before use. The parser requires no validation library.
+Aktualizacja z 17 sierpnia 2026 r. instaluje katalog w schemacie `2.0` i pełny pakiet źródeł.
 
-## Schema
+## Zakres katalogu
 
-The catalog contains a `sources` registry and a `models` array. Each model record has the following content:
+- 14 rekordów pojazdów.
+- 10 modeli z aktualnymi ofertami.
+- 11 konkretnych konfiguracji handlowych.
+- 1 porównawczy Citroën C3 bez oferty dealerskiej.
+- 3 rekordy archiwalne.
+- 18 scenariuszy finansowania.
+- 10 dossier technicznych.
 
-- The record identifies the brand and model.
-- The record describes versions, the powertrain, fuels, the gearbox, and technical data.
-- The record contains offers and their short summaries.
-- The record contains financing details and their short summaries.
-- The record contains the base warranty and its extensions.
-- The record links to materials shown under `Więcej`.
+Katalog rozdziela dane konkretnej oferty, dane modelowe, wartości wyliczone, proxy, konflikty i braki.
 
-Each fact has `value`, `status`, and `sourceRef` fields. The source registry stores the `accessedAt` date.
+Finansowanie Volkswagena dotyczy innej wersji T-Crossa niż główna oferta.
 
-## Fact statuses
+Sześć kalkulacji VeloBank nie wskazuje pojazdu i pozostaje nieprzypisanych.
 
-- A `verified` status means that the cited source confirms the value.
-- An `unverified` status means that a source provides the value, but the value requires further confirmation.
-- An `unknown` status means that no value is confirmed. A fact with this status must have `value: null`.
+## Materiały źródłowe
 
-The `unverified` status may contain a value or `null`. A `verified` value of `null` may mean a confirmed absence of a numeric limit.
+`public/documents/offers/` zawiera 18 pełnych konwersji Markdown i obrazy wszystkich 98 stron.
 
-## Sources and dates
+Dokumenty nie są anonimizowane. Zachowują dostarczone nazwy, kontakty, identyfikatory ofert, konfiguracji, VIN-y i dane dealerów.
 
-`sourceRef` identifies one entry in `sources`. The parser rejects unknown references.
+`public/research/` zawiera pełne dane, notatki, konflikty, źródła i lokalne podglądy researchu.
 
-Supported source kinds are `official`, `dealer-email`, `independent`, `youtube`, and `input`.
+Wersje `*_redacted.*` pozostają jedynie dodatkowymi wariantami historycznymi. Aplikacja korzysta z pełnych źródeł.
 
-Official, independent, and YouTube sources require an HTTPS address. Anonymized emails and input data have no URL.
+Surowe pliki PDF nie są publikowane. Pakiet wejściowy zawierał 17 z 18 PDF-ów.
 
-The `accessedAt` date records the source check date in `YYYY-MM-DD` format. The current catalog reflects project decisions as of 2026-08-16.
+Brakującym plikiem jest PDF źródłowy dokumentu `02-gov-26-286981.md`. Pełny Markdown i obrazy 12 stron są dostępne.
 
-## Privacy
+## Galerie
 
-The catalog contains only anonymized facts needed to compare offers. It contains no names, email addresses, or phone numbers.
+`public/cars/` zawiera 25 lokalnych zdjęć i fallbacków wskazanych przez katalog.
 
-The catalog contains no Gmail identifiers, private attachment names, raw PDFs, or data identifying a specific dealer.
+Katalog przechowuje 16 zdalnych źródeł galerii wyłącznie jako metadane. Każde ma lokalny fallback.
 
-Confirm the publication scope for exact financing terms before a public push.
+## Uruchomienie i sprawdzenie
 
-## Offer states
-
-- A `missing` state means `Brak oferty`. This state is explicit for Dacia, Renault, and Citroën.
-- A `pending` state means that an announced offer has not arrived.
-- An `available` state means that an offer or document has been received.
-
-A missing price does not hide an offer. The price remains `null` when the document does not confirm an amount.
-
-## Financing
-
-The `nominalInterestRate` field stores the nominal interest rate. The `annualPercentageRate` field stores RRSO.
-
-RRSO represents the annual total credit cost under statutory rules. It is not the nominal interest rate.
-
-The Hyundai calculations record 7.79% as the nominal interest rate and 11.06% as RRSO. The calculation base price remains separate from the configuration price.
-
-## Known gaps
-
-- The Renault Eco-G 120 automatic gearbox remains `unknown`.
-- The Dacia Sandero Stepway Eco-G 120 automatic gearbox remains `unverified`. The official page does not confirm the automatic gearbox with the LPG engine.
-- The Citroën Plus, Max, and Collection versions remain in scope. The official page does not confirm a current Max version.
-- The official Citroën C3 range also lists a YOU version. The user decides during final validation whether YOU belongs in scope.
-- The electric range of the Hyundai Inster remains unconfirmed.
-- No reliable cabin-noise measurements or measurement speeds were found.
-- The timing drives and clutch types remain unconfirmed for the specified versions.
-- Complete dimensions, weights, fuel-consumption figures, and ranges have not been collected.
-- The exact Volkswagen warranty and the official Fiat warranty terms remain unconfirmed.
-- The Toyota Yaris price and some financing terms remain unconfirmed.
-
-## Test
-
-Run the parser and contract tests:
+Zainstaluj zależności:
 
 ```sh
-bun test
+bun install
 ```
+
+Uruchom sprawdzenia:
+
+```sh
+node scripts/validate-data.mjs
+bun test
+bun run typecheck
+bun run build
+bun run test:e2e
+```
+
+Uruchom serwer deweloperski:
+
+```sh
+bun run dev
+```
+
+Vite używa ścieżki bazowej `/showroom/` dla GitHub Pages.
+
+## Ścieżki wykonawcze
+
+- `src/main.tsx` uruchamia aplikację.
+- `src/App.tsx` zawiera główny interfejs.
+- `src/data/showroom.json` zawiera katalog w schemacie `2.0`.
+- `src/types.ts` opisuje katalog.
+- `scripts/validate-data.mjs` sprawdza dane, ścieżki i liczności.
+- `public/cars/` zawiera lokalne obrazy galerii.
+- `public/documents/offers/` zawiera pełne dokumenty i obrazy stron.
+- `public/documents/dossiers/` zawiera dossier pojazdów.
+- `public/research/` zawiera pełny pakiet researchu.
+- `tests/e2e/showroom.e2e.ts` zawiera testy przeglądarkowe.
+
+Szczegóły zmiany opisuje [`UPDATE_REPORT.md`](UPDATE_REPORT.md).

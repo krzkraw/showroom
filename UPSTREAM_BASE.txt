@@ -1,0 +1,6 @@
+Repository: krzkraw/showroom
+Upstream branch: main
+Working branch: agent/update-showroom-offers-2026-08
+Base commit: 0cf8be623ad411d50ab10d1e7f8d0ea62d9850ac
+Base tree: 1e23fb4a2f5fb51c61b78c881f615e7538d63fee
+Prepared: 2026-08-17

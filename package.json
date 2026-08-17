@@ -4,8 +4,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "test:data": "node scripts/validate-data.mjs",
     "typecheck": "tsc --noEmit",
-    "build": "tsc --noEmit && vite build",
+    "build": "bun run test:data && bun run typecheck && vite build",
     "preview": "vite preview",
     "test:e2e": "playwright test"
   },
