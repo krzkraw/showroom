@@ -4,10 +4,28 @@ import {
   useMemo,
   useRef,
   useState,
-  type KeyboardEvent as ReactKeyboardEvent,
   type ReactNode,
   type RefObject,
 } from "react";
+import {
+  ArrowLeft,
+  Calculator,
+  CircleEllipsis,
+  ExternalLink,
+  FileText,
+  Images,
+  Search,
+  Shield,
+  X,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetTitle,
+} from "@/components/ui/sheet";
 import catalogJson from "./data/showroom.json";
 import type {
   Catalog,
@@ -32,6 +50,14 @@ type TabId =
   | "issues"
   | "sources";
 
+type SheetView =
+  | "directory"
+  | "gallery"
+  | "offers"
+  | "financing"
+  | "warranty"
+  | "more";
+
 const tabs: readonly { id: TabId; label: string }[] = [
   { id: "overview", label: "Przegląd" },
   { id: "specification", label: "Specyfikacja" },
@@ -42,6 +68,17 @@ const tabs: readonly { id: TabId; label: string }[] = [
   { id: "issues", label: "Konflikty i braki" },
   { id: "sources", label: "Źródła" },
 ];
+const destinationActions = [
+  { view: "offers", label: "Oferty", Icon: FileText, tab: "offer" },
+  { view: "financing", label: "Finansowanie", Icon: Calculator, tab: "financing" },
+  { view: "warranty", label: "Gwarancja", Icon: Shield, tab: "warranty" },
+  { view: "more", label: "Więcej", Icon: CircleEllipsis, tab: "specification" },
+] as const satisfies readonly {
+  readonly view: SheetView;
+  readonly label: string;
+  readonly Icon: typeof FileText;
+  readonly tab: TabId;
+}[];
 
 const vehicleGroups = [
   { id: "offer-2026", label: "Aktualne oferty" },
@@ -227,6 +264,38 @@ function valueText(field: string, fact: SourcedValue | undefined): string {
   return `${text} ${unit}`;
 }
 
+const mainCanvasMissingText = "Brak potwierdzonych danych";
+const mainCanvasCommercialPointer = "szczegóły w sekcji Gwarancja";
+const mainCanvasCommercialSummaryLimit = 64;
+const commercialQualificationBoundary =
+  /\s+—\s+|;\s+(?=(?:przed|zakres|ograniczeni(?:a|e)|zweryfikować|sprawdzić|obowiązuj(?:ą|e)|wyjąt(?:ki|ek)|wymag(?:ania|a|ane|any)|szczegóły|pobrać)(?=[\s,.;:]|$))/i;
+const safelyOmissibleCommercialQualification =
+  /^(?:warunki ogólne [^;]{1,40}|zgodnie z [^;]{1,40})\.?$/i;
+
+function confirmedFactText(field: string, fact: SourcedValue | undefined): string | null {
+  if (!fact || fact.value === null || fact.value === undefined) return null;
+  if (/not-found|unknown|missing|conflict|proxy|illustrative|comparable|unconfirmed|likely|prior-repo-input/i.test(fact.status)) {
+    return null;
+  }
+  return valueText(field, fact);
+}
+
+function conciseCommercialSummary(value: string | undefined): string | null {
+  const text = value?.trim();
+  if (!text) return null;
+  const boundary = text.match(commercialQualificationBoundary);
+  const candidate = (boundary?.index === undefined ? text : text.slice(0, boundary.index)).trim();
+  const omittedQualification = boundary?.index === undefined
+    ? ""
+    : text.slice(boundary.index + boundary[0].length).trim();
+
+  if (candidate.length > mainCanvasCommercialSummaryLimit) return mainCanvasCommercialPointer;
+  if (omittedQualification && !safelyOmissibleCommercialQualification.test(omittedQualification)) {
+    return mainCanvasCommercialPointer;
+  }
+  return candidate;
+}
+
 function humanize(value: string): string {
   return value
     .replaceAll("_", " ")
@@ -290,17 +359,19 @@ function StatusBadge({ status }: { readonly status: string }) {
 
 function FactCell({ field, fact }: { readonly field: string; readonly fact: SourcedValue }) {
   return (
-    <div className="fact-card">
-      <div className="fact-card-heading">
-        <dt>{fieldLabels[field] ?? humanize(field)}</dt>
+    <dl className="fact-card">
+      <dt className="fact-card-heading">
+        <span>{fieldLabels[field] ?? humanize(field)}</span>
         <StatusBadge status={fact.status} />
-      </div>
-      <dd>{valueText(field, fact)}</dd>
-      {fact.note ? <p>{fact.note}</p> : null}
-      {fact.source_ids && fact.source_ids.length > 0 ? (
-        <small>Źródła: {fact.source_ids.join(", ")}</small>
-      ) : null}
-    </div>
+      </dt>
+      <dd>
+        <span>{valueText(field, fact)}</span>
+        {fact.note ? <p>{fact.note}</p> : null}
+        {fact.source_ids && fact.source_ids.length > 0 ? (
+          <small>Źródła: {fact.source_ids.join(", ")}</small>
+        ) : null}
+      </dd>
+    </dl>
   );
 }
 
@@ -331,8 +402,13 @@ function EmptyState({ children }: { readonly children: ReactNode }) {
 
 function DocumentButton({ document, onOpen }: { readonly document: DocumentLink; readonly onOpen: (document: DocumentLink) => void }) {
   return (
-    <button className="document-button" type="button" onClick={() => onOpen(document)}>
-      <span aria-hidden="true">↗</span>
+    <button
+      className="document-button"
+      type="button"
+      data-document-path={document.path}
+      onClick={() => onOpen(document)}
+    >
+      <ExternalLink aria-hidden="true" />
       <span>
         <strong>{document.title}</strong>
         <small>{humanize(document.kind)}</small>
@@ -401,7 +477,7 @@ function DocumentViewer({
           onClick={() => dialogRef.current?.close()}
           aria-label="Zamknij dokument"
         >
-          ×
+          <X aria-hidden="true" />
         </button>
       </header>
       <div className="document-content">
@@ -485,7 +561,7 @@ function ComparisonDialog({
           onClick={() => dialogRef.current?.close()}
           aria-label="Zamknij porównanie"
         >
-          ×
+          <X aria-hidden="true" />
         </button>
       </header>
       <section
@@ -521,84 +597,35 @@ function ComparisonDialog({
   );
 }
 
-function Overview({ vehicle, selectedOffer }: { readonly vehicle: Vehicle; readonly selectedOffer: OfferVariant | undefined }) {
-  const power = vehicle.powertrain.power_hp;
-  const gearbox = vehicle.powertrain.gearbox;
-  const consumption =
-    vehicle.efficiency.electric_consumption_wltp_kwh_100km ??
-    vehicle.efficiency.consumption_wltp_l_100km ??
-    vehicle.efficiency.consumption_wltp_kwh_100km;
-  const consumptionField = vehicle.efficiency.electric_consumption_wltp_kwh_100km
-    ? "electric_consumption_wltp_kwh_100km"
-    : vehicle.efficiency.consumption_wltp_l_100km
-      ? "consumption_wltp_l_100km"
-      : "consumption_wltp_kwh_100km";
-  const price = offerPrice(selectedOffer);
-
+function RealWorldView({ vehicle }: { readonly vehicle: Vehicle }) {
+  const measurements = Object.entries(vehicle.real_world).filter(
+    ([key, value]) => key !== "sources" && typeof value === "string",
+  );
   return (
-    <div className="tab-stack">
-      <section>
-        <SectionTitle eyebrow="Najważniejsze liczby">Szybki obraz konfiguracji</SectionTitle>
-        <dl className="primary-grid">
-          <PrimaryMetric label="Cena z oferty" value={pln(price)} note={selectedOffer?.label} />
-          <PrimaryMetric label="Moc" value={valueText("power_hp", power)} note={power ? statusLabel(power.status) : undefined} />
-          <PrimaryMetric label="Skrzynia" value={valueText("gearbox", gearbox)} note={gearbox ? statusLabel(gearbox.status) : undefined} />
-          <PrimaryMetric label="Zużycie WLTP" value={valueText(consumptionField, consumption)} note={consumption ? statusLabel(consumption.status) : undefined} />
-          <PrimaryMetric label="0–100 km/h" value={valueText("zero_to_100_s", vehicle.performance.zero_to_100_s)} />
-          <PrimaryMetric label="Prześwit" value={valueText("ground_clearance_mm", vehicle.dimensions.ground_clearance_mm)} />
-          <PrimaryMetric label="Bagażnik" value={valueText("boot_l", vehicle.dimensions.boot_l)} />
-          <PrimaryMetric
-            label="Wymiary D × S × W"
-            value={["length_mm", "width_mm", "height_mm"]
-              .map((field) => valueText(field, vehicle.dimensions[field]))
-              .join(" × ")}
-          />
-        </dl>
-      </section>
-
-      <section className="two-column-cards">
-        <article className="content-card real-world-card">
-          <h3>Rzeczywiste pomiary i rozsądne założenia</h3>
-          {Object.entries(vehicle.real_world).filter(([key]) => key !== "sources").length === 0 ? (
-            <p>Nie znaleziono porównywalnych pomiarów rzeczywistych dla tej dokładnej wersji.</p>
-          ) : (
-            <dl className="plain-list">
-              {Object.entries(vehicle.real_world)
-                .filter(([key, value]) => key !== "sources" && typeof value === "string")
-                .map(([key, value]) => (
-                  <div key={key}>
-                    <dt>{humanize(key)}</dt>
-                    <dd>{value as string}</dd>
-                  </div>
-                ))}
-            </dl>
-          )}
-          {vehicle.real_world.sources && vehicle.real_world.sources.length > 0 ? (
-            <div className="source-chip-row">
-              {vehicle.real_world.sources.map((source) => (
-                <a key={source} href={source} target="_blank" rel="noreferrer">
-                  źródło pomiaru
-                </a>
-              ))}
+    <article className="content-card real-world-card">
+      <h3>Rzeczywiste pomiary i rozsądne założenia</h3>
+      {measurements.length === 0 ? (
+        <p>Nie znaleziono porównywalnych pomiarów rzeczywistych dla tej dokładnej wersji.</p>
+      ) : (
+        <dl className="plain-list">
+          {measurements.map(([key, value]) => (
+            <div key={key}>
+              <dt>{humanize(key)}</dt>
+              <dd>{value as string}</dd>
             </div>
-          ) : null}
-        </article>
-
-        <article className="content-card">
-          <h3>Status danych</h3>
-          <p>
-            Dane konkretnego egzemplarza są oddzielone od danych modelowych, pomiarów niezależnych i wartości wyliczonych.
-            Braki i konflikty nie są automatycznie uzupełniane przypuszczeniami.
-          </p>
-          <div className="legend">
-            <StatusBadge status="exact-offer" />
-            <StatusBadge status="official-current-model-pl" />
-            <StatusBadge status="derived" />
-            <StatusBadge status="not-found" />
-          </div>
-        </article>
-      </section>
-    </div>
+          ))}
+        </dl>
+      )}
+      {vehicle.real_world.sources && vehicle.real_world.sources.length > 0 ? (
+        <div className="source-chip-row">
+          {vehicle.real_world.sources.map((source) => (
+            <a key={source} href={source} target="_blank" rel="noreferrer">
+              źródło pomiaru
+            </a>
+          ))}
+        </div>
+      ) : null}
+    </article>
   );
 }
 
@@ -615,11 +642,11 @@ function Specification({ vehicle }: { readonly vehicle: Vehicle }) {
       {sections.map(([sectionId, section]) => (
         <section key={sectionId}>
           <SectionTitle>{sectionLabels[sectionId]}</SectionTitle>
-          <dl className="fact-grid">
+          <div className="fact-grid">
             {Object.entries(section).map(([field, fact]) => (
               <FactCell key={field} field={field} fact={fact} />
             ))}
-          </dl>
+          </div>
         </section>
       ))}
     </div>
@@ -755,7 +782,7 @@ function FinancingCard({ scenario, onOpenDocument }: { readonly scenario: Financ
     ? { title: "Pełny dokument finansowania", path: scenario.documentPath, kind: "financing-document" }
     : null;
   return (
-    <article className="financing-card">
+    <article className="financing-card" data-scenario-id={scenario.id}>
       <header>
         <div>
           <StatusBadge status={scenario.association} />
@@ -957,7 +984,7 @@ function TabContent({
   readonly onOpenDocument: (document: DocumentLink) => void;
 }) {
   const selectedOffer = vehicle.offer_variants[selectedOfferIndex];
-  if (tab === "overview") return <Overview vehicle={vehicle} selectedOffer={selectedOffer} />;
+  if (tab === "overview") return <RealWorldView vehicle={vehicle} />;
   if (tab === "specification") return <Specification vehicle={vehicle} />;
   if (tab === "offer") {
     return (
@@ -993,12 +1020,25 @@ export function DestinationView(_props: {
   return null;
 }
 
+function sheetForTab(tab: TabId): SheetView | null {
+  if (tab === "offer" || tab === "equipment") return "offers";
+  if (tab === "financing") return "financing";
+  if (tab === "warranty") return "warranty";
+  if (tab === "specification" || tab === "issues" || tab === "sources") return "more";
+  return null;
+}
+
 export default function App() {
   const [initialRoute] = useState(readHashState);
   const [vehicleIndex, setVehicleIndex] = useState(initialRoute.vehicleIndex);
   const [selectedOfferIndex, setSelectedOfferIndex] = useState(initialRoute.offerIndex);
   const [imageIndex, setImageIndex] = useState(initialRoute.imageIndex);
   const [activeTab, setActiveTab] = useState<TabId>(initialRoute.tab);
+  const initialSheet = sheetForTab(initialRoute.tab);
+  const [sheet, setSheet] = useState<{ readonly open: boolean; readonly view: SheetView }>({
+    open: initialSheet !== null,
+    view: initialSheet ?? "offers",
+  });
   const [query, setQuery] = useState("");
   const [comparisonIds, setComparisonIds] = useState<readonly string[]>([]);
   const [openDocumentLink, setOpenDocumentLink] = useState<DocumentLink | null>(null);
@@ -1006,6 +1046,7 @@ export default function App() {
   const documentTrigger = useRef<HTMLElement | null>(null);
   const comparisonDialog = useRef<HTMLDialogElement>(null);
   const comparisonTrigger = useRef<HTMLButtonElement | null>(null);
+  const sheetTrigger = useRef<HTMLElement | null>(null);
 
   const vehicle = catalog.vehicles[vehicleIndex];
   const gallery = vehicle.gallery;
@@ -1016,14 +1057,6 @@ export default function App() {
   const comparisonVehicles = comparisonIds
     .map((id) => catalog.vehicles.find((item) => item.id === id))
     .filter((item): item is Vehicle => item !== undefined);
-
-  const categoryCounts = useMemo(() => {
-    const counts = new Map<string, number>();
-    for (const item of catalog.vehicles) {
-      counts.set(item.category, (counts.get(item.category) ?? 0) + 1);
-    }
-    return counts;
-  }, []);
 
   const visibleGroups = useMemo(() => {
     const normalizedQuery = query
@@ -1043,10 +1076,6 @@ export default function App() {
       .filter((group) => group.vehicles.length > 0);
   }, [query]);
 
-  const selectHasCurrent = visibleGroups.some((group) =>
-    group.vehicles.some((item) => item.id === vehicle.id),
-  );
-
   useEffect(() => {
     if (imageIndex >= gallery.length) setImageIndex(0);
   }, [gallery.length, imageIndex]);
@@ -1063,6 +1092,23 @@ export default function App() {
       `${window.location.pathname}${window.location.search}#${params.toString()}`,
     );
   }, [activeTab, currentOffer, imageIndex, vehicle.id]);
+
+  useEffect(() => {
+    function handleModelKeys(event: KeyboardEvent) {
+      if (sheet.open || event.altKey || event.ctrlKey || event.metaKey) return;
+      if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+      if (event.target instanceof Element && event.target.closest("button, input, select, textarea, a")) return;
+      event.preventDefault();
+      const step = event.key === "ArrowLeft" ? -1 : 1;
+      setVehicleIndex((current) => (current + step + catalog.vehicles.length) % catalog.vehicles.length);
+      setSelectedOfferIndex(0);
+      setImageIndex(0);
+      setActiveTab("overview");
+    }
+
+    window.addEventListener("keydown", handleModelKeys);
+    return () => window.removeEventListener("keydown", handleModelKeys);
+  }, [sheet.open]);
 
   const closeDocument = useCallback(() => {
     setOpenDocumentLink(null);
@@ -1109,224 +1155,391 @@ export default function App() {
     comparisonDialog.current?.showModal();
   }
 
-  function handleTabKeyDown(event: ReactKeyboardEvent<HTMLButtonElement>, index: number) {
-    let nextIndex = index;
-    if (event.key === "ArrowLeft" || event.key === "ArrowUp") nextIndex = (index - 1 + tabs.length) % tabs.length;
-    else if (event.key === "ArrowRight" || event.key === "ArrowDown") nextIndex = (index + 1) % tabs.length;
-    else if (event.key === "Home") nextIndex = 0;
-    else if (event.key === "End") nextIndex = tabs.length - 1;
-    else return;
-    event.preventDefault();
-    setActiveTab(tabs[nextIndex].id);
-    window.document.getElementById(`tab-${tabs[nextIndex].id}`)?.focus();
+  function openSheet(view: SheetView, trigger: HTMLElement, tab?: TabId) {
+    sheetTrigger.current = trigger;
+    if (tab) setActiveTab(tab);
+    setSheet({ open: true, view });
   }
+
+  function handleSheetOpenChange(open: boolean) {
+    if (!open) setActiveTab("overview");
+    setSheet((current) => ({ ...current, open }));
+  }
+
+  const consumption = ([
+    ["electric_consumption_wltp_kwh_100km", vehicle.efficiency.electric_consumption_wltp_kwh_100km],
+    ["consumption_wltp_l_100km", vehicle.efficiency.consumption_wltp_l_100km],
+    ["consumption_wltp_kwh_100km", vehicle.efficiency.consumption_wltp_kwh_100km],
+  ] as const).find(([field, fact]) => confirmedFactText(field, fact) !== null);
+  const dimensionsParts = ["length_mm", "width_mm", "height_mm"].map((field) =>
+    confirmedFactText(field, vehicle.dimensions[field]),
+  );
+  const dimensions = dimensionsParts.includes(null)
+    ? mainCanvasMissingText
+    : dimensionsParts.join(" × ");
+  const powertrainSummary = [
+    confirmedFactText("type", vehicle.powertrain.type),
+    confirmedFactText("power_hp", vehicle.powertrain.power_hp),
+    confirmedFactText("gearbox", vehicle.powertrain.gearbox),
+  ].filter((item): item is string => item !== null);
+  const warrantySummary = conciseCommercialSummary(vehicle.warranty[0]);
+  const protectionSummary = conciseCommercialSummary(vehicle.warranty[1]);
+  const dossier = vehicle.dossierPath
+    ? { title: "Dossier researchu modelu", path: vehicle.dossierPath, kind: "research-dossier" }
+    : null;
+  const sheetTitles: Readonly<Record<SheetView, string>> = {
+    directory: "Wybierz model",
+    gallery: "Galeria",
+    offers: "Oferty i wyposażenie",
+    financing: "Finansowanie",
+    warranty: "Gwarancja",
+    more: "Więcej informacji",
+  };
 
   return (
     <>
-      <main className="app-shell">
-        <header className="topbar">
-          <div>
-            <p className="kicker">Nowe auta · roczniki 2025+</p>
-            <h1>Showroom ofert</h1>
-          </div>
-          <div className="topbar-controls">
-            <label className="search-control">
-              <span>Szukaj marki, modelu, wersji lub grupy</span>
-              <input
-                type="search"
-                value={query}
-                onChange={(event) => setQuery(event.target.value)}
-                placeholder="np. Fabia, hybryda, archiwum"
-              />
-            </label>
-            <label>
-              <span>Wybierz model</span>
-              <select
-                value={selectHasCurrent ? vehicle.id : ""}
-                onChange={(event) =>
-                  selectVehicle(
-                    catalog.vehicles.findIndex((item) => item.id === event.target.value),
-                  )
-                }
-              >
-                {!selectHasCurrent ? (
-                  <option value="" disabled>
-                    {visibleGroups.length === 0 ? "Brak wyników" : "Wybierz z wyników"}
-                  </option>
-                ) : null}
-                {visibleGroups.map((group) => (
-                  <optgroup
-                    key={group.id}
-                    label={`${group.label} (${group.vehicles.length})`}
-                  >
-                    {group.vehicles.map((item) => (
-                      <option key={item.id} value={item.id}>
-                        {item.make} {item.model} — {item.trim}
-                      </option>
-                    ))}
-                  </optgroup>
-                ))}
-              </select>
-            </label>
-            <button
-              ref={comparisonTrigger}
-              type="button"
-              className="comparison-button"
-              disabled={comparisonIds.length < 2}
-              onClick={openComparison}
-            >
-              Porównaj ({comparisonIds.length}/3)
-            </button>
-            <p className="counter">{vehicleIndex + 1} / {catalog.vehicles.length}</p>
-          </div>
+      <main className="showroom-shell">
+        <header className="showroom-header">
+          <p className="showroom-title">Wirtualny salon samochodów</p>
+          <button
+            type="button"
+            className="model-counter"
+            aria-label={`Wybierz model, ${vehicleIndex + 1} z ${catalog.vehicles.length}`}
+            aria-haspopup="dialog"
+            aria-expanded={sheet.open && sheet.view === "directory"}
+            onClick={(event) => openSheet("directory", event.currentTarget)}
+          >
+            {vehicleIndex + 1} z {catalog.vehicles.length}
+          </button>
         </header>
 
-        <section className="vehicle-hero" aria-live="polite">
-          <div className="vehicle-intro">
-            <div className="badge-row">
-              <span className="category-badge">{categoryLabel(vehicle.category)}</span>
-              <span className="count-badge">{categoryCounts.get(vehicle.category)} w tej grupie</span>
-            </div>
-            <p className="make">{vehicle.make}</p>
-            <h2>{vehicle.model}</h2>
-            <p className="trim">{vehicle.trim}</p>
-            <p className="powertrain-line">
-              {[vehicle.powertrain.type, vehicle.powertrain.power_hp, vehicle.powertrain.gearbox]
-                .filter(Boolean)
-                .map((fact, index) =>
-                  valueText(index === 1 ? "power_hp" : index === 2 ? "gearbox" : "type", fact),
-                )
-                .join(" · ")}
-            </p>
-            {vehicle.category === "comparison-no-offer" ? (
-              <p className="comparison-only-note">
-                Wyłącznie porównanie techniczne. Brak otrzymanej oferty dealerskiej, ceny i finansowania.
-              </p>
-            ) : null}
-            <div className="hero-price">
-              <span>{hasActivePrice ? "Cena z aktywnej oferty" : "Status ceny"}</span>
-              <strong>{hasActivePrice ? pln(activePrice) : "brak konkretnej oferty"}</strong>
-            </div>
-            {vehicle.offer_variants.length > 1 ? (
-              <div className="hero-offer-switcher" role="group" aria-label="Wariant konfiguracji">
-                {vehicle.offer_variants.map((offer, index) => (
-                  <button
-                    key={offer.id}
-                    type="button"
-                    aria-pressed={selectedOfferIndex === index}
-                    className={selectedOfferIndex === index ? "is-active" : ""}
-                    onClick={() => selectOffer(index)}
-                  >
-                    {offer.exterior ?? offer.label}
-                  </button>
-                ))}
-              </div>
-            ) : null}
-            <label className="comparison-toggle">
-              <input
-                type="checkbox"
-                checked={comparisonIds.includes(vehicle.id)}
-                disabled={!comparisonIds.includes(vehicle.id) && comparisonIds.length >= 3}
-                onChange={() => toggleComparison(vehicle.id)}
-              />
-              Dodaj ten model do porównania ({comparisonIds.length}/3)
-            </label>
-            <div className="model-navigation">
-              <button type="button" onClick={() => moveVehicle(-1)} aria-label="Poprzedni model">
-                ← Poprzedni
-              </button>
-              <button type="button" onClick={() => moveVehicle(1)} aria-label="Następny model">
-                Następny →
-              </button>
-            </div>
+        <section className="showroom-content">
+          <div className="model-identity">
+            <h1>{vehicle.make} {vehicle.model}</h1>
+            <p>{[vehicle.trim, ...powertrainSummary].join(" · ")}</p>
           </div>
 
-          <div className="vehicle-media">
-            <figure className="main-image-frame">
-              {selectedImage ? <ImageWithFallback item={selectedImage} className="main-image" /> : null}
-              <figcaption>
-                <span>{selectedImage?.label ?? "Brak zdjęcia"}</span>
-                {selectedImage ? <small>{colorMatchLabel(selectedImage.colorMatch)}</small> : null}
-              </figcaption>
-            </figure>
-
-            <div className="thumbnail-rail" role="group" aria-label="Galeria samochodu">
-              {gallery.map((item, index) => (
+          <div className="vehicle-stage">
+            <div className="vehicle-row">
+              <Button
+                type="button"
+                size="icon"
+                className="model-arrow"
+                aria-label="Poprzedni model"
+                onClick={() => moveVehicle(-1)}
+              >
+                {"<"}
+              </Button>
+              <figure className="showroom-vehicle">
                 <button
                   type="button"
-                  className={imageIndex === index ? "thumbnail is-active" : "thumbnail"}
-                  key={`${item.src}-${index}`}
-                  onClick={() => setImageIndex(index)}
-                  aria-label={`Pokaż zdjęcie: ${item.label}`}
-                  aria-pressed={imageIndex === index}
+                  className="vehicle-image-button"
+                  aria-label={`Otwórz galerię: ${selectedImage?.label ?? vehicle.model}`}
+                  onClick={(event) => openSheet("gallery", event.currentTarget)}
                 >
-                  <ImageWithFallback item={item} />
-                  <span>{index + 1}</span>
+                  {selectedImage ? (
+                    <ImageWithFallback item={selectedImage} className="main-image" />
+                  ) : (
+                    <span className="image-failure">Brak zdjęcia</span>
+                  )}
                 </button>
-              ))}
+                <figcaption>
+                  <button
+                    type="button"
+                    className="gallery-count"
+                    onClick={(event) => openSheet("gallery", event.currentTarget)}
+                  >
+                    <Images aria-hidden="true" />
+                    Zdjęcia {gallery.length === 0 ? 0 : imageIndex + 1} z {gallery.length}
+                  </button>
+                </figcaption>
+              </figure>
+              <Button
+                type="button"
+                size="icon"
+                className="model-arrow"
+                aria-label="Następny model"
+                onClick={() => moveVehicle(1)}
+              >
+                {">"}
+              </Button>
             </div>
+
+            <ul className="version-selector" aria-label="Wariant konfiguracji">
+              {vehicle.offer_variants.length === 0 ? (
+                <li>
+                  <span className="version-button is-static" aria-current="true">{vehicle.trim}</span>
+                </li>
+              ) : (
+                vehicle.offer_variants.map((offer, index) => (
+                  <li key={offer.id}>
+                    <button
+                      type="button"
+                      className="version-button"
+                      aria-pressed={selectedOfferIndex === index}
+                      onClick={() => selectOffer(index)}
+                    >
+                      {offer.exterior ?? offer.label}
+                    </button>
+                  </li>
+                ))
+              )}
+            </ul>
           </div>
+
+          <dl className="fact-list">
+            <div><dt>Moc</dt><dd>{confirmedFactText("power_hp", vehicle.powertrain.power_hp) ?? mainCanvasMissingText}</dd></div>
+            <div><dt>Spalanie / zużycie</dt><dd>{consumption ? valueText(consumption[0], consumption[1]) : mainCanvasMissingText}</dd></div>
+            <div><dt>Wymiary</dt><dd>{dimensions}</dd></div>
+            <div><dt>Masa</dt><dd>{confirmedFactText("curb_mass_kg", vehicle.dimensions.curb_mass_kg) ?? mainCanvasMissingText}</dd></div>
+            <div><dt>Hałas w kabinie</dt><dd>{vehicle.real_world.noise && !/^(?:brak|nie znaleziono|nie potwierdzono)\b/i.test(vehicle.real_world.noise) ? vehicle.real_world.noise : mainCanvasMissingText}</dd></div>
+          </dl>
+
+          <dl className="showroom-summary" aria-label="Podsumowanie handlowe">
+            <div>
+              <dt>Oferta</dt>
+              <dd>{hasActivePrice ? `${pln(activePrice)} · ${currentOffer?.label ?? vehicle.trim}` : "brak konkretnej oferty"}</dd>
+            </div>
+            <div><dt>Gwarancja</dt><dd>{warrantySummary ?? mainCanvasMissingText}</dd></div>
+            <div><dt>Program ochronny</dt><dd>{protectionSummary ?? mainCanvasMissingText}</dd></div>
+            <div>
+              <dt>Finansowanie</dt>
+              <dd>{vehicle.financing_scenarios.length > 0 ? `${vehicle.financing_scenarios.length} przypisanych scenariuszy` : "brak przypisanej kalkulacji"}</dd>
+            </div>
+          </dl>
+
+          <nav className="destination-actions" aria-label="Główne sekcje salonu">
+            {destinationActions.map(({ view, label, Icon, tab }) => (
+              <Button
+                type="button"
+                className="destination-action"
+                key={view}
+                aria-haspopup="dialog"
+                aria-expanded={sheet.open && sheet.view === view}
+                onClick={(event) => openSheet(view, event.currentTarget, tab)}
+              >
+                <Icon className="destination-icon" aria-hidden="true" />
+                <span>{label}</span>
+              </Button>
+            ))}
+          </nav>
         </section>
 
-        <nav className="tabs" role="tablist" aria-label="Sekcje informacji">
-          {tabs.map((tab, index) => (
-            <button
-              id={`tab-${tab.id}`}
-              key={tab.id}
-              type="button"
-              role="tab"
-              aria-controls="tab-panel"
-              aria-selected={activeTab === tab.id}
-              tabIndex={activeTab === tab.id ? 0 : -1}
-              className={activeTab === tab.id ? "is-active" : ""}
-              onClick={() => setActiveTab(tab.id)}
-              onKeyDown={(event) => handleTabKeyDown(event, index)}
-            >
-              {tab.label}
-              {tab.id === "issues" && vehicle.conflicts.length + vehicle.unknown_fields.length > 0 ? (
-                <span>{vehicle.conflicts.length + vehicle.unknown_fields.length}</span>
-              ) : null}
-            </button>
-          ))}
-        </nav>
-
-        <section
-          id="tab-panel"
-          className="tab-panel"
-          role="tabpanel"
-          aria-labelledby={`tab-${activeTab}`}
-        >
-          <TabContent
-            tab={activeTab}
-            vehicle={vehicle}
-            selectedOfferIndex={selectedOfferIndex}
-            onSelectOffer={selectOffer}
-            onOpenDocument={openDocument}
-          />
-        </section>
-
-        <GlobalFinancingSection onOpenDocument={openDocument} />
-
-        <footer>
-          <p>
-            Dane wygenerowano {catalog.generatedAt}. Zachowano wartości handlowe, wyposażenie, warunki finansowania i jawne luki źródłowe.
-          </p>
-          <a href={`https://github.com/${catalog.upstream.repository}`} target="_blank" rel="noreferrer">
-            Repozytorium źródłowe
-          </a>
-        </footer>
       </main>
 
-      <DocumentViewer
-        document={openDocumentLink}
-        dialogRef={documentDialog}
-        onClose={closeDocument}
-      />
-      <ComparisonDialog
-        vehicles={comparisonVehicles}
-        dialogRef={comparisonDialog}
-        onClose={() => requestAnimationFrame(() => comparisonTrigger.current?.focus())}
-      />
+      <Sheet open={sheet.open} onOpenChange={handleSheetOpenChange}>
+        <SheetContent
+          id="destination-sheet"
+          onEscapeKeyDown={(event) => {
+            const nestedDialog = documentDialog.current?.open
+              ? documentDialog.current
+              : comparisonDialog.current?.open
+                ? comparisonDialog.current
+                : null;
+            if (!nestedDialog) return;
+            event.preventDefault();
+            nestedDialog.close();
+          }}
+          onCloseAutoFocus={(event) => {
+            event.preventDefault();
+            requestAnimationFrame(() => sheetTrigger.current?.focus());
+          }}
+        >
+          <div className="destination-page">
+            <header className="destination-header">
+              <SheetClose asChild>
+                <Button type="button" className="sheet-back">
+                  <ArrowLeft aria-hidden="true" />
+                  Wróć
+                </Button>
+              </SheetClose>
+              <div className="destination-heading">
+                <SheetTitle>{sheetTitles[sheet.view]}</SheetTitle>
+                <SheetDescription>{vehicle.make} {vehicle.model} · {vehicle.trim}</SheetDescription>
+              </div>
+            </header>
+
+            <div className="destination-body">
+              {sheet.view === "directory" ? (
+                <section className="directory-view" aria-label="Katalog modeli">
+                  <label className="directory-search">
+                    <Search aria-hidden="true" />
+                    <span className="sr-only">Szukaj marki, modelu, wersji lub grupy</span>
+                    <input
+                      type="search"
+                      value={query}
+                      onChange={(event) => setQuery(event.target.value)}
+                      placeholder="Szukaj marki, modelu lub wersji"
+                    />
+                  </label>
+                  {visibleGroups.length === 0 ? (
+                    <EmptyState>Brak modeli pasujących do wyszukiwania.</EmptyState>
+                  ) : (
+                    visibleGroups.map((group) => (
+                      <section className="directory-group" key={group.id}>
+                        <header>
+                          <h3>{group.label}</h3>
+                          <span>{group.vehicles.length}</span>
+                        </header>
+                        <div className="directory-list">
+                          {group.vehicles.map((item) => (
+                            <button
+                              type="button"
+                              className={item.id === vehicle.id ? "is-current" : ""}
+                              aria-current={item.id === vehicle.id ? "true" : undefined}
+                              key={item.id}
+                              onClick={() => {
+                                selectVehicle(catalog.vehicles.findIndex((entry) => entry.id === item.id));
+                                handleSheetOpenChange(false);
+                              }}
+                            >
+                              <span><strong>{item.make} {item.model}</strong><small>{item.trim}</small></span>
+                              <span>{catalog.vehicles.findIndex((entry) => entry.id === item.id) + 1}</span>
+                            </button>
+                          ))}
+                        </div>
+                      </section>
+                    ))
+                  )}
+                </section>
+              ) : null}
+
+              {sheet.view === "gallery" ? (
+                <section className="gallery-view" aria-label="Pełna galeria samochodu">
+                  <figure className="gallery-stage">
+                    {selectedImage ? <ImageWithFallback item={selectedImage} className="gallery-image" /> : <EmptyState>Brak zdjęć dla tego modelu.</EmptyState>}
+                    <figcaption>
+                      <strong>{selectedImage?.label ?? "Brak zdjęcia"}</strong>
+                      <span>{selectedImage ? colorMatchLabel(selectedImage.colorMatch) : "brak danych"}</span>
+                    </figcaption>
+                  </figure>
+                  <div className="gallery-grid" role="group" aria-label="Wybierz zdjęcie">
+                    {gallery.map((item, index) => (
+                      <button
+                        type="button"
+                        className={imageIndex === index ? "gallery-thumbnail is-active" : "gallery-thumbnail"}
+                        key={`${item.src}-${index}`}
+                        onClick={() => setImageIndex(index)}
+                        aria-label={`Pokaż zdjęcie: ${item.label}`}
+                        aria-pressed={imageIndex === index}
+                      >
+                        <ImageWithFallback item={item} />
+                        <span>{index + 1}</span>
+                      </button>
+                    ))}
+                  </div>
+                </section>
+              ) : null}
+
+              {sheet.view === "offers" ? (
+                <div className="sheet-section-list">
+                  <details className="more-section" open={activeTab !== "equipment"} onToggle={(event) => { if (event.currentTarget.open) setActiveTab("offer"); }}>
+                    <summary>Oferty</summary>
+                    <div className="more-section-body">
+                      <TabContent tab="offer" vehicle={vehicle} selectedOfferIndex={selectedOfferIndex} onSelectOffer={selectOffer} onOpenDocument={openDocument} />
+                    </div>
+                  </details>
+                  <details className="more-section" open={activeTab === "equipment"} onToggle={(event) => { if (event.currentTarget.open) setActiveTab("equipment"); }}>
+                    <summary>Wyposażenie</summary>
+                    <div className="more-section-body">
+                      <TabContent tab="equipment" vehicle={vehicle} selectedOfferIndex={selectedOfferIndex} onSelectOffer={selectOffer} onOpenDocument={openDocument} />
+                    </div>
+                  </details>
+                </div>
+              ) : null}
+
+              {sheet.view === "financing" ? (
+                <div className="tab-stack">
+                  <TabContent tab="financing" vehicle={vehicle} selectedOfferIndex={selectedOfferIndex} onSelectOffer={selectOffer} onOpenDocument={openDocument} />
+                  <GlobalFinancingSection onOpenDocument={openDocument} />
+                </div>
+              ) : null}
+
+              {sheet.view === "warranty" ? <WarrantyView vehicle={vehicle} /> : null}
+
+              {sheet.view === "more" ? (
+                <div className="sheet-section-list">
+                  <details className="more-section" open={activeTab === "specification"} onToggle={(event) => { if (event.currentTarget.open) setActiveTab("specification"); }}>
+                    <summary>Specyfikacja</summary>
+                    <div className="more-section-body"><Specification vehicle={vehicle} /></div>
+                  </details>
+                  <details className="more-section">
+                    <summary>Galeria</summary>
+                    <div className="more-section-body compact-section">
+                      <p>{gallery.length} zdjęć przypisanych do tego modelu.</p>
+                      <Button type="button" className="secondary-action" onClick={() => setSheet({ open: true, view: "gallery" })}>
+                        <Images aria-hidden="true" />
+                        Otwórz pełną galerię
+                      </Button>
+                    </div>
+                  </details>
+                  <details className="more-section">
+                    <summary>Porównanie</summary>
+                    <div className="more-section-body compact-section">
+                      <p>Wybierz od dwóch do trzech modeli.</p>
+                      <div className="comparison-picker">
+                        {catalog.vehicles.map((item) => (
+                          <label key={item.id}>
+                            <input
+                              type="checkbox"
+                              aria-label={item.id}
+                              checked={comparisonIds.includes(item.id)}
+                              disabled={!comparisonIds.includes(item.id) && comparisonIds.length >= 3}
+                              onChange={() => toggleComparison(item.id)}
+                            />
+                            <span><strong>{item.make} {item.model}</strong><small>{item.trim}</small></span>
+                          </label>
+                        ))}
+                      </div>
+                      <Button type="button" className="secondary-action" disabled={comparisonIds.length < 2} onClick={openComparison}>
+                        Porównaj ({comparisonIds.length}/3)
+                      </Button>
+                    </div>
+                  </details>
+                  <details className="more-section">
+                    <summary>Dane rzeczywiste</summary>
+                    <div className="more-section-body"><RealWorldView vehicle={vehicle} /></div>
+                  </details>
+                  <details className="more-section" open={activeTab === "issues"} onToggle={(event) => { if (event.currentTarget.open) setActiveTab("issues"); }}>
+                    <summary>Konflikty i braki</summary>
+                    <div className="more-section-body"><IssuesView vehicle={vehicle} /></div>
+                  </details>
+                  <details className="more-section" open={activeTab === "sources"} onToggle={(event) => { if (event.currentTarget.open) setActiveTab("sources"); }}>
+                    <summary>Źródła</summary>
+                    <div className="more-section-body"><SourcesView vehicle={vehicle} onOpenDocument={openDocument} /></div>
+                  </details>
+                  <details className="more-section">
+                    <summary>Dossier</summary>
+                    <div className="more-section-body compact-section">
+                      {dossier ? <DocumentButton document={dossier} onOpen={openDocument} /> : <EmptyState>Brak dossier dla tego modelu.</EmptyState>}
+                    </div>
+                  </details>
+                  <details className="more-section">
+                    <summary>Dokumenty</summary>
+                    <div className="more-section-body compact-section">
+                      {vehicle.documents.length === 0 ? <EmptyState>Brak dokumentów lokalnych.</EmptyState> : (
+                        <div className="document-list">
+                          {vehicle.documents.map((document) => <DocumentButton key={document.path} document={document} onOpen={openDocument} />)}
+                        </div>
+                      )}
+                    </div>
+                  </details>
+                </div>
+              ) : null}
+            </div>
+          </div>
+          <DocumentViewer
+            document={openDocumentLink}
+            dialogRef={documentDialog}
+            onClose={closeDocument}
+          />
+          <ComparisonDialog
+            vehicles={comparisonVehicles}
+            dialogRef={comparisonDialog}
+            onClose={() => requestAnimationFrame(() => comparisonTrigger.current?.focus())}
+          />
+        </SheetContent>
+      </Sheet>
     </>
   );
 }

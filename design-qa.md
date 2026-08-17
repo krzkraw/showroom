@@ -1,55 +1,127 @@
 # Design QA
 
-## Sources and capture state
+## Source visual truth
 
-- Landscape reference: `design/concept-landscape.png`, 1280 × 800.
-- Landscape acceptance: `design/acceptance/landscape.png`, 1280 × 800.
-- Portrait reference: `design/concept-portrait.png`, 800 × 1280.
-- Portrait acceptance: `design/acceptance/portrait.png`, 800 × 1280.
-- State: initial Dacia Sandero Stepway model with Extreme Eco-G 120 selected.
-- Capture method: the existing Playwright screenshot test at each reference viewport.
-- Capture controls: loaded local fonts, disabled animations, and hidden the caret.
+- `design/concept-landscape.png`
+- `design/concept-portrait.png`
 
-The repository user-context preflight returned no stored visual context. The two concept images remained the only visual source.
+The current schema and vehicle assets intentionally replace the mockups' sample data.
 
-## Comparison and iterations
+## Implementation evidence
 
-1. The initial comparison found three P1 differences.
-   The page omitted the four-row summary.
-   The destination actions used gray text tiles without icons.
-   The portrait fact rows had excess vertical spacing.
-2. The first implementation added data-derived summary rows and four Lucide icons.
-   It also added responsive summary and action grid areas.
-   The first captures exposed P2 differences in summary order, fact cadence, action placement, and portrait insets.
-3. The second implementation matched the concept order and vertical rhythm.
-   It placed landscape actions at the viewport bottom with separators.
-   It placed portrait icons above labels across the full viewport width.
-   The resulting captures have no remaining P0, P1, or P2 findings.
+- `/Users/krz/.codex/visualizations/2026/08/17/01a010ab-690e-7870-afb6-cc4e5e77168c/showroom-final-landscape.png`
+- `/Users/krz/.codex/visualizations/2026/08/17/01a010ab-690e-7870-afb6-cc4e5e77168c/showroom-final-portrait.png`
+- `/Users/krz/.codex/visualizations/2026/08/17/01a010ab-690e-7870-afb6-cc4e5e77168c/showroom-final-peugeot-portrait.png`
+- `/Users/krz/.codex/visualizations/2026/08/17/01a010ab-690e-7870-afb6-cc4e5e77168c/showroom-final-landscape-comparison.png`
+- `/Users/krz/.codex/visualizations/2026/08/17/01a010ab-690e-7870-afb6-cc4e5e77168c/showroom-final-portrait-comparison.png`
 
-## Final comparison
+## Normalization
 
-The landscape capture matches the reference hierarchy and major geometry.
-The identity and facts occupy the left column.
-The vehicle stage and selected version occupy the right column.
-The summary follows the facts.
-The four actions span the lower viewport with vertical separators.
+- Landscape source pixels: 1280 x 800.
+- Landscape implementation pixels: 1280 x 800.
+- Landscape CSS viewport: 1280 x 800.
+- Portrait source pixels: 800 x 1280.
+- Portrait implementation pixels: 800 x 1280.
+- Portrait CSS viewport: 800 x 1280.
+- Device scale factor: 1.
+- Density normalization: none required.
+- Intermediate implementation viewport: 912 x 1100.
+- State: Fiat Grande Panda, first offer, first gallery image, closed destination sheet.
 
-The portrait capture matches the reference sequence and spacing.
-The vehicle stage follows the identity.
-The version selector follows the stage.
-The five separated facts precede the four-row summary.
-The four icon actions remain visible in one row near the viewport bottom.
+## Full-view comparison
 
-All action targets retain keyboard focus indicators and minimum target sizes.
-All icons are decorative and hidden from the accessibility tree.
-The visible button labels remain their accessible names.
+The final implementation preserves the reference composition at both primary viewports.
 
-## Intentional deviation and remaining P3 items
+- The page uses a flat white canvas.
+- The header retains the title and compact model counter.
+- The landscape view uses the original identity, facts, summary, vehicle, and action regions.
+- The portrait view keeps the original vertical order and bottom action row.
+- The vehicle remains the dominant visual element within the supplied image constraints.
+- Bare model arrows flank the vehicle.
+- The selected configuration uses black text and a red underline.
+- The four red-icon actions remain fully visible at both reference viewports.
+- The current factual content remains distinct from the mockup's sample Dacia content.
 
-- The acceptance captures retain the deliberate gray vehicle placeholder.
-  The concepts show a vehicle photograph, but no approved raster vehicle asset exists.
-  No image was generated or inferred for this placeholder.
-- The Lucide icon outlines differ slightly from the concept artwork.
-  Their roles, scale, red outline treatment, and responsive arrangement match the concepts.
+## Focused-region comparison
+
+Focused checks covered the header, vehicle stage, fact rows, commercial summary, and action row.
+
+- Header spacing and type hierarchy match the reference closely.
+- Missing facts use `Brak potwierdzonych danych`.
+- Incomplete dimensions use one honest missing-state phrase.
+- Commercial summaries remain concise enough for the reference viewport.
+- The action icons, dividers, labels, and alignment follow the original design.
+- The Fiat source image has lower resolution and more embedded whitespace than the reference image.
+- No image cropping, fabrication, or replacement was used.
+
+## Interaction and browser evidence
+
+- The model directory opened and filtered to Fabia.
+- The offer sheet opened and exposed its document action.
+- The gallery sheet opened and exposed both images.
+- The More sheet opened and exposed technical sections.
+- Sheet focus restoration worked.
+- The final clean browser session reported no JavaScript errors.
+- The final console contained only Vite and React development messages.
+- The 912-pixel view had no horizontal clipping.
+- The responsive regression covered all 14 vehicles at both reference viewports.
+- All 28 vehicle and viewport combinations kept the complete action row visible.
+
+## Comparison history
+
+### Iteration 1
+
+Findings:
+
+- P1: Long warranty text pushed the action row below both reference viewports.
+- P1: Missing primary facts used `brak danych` instead of the required phrase.
+- P2: Incomplete dimensions mixed confirmed values with missing fragments.
+- P2: The subtitle included missing-data fragments.
+- P2: The visible counter included the extra word `Model`.
+- P2: The layout overflowed between 901 and 1099 pixels.
+- P2: The full-canvas live region exposed modal background controls.
+
+Repairs:
+
+- Main warranty summaries now use concise confirmed clauses.
+- Full warranty text remains in the Warranty sheet.
+- Main missing facts use the required phrase.
+- Incomplete dimensions collapse to one missing state.
+- The subtitle omits absent facts.
+- The counter now uses `X z 14` with an explicit accessible name.
+- The single-column breakpoint now covers intermediate widths.
+- The full-canvas live region was removed.
+
+### Iteration 2
+
+Post-fix evidence:
+
+- `/Users/krz/.codex/visualizations/2026/08/17/01a010ab-690e-7870-afb6-cc4e5e77168c/showroom-final-landscape-comparison.png`
+- `/Users/krz/.codex/visualizations/2026/08/17/01a010ab-690e-7870-afb6-cc4e5e77168c/showroom-final-portrait-comparison.png`
+
+The second comparison exposed longer summaries on several non-default vehicles.
+
+### Iteration 3
+
+Repairs:
+
+- Unsafe or oversized warranty summaries now use a neutral details pointer.
+- Complete source qualifications remain available in the Warranty sheet.
+- The portrait image ratio supplies headroom for long confirmed facts.
+- An all-vehicle test covers 28 vehicle and viewport combinations.
+
+Post-fix evidence:
+
+- `/Users/krz/.codex/visualizations/2026/08/17/01a010ab-690e-7870-afb6-cc4e5e77168c/showroom-final-peugeot-portrait.png`
+
+No actionable P0, P1, or P2 visual findings remain.
+
+## Remaining P3 limitations
+
+- The supplied Fiat image is visibly lower-resolution than the original Dacia concept image.
+- The supplied Fiat image contains embedded whitespace and `Zdjęcie przykładowe` text.
+- Expanded commercial content creates small spacing differences from the static concept.
+
+These limitations do not change the restored hierarchy or navigation model.
 
 final result: passed
