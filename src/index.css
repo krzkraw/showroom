@@ -514,6 +514,9 @@ button {
 
 a.source-line,
 .material-list a {
+  display: flex;
+  min-height: 48px;
+  align-items: center;
   color: #8f0010;
   text-decoration-thickness: 0.08rem;
   text-underline-offset: 0.15rem;

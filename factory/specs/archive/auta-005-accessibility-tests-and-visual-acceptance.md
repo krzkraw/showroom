@@ -1,7 +1,7 @@
 ---
 id: auta-005-accessibility-tests-and-visual-acceptance
 title: Accessibility tests and visual acceptance
-status: inbox
+status: accepted
 agent: codex
 verification:
   - bun test
