@@ -22,6 +22,11 @@ export const copy = {
   dimensions: "Wymiary",
   weight: "Masa",
   cabinNoise: "Hałas w kabinie",
+  showroomSummary: "Podsumowanie oferty i ochrony",
+  offer: "Oferta",
+  manufacturerWarranty: "Gwarancja producenta",
+  warrantyExtension: "Rozszerzenie gwarancji",
+  nonStopWarranty: "Formuła Non Stop",
   offers: "Oferty",
   financing: "Finansowanie",
   warranty: "Gwarancja",
@@ -68,6 +73,19 @@ export const copy = {
   percent: (value: number) => `${number.format(value)}%`,
   months: (value: number) => `${number.format(value)} mies.`,
   years: (value: number) => `${number.format(value)} lat`,
+  summaryYears: (value: number) => {
+    const integer = Math.abs(value);
+    const lastTwoDigits = integer % 100;
+    const lastDigit = integer % 10;
+    const unit =
+      value === 1
+        ? "rok"
+        : lastDigit >= 2 && lastDigit <= 4 && !(lastTwoDigits >= 12 && lastTwoDigits <= 14)
+          ? "lata"
+          : "lat";
+    return `${number.format(value)} ${unit}`;
+  },
+  upToEither: (duration: string, distance: string) => `do ${duration} lub ${distance}`,
   kilometers: (value: number) => `${number.format(value)} km`,
   fuelLabels: {
     petrol: "benzyna",

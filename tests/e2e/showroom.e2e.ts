@@ -95,14 +95,46 @@ test("model and version controls wrap across keyboard, buttons, and pointer inpu
   await expect(versionButtons[2]).toHaveAttribute("aria-pressed", "true");
 });
 
+test("warranty summary preserves a known duration when mileage is unknown", async ({ page }) => {
+  await page.goto("./");
+  const next = page.getByRole("button", { name: copy.nextModel });
+  await next.click();
+  await next.click();
+  await next.click();
+
+  const aygo = catalogData.models.find((model) => model.id === "toyota-aygo-x");
+  const relax = aygo?.warranty.find((warranty) => warranty.id === "relax");
+  if (relax?.label.value === null || relax?.label.value === undefined) {
+    throw new Error("Toyota Relax fixture label is missing");
+  }
+
+  const summary = page.getByLabel(copy.showroomSummary);
+  await expect(
+    summary.getByText(relax.label.value, { exact: true }).locator("..").locator("dd"),
+  ).toHaveText(copy.upToEither(copy.summaryYears(10), copy.unknownFact));
+});
+
 test("destinations support keyboard activation, all close paths, and honest missing facts", async ({
   page,
 }) => {
   await page.goto("./");
   const destinations = [copy.offers, copy.financing, copy.warranty, copy.more];
 
+  const summary = page.getByLabel(copy.showroomSummary);
+  for (const [label, value] of [
+    [copy.offer, copy.noOffer],
+    [copy.manufacturerWarranty, copy.summaryYears(3)],
+    [copy.nonStopWarranty, copy.upToEither(copy.summaryYears(5), copy.kilometers(200_000))],
+    [copy.financing, copy.unknownFact],
+  ]) {
+    await expect(summary.getByText(label, { exact: true }).locator("..").locator("dd")).toHaveText(
+      value,
+    );
+  }
+
   for (const name of destinations) {
     const trigger = page.getByRole("button", { name });
+    await expect(trigger.locator("svg[aria-hidden='true']")).toHaveCount(1);
     await trigger.press("Enter");
     await expect(page.getByRole("dialog", { name })).toBeVisible();
     await page.keyboard.press("Escape");
@@ -170,6 +202,9 @@ test("visible controls meet touch, focus, axe, and reduced-motion requirements",
   await more.click();
   const dialog = page.getByRole("dialog", { name: copy.more });
   await expect(dialog).toBeVisible();
+  await dialog.evaluate(async (target) => {
+    await Promise.all(target.getAnimations().map((animation) => animation.finished));
+  });
   await expectKeyboardFocusCycle(page, dialog, true);
   const dialogAxe = await new AxeBuilder({ page }).include("#destination-sheet").analyze();
   expect(

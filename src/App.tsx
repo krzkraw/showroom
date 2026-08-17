@@ -5,6 +5,7 @@ import {
   type PointerEvent as ReactPointerEvent,
   type ReactNode,
 } from "react";
+import { Calculator, CircleEllipsis, FileText, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -47,11 +48,15 @@ import { swipeStep, wrappedIndex } from "./ui/navigation";
 const catalog = Catalog.fromJSON(catalogData);
 
 const destinationActions = [
-  ["offers", copy.offers],
-  ["financing", copy.financing],
-  ["warranty", copy.warranty],
-  ["more", copy.more],
-] as const satisfies readonly (readonly [Destination, string])[];
+  { value: "offers", label: copy.offers, Icon: FileText },
+  { value: "financing", label: copy.financing, Icon: Calculator },
+  { value: "warranty", label: copy.warranty, Icon: Shield },
+  { value: "more", label: copy.more, Icon: CircleEllipsis },
+] as const satisfies readonly {
+  readonly value: Destination;
+  readonly label: string;
+  readonly Icon: typeof FileText;
+}[];
 
 function numberFactText(fact: Fact<number>, unit: string): string {
   const text = factText(fact);
@@ -414,6 +419,34 @@ export default function App() {
     fuelText(version.fuels),
     factText(version.gearbox.name),
   ].filter((item): item is string => item !== null);
+  const offers = offersForVersion(model, version.id);
+  const financing = financingForVersion(model, version.id);
+  const warranties = warrantySections(model.warranty);
+  const baseWarranty = warranties.base[0];
+  const warrantyExtension = warranties.extensions[0];
+  const offerSummary =
+    offers.length === 0 || offers[0].state === "missing"
+      ? copy.noOffer
+      : offers[0].state === "pending"
+        ? copy.pendingOffer
+        : copy.availableOffer;
+  const financingSummary =
+    financing.length === 0 || financing[0].state === "missing"
+      ? copy.unknownFact
+      : financing[0].state === "pending"
+        ? copy.pendingFinancing
+        : copy.availableFinancing;
+  const baseWarrantySummary =
+    baseWarranty === undefined
+      ? copy.unknownFact
+      : formattedFactText(baseWarranty.durationYears, copy.summaryYears);
+  const warrantyExtensionSummary =
+    warrantyExtension === undefined
+      ? copy.unknownFact
+      : copy.upToEither(
+          formattedFactText(warrantyExtension.durationYears, copy.summaryYears),
+          distanceLimitText(warrantyExtension.distanceLimitKm),
+        );
 
   return (
     <>
@@ -521,8 +554,35 @@ export default function App() {
             </div>
           </dl>
 
+          <dl className="showroom-summary" aria-label={copy.showroomSummary}>
+            <div>
+              <dt>{copy.offer}</dt>
+              <dd>{offerSummary}</dd>
+            </div>
+            <div>
+              <dt>
+                {baseWarranty === undefined
+                  ? copy.manufacturerWarranty
+                  : formattedFactText(baseWarranty.label)}
+              </dt>
+              <dd>{baseWarrantySummary}</dd>
+            </div>
+            <div>
+              <dt>
+                {warrantyExtension === undefined
+                  ? copy.warrantyExtension
+                  : formattedFactText(warrantyExtension.label)}
+              </dt>
+              <dd>{warrantyExtensionSummary}</dd>
+            </div>
+            <div>
+              <dt>{copy.financing}</dt>
+              <dd>{financingSummary}</dd>
+            </div>
+          </dl>
+
           <nav className="destination-actions">
-            {destinationActions.map(([value, label]) => (
+            {destinationActions.map(({ value, label, Icon }) => (
               <Button
                 type="button"
                 className="destination-action"
@@ -537,7 +597,8 @@ export default function App() {
                   setSheet({ open: true, destination: value });
                 }}
               >
-                {label}
+                <Icon className="destination-icon" aria-hidden="true" />
+                <span>{label}</span>
               </Button>
             ))}
           </nav>
