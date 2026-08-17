@@ -1,0 +1,11 @@
+﻿vehicle_id,make,model,trim,body_style,fuel,power_hp,power_kw,torque_nm,gearbox,zero_to_100_s,max_speed_kmh,consumption_wltp_l_100km,co2_wltp_g_km,electric_consumption_kwh_100km,range_wltp_km,length_mm,width_mm,height_mm,wheelbase_mm,ground_clearance_mm,turning_circle_m,boot_l,boot_max_l,tank_l,towing_braked_kg,towing_unbraked_kg,unknown_field_count,conflict_count
+fiat-grande-panda-hybrid-la-prima,Fiat,Grande Panda,La Prima,crossover / hatchback,benzyna + mild hybrid 48 V,110,81,205,"6-biegowa eDCT, dwusprzęgłowa",10.0,,5.1,116,,,3999,,1586,,,,412,,,,,5,0
+volkswagen-t-cross-life-plus-116-dsg,Volkswagen,T-Cross,Life Plus,crossover / SUV,benzyna,116,85,200,7-biegowa DSG,10.3,192,5.8,132,,,4127–4135,1760–1784,1573,2551,,10.7,455,1281,40,1100,640,3,1
+peugeot-2008-edition-hybrid-110,Peugeot,2008,Edition,SUV / crossover,benzyna + hybryda 48 V,110,81,,6-biegowa e-DCS6,,,4.9,111,,,4300,1770,1550,2605,,,434,1467,44,,,5,2
+peugeot-208-business-hybrid-110,Peugeot,208,Business,hatchback,benzyna + hybryda 48 V,110,81,,6-biegowa e-DCS6,,193,4.5,102,,,4055,1745,1465,2540,,,352,1163,44,1200,645,4,2
+hyundai-inster-49kwh-pure,Hyundai,Inster,Pure,miejski crossover EV,energia elektryczna,115,84.5,,jednobiegowa / automatyczna,10.6,150,,,15.3,370,3825,1610,1575,2580,,,238–351 / 280–351 zależnie od źródła i położenia siedzeń,1059,,,,4,1
+hyundai-bayon-modern-90-7dct,Hyundai,Bayon,Modern + Comfort,crossover / SUV,benzyna,90,66,172,7DCT,13.3,172,5.8,131–132,,,4180,1775,1490–1500,2580,,10.4–10.6,411,1205,40,910,450,3,1
+hyundai-i20-modern-90-7dct,Hyundai,i20,Modern + Comfort,hatchback,benzyna,90,66,172,7DCT,12.8,179,5.3–5.8,126–139,,,4065,1775,1450,2570,140,10.4,352,1165,,1110,,3,1
+skoda-fabia-drive-115-dsg,Škoda,Fabia,Drive,hatchback,benzyna,115,85,200,7-biegowa DSG,9.7,202,5.2,119,,,4108,1780,1482,2552,,9.9,380,1190,,1100,590,4,1
+skoda-kamiq-drive-115-dsg,Škoda,Kamiq,Drive,crossover / SUV,benzyna,115,85,200,7-biegowa DSG,10.2,195,5.6,126,,,4241,1793,1559,2639,,10.1,400,1395,50,,,4,0
+toyota-yaris-style-hybrid-116,Toyota,Yaris,Style,hatchback,benzyna + pełna hybryda,116,85,120,e-CVT / bezstopniowa automatyczna,9.7,175,3.8–4.4,87–99,,,3940,1745,1500,2560,135,9.8,286 lub 296,,36,,,4,3

@@ -1,0 +1,19 @@
+﻿id,vehicle_id,association,source_file,price_pln,down_payment_pln,term_months,credit_amount_pln,monthly_payment_pln,nominal_rate_pct,rrso_pct,total_cash_outlay_pln,financing_premium_vs_price_pln,notes
+vw-6177859-36,volkswagen-t-cross-life-plus-116-dsg,not-exact,03-simulation-6177859.md,106000,42400,36,66691,1953.89,3.49,3.55,112740.04,6740.04,"Finansowanie opisuje T-Cross Life, nie exact Life Plus z oferty GOV-26-286981."
+vw-6177859-48,volkswagen-t-cross-life-plus-116-dsg,not-exact,03-simulation-6177859.md,106000,42400,48,67721,1513.67,3.49,3.55,115056.16,9056.16,"Finansowanie opisuje T-Cross Life, nie exact Life Plus z oferty GOV-26-286981."
+skoda-fabia-blue-6174608-36,skoda-fabia-drive-115-dsg,likely,15-simulation-6174608.md,92700,27810,36,68044,1904.42,0.49,3.5,96369.12,3669.12,"Prawdopodobnie niebieska Fabia, lecz konfiguracja pokazuje 101 550 zł przed potencjalnym rabatem."
+skoda-fabia-blue-6174608-48,skoda-fabia-drive-115-dsg,likely,15-simulation-6174608.md,92700,27810,48,69095,1453.93,0.49,2.72,97598.64,4898.64,"Prawdopodobnie niebieska Fabia, ale brak jednoznacznego identyfikatora."
+skoda-kamiq-6174620-36,skoda-kamiq-drive-115-dsg,exact-by-model-and-price,16-simulation-6174620.md,108800,32640,36,79861,2218.36,0.0,2.53,112500.96,3700.96,Cena i model zgodne z ofertą Kamiq.
+skoda-kamiq-6174620-48,skoda-kamiq-drive-115-dsg,exact-by-model-and-price,16-simulation-6174620.md,108800,32640,48,81095,1689.48,0.0,1.87,113735.04,4935.04,Cena i model zgodne z ofertą Kamiq.
+skoda-fabia-green-6174634-36,skoda-fabia-drive-115-dsg,exact-by-model-and-price,17-simulation-6174634.md,91350,27405,36,67053,1862.58,0.0,3.03,94457.88,3107.88,Cena i model zgodne z zieloną Fabią.
+skoda-fabia-green-6174634-48,skoda-fabia-drive-115-dsg,exact-by-model-and-price,17-simulation-6174634.md,91350,27405,48,68089,1418.52,0.0,2.25,95493.96,4143.96,Cena i model zgodne z zieloną Fabią.
+toyota-022777-36-50k,toyota-yaris-style-hybrid-116,exact,18-toyota-yaris-forest-green-wersja-style.md,107920,50000,36,60526.4,1938.8,9.49,13.2694,119796.64,11876.64,"Koszt AC/KR wymagany, ale niewliczony do RRSO."
+toyota-022777-36-30k,toyota-yaris-style-hybrid-116,exact,18-toyota-yaris-forest-green-wersja-style.md,107920,30000,36,81426.4,2608.27,9.49,13.2694,123897.73,15977.73,"Koszt AC/KR wymagany, ale niewliczony do RRSO."
+toyota-022777-48-50k,toyota-yaris-style-hybrid-116,exact,18-toyota-yaris-forest-green-wersja-style.md,107920,50000,48,60526.4,1534.99,9.99,13.0538,123679.67,15759.67,"Dokument w tabeli zaokrągla ratę do 1 535,00 zł; tekst reprezentatywny podaje 1 534,99 zł."
+toyota-022777-48-30k,toyota-yaris-style-hybrid-116,exact,18-toyota-yaris-forest-green-wersja-style.md,107920,30000,48,81426.4,2065.03,9.99,13.0535,129121.66,21201.66,"Koszt AC/KR wymagany, ale niewliczony do RRSO."
+velo-90000-promo,,unknown-vehicle,06-kalkulacja48318-2-pdf-3opcja.md,90000,40000,48,50000,1293.85,7.79,11.06,102104.8,12104.8,"Warunki promocyjne: VeloKonto, wpływ min. 3000 zł, zgody marketingowe, AC z cesją."
+velo-90000-nonpromo,,unknown-vehicle,06-kalkulacja48318-2-pdf-3opcja.md,90000,40000,48,50000,1341.22,9.79,13.8,104378.56,14378.56,Bez spełnienia warunków promocji.
+velo-82000-promo,,unknown-vehicle,07-kalkulacja48318-1-pdf-2opcja.md,82000,40000,48,42000,1086.83,7.79,11.06,92167.84,10167.84,Pojazd nieopisany w kalkulacji.
+velo-82000-nonpromo,,unknown-vehicle,07-kalkulacja48318-1-pdf-2opcja.md,82000,40000,48,42000,1126.62,9.79,13.8,94077.76,12077.76,Bez warunków promocyjnych; pojazd nieopisany.
+velo-89900-promo,,unknown-vehicle,08-kalkulacja48318-pdf-1opcja.md,89900,40000,48,49900,1291.26,7.79,11.06,101980.48,12080.48,Pojazd nieopisany w kalkulacji.
+velo-89900-nonpromo,,unknown-vehicle,08-kalkulacja48318-pdf-1opcja.md,89900,40000,48,49900,1338.54,9.79,13.8,104249.92,14349.92,Bez warunków promocyjnych; pojazd nieopisany.
