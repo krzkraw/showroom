@@ -55,7 +55,7 @@ async function expectKeyboardFocusCycle(page: Page, root: Locator, startsFocused
 }
 
 test("model and version controls wrap across keyboard, buttons, and pointer input", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("./");
   const total = catalogData.models.length;
   const counter = page.getByText(copy.modelCounter(1, total), { exact: true });
   const previous = page.getByRole("button", { name: copy.previousModel });
@@ -98,7 +98,7 @@ test("model and version controls wrap across keyboard, buttons, and pointer inpu
 test("destinations support keyboard activation, all close paths, and honest missing facts", async ({
   page,
 }) => {
-  await page.goto("/");
+  await page.goto("./");
   const destinations = [copy.offers, copy.financing, copy.warranty, copy.more];
 
   for (const name of destinations) {
@@ -146,7 +146,7 @@ test("destinations support keyboard activation, all close paths, and honest miss
 });
 
 test("visible controls meet touch, focus, axe, and reduced-motion requirements", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("./");
   const main = page.locator("main");
   await expectTargetsMeetMinimum(main);
   await expectKeyboardFocusCycle(page, main);
@@ -190,7 +190,7 @@ test("visible controls meet touch, focus, axe, and reduced-motion requirements",
 
 test("source and material links keep 48px targets at narrow width", async ({ page }) => {
   await page.setViewportSize({ width: 520, height: 900 });
-  await page.goto("/");
+  await page.goto("./");
 
   for (const [destination, selector] of [
     [copy.warranty, "a.source-line"],
@@ -210,7 +210,7 @@ test("source and material links keep 48px targets at narrow width", async ({ pag
 });
 
 test("initial tablet view matches the accepted baseline", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("./");
   await page.evaluate(() => document.fonts.ready.then(() => undefined));
   await expect(page).toHaveScreenshot({ animations: "disabled", caret: "hide" });
 });

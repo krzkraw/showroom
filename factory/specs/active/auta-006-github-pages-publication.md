@@ -1,7 +1,7 @@
 ---
 id: auta-006-github-pages-publication
 title: GitHub Pages publication
-status: inbox
+status: active
 agent: codex
 verification:
   - bun test
